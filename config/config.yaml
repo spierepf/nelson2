@@ -5,3 +5,4 @@ config:
   - coils.yaml
   - devices.yaml
   - modes.yaml
+  - dmd.yaml

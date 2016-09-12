@@ -1,0 +1,12 @@
+#config_version=3
+
+config:
+  - ../config.yaml
+
+switch_player:
+  start_event: mode_attract_started
+  start_delay: 100ms
+  steps:
+    - time: 100ms
+      switch: s_start
+      action: hit
