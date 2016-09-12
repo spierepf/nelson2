@@ -1,0 +1,11 @@
+#config_version=3
+
+coils:
+  c_drain_eject:
+    pulse_ms: 9
+    number: 5-3
+
+  c_trough_eject:
+    pulse_ms: 6
+    number: 5-2
+    

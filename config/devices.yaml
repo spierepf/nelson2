@@ -1,0 +1,24 @@
+#config_version=3
+
+ball_devices:
+  drain:
+    ball_switches: s_drain
+    eject_coil: c_drain_eject
+    entrance_count_delay: 300ms
+    confirm_eject_type: target
+    eject_targets: trough
+    tags: drain
+
+  trough:
+    ball_switches: s_trough_1, s_trough_2, s_trough_3
+    eject_coil: c_trough_eject
+    entrance_count_delay: 300ms
+    confirm_eject_type: target
+    eject_targets: plunger_lane
+    tags: home, trough
+
+  plunger_lane:
+    ball_switches: s_plunger_lane
+    entrance_count_delay: 300ms
+    mechanical_eject: true
+    tags: ball_add_live

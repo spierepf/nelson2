@@ -1,0 +1,30 @@
+#config_version=3
+
+switches:
+  s_drain:
+    number: 5-0
+
+  s_trough_1:
+    number: 5-1
+
+  s_trough_2:
+    number: 5-2
+
+  s_trough_3:
+    number: 5-3
+
+  s_start:
+    number: 21-1
+    tags: start
+
+  s_plunger_lane:
+    number: 5-4
+
+keyboard:
+  s:
+    switch: s_start
+
+virtual_platform_start_active_switches:
+    s_trough_1
+    s_trough_2
+    s_trough_3
