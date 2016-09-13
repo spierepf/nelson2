@@ -1,0 +1,13 @@
+# config_version=3
+
+mode:
+  start_events: carousel_2_selected
+  stop_events: carousel_2_complete, carousel_2_failed
+  priority: 100
+
+logic_blocks:
+  sequences:
+    carousel_2:
+      events:
+        - s_test_3_active
+      events_when_complete: carousel_2_complete, carousel_mode_complete

@@ -11,7 +11,6 @@ fonts:
   weltron:
     file: WELTRON2.TTF
 
-
 logic_blocks:
   counters:
     carousel_modes_completed:
@@ -31,3 +30,6 @@ logic_blocks:
       events_when_complete: mode_wizard_started
       reset_events: mode_wizard_started
       disable_on_complete: true
+
+scriptlets:
+    carousel_mode_complete_handler.CarouselModeCompleteHandler
