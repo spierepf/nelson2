@@ -8,6 +8,6 @@ modes:
   - carousel_3
   # - jackpot
   # - wizard
-  # - bonus
+  - bonus
   - tilt
   
