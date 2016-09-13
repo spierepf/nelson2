@@ -6,3 +6,28 @@ config:
   - devices.yaml
   - modes.yaml
   - dmd.yaml
+
+fonts:
+  weltron:
+    file: WELTRON2.TTF
+
+
+logic_blocks:
+  counters:
+    carousel_modes_completed:
+      enable_events: ball_starting
+      count_events: s_test_1_active, s_test_2_active, s_test_3_active
+      event_when_hit: mode_jackpot_started
+      count_complete_value: 2
+      reset_events: mode_wizard_started
+      disable_on_complete: true
+  accruals:
+    wizard_mode:
+      enable_events: ball_starting
+      events:
+        - s_test_1_active,
+        - s_test_2_active,
+        - s_test_3_active,
+      events_when_complete: mode_wizard_started
+      reset_events: mode_wizard_started
+      disable_on_complete: true

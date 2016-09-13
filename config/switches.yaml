@@ -20,11 +20,45 @@ switches:
   s_plunger_lane:
     number: 5-4
 
+  s_test_1:
+    number: 21-6
+
+  s_test_2:
+    number: 21-7
+
+  s_test_3:
+    number: 21-8
+
+  s_test_4:
+    number: 21-9
+
+  s_test_5:
+    number: 21-10
+
+  s_test_6:
+    number: 21-11
+
 keyboard:
   s:
     switch: s_start
 
-virtual_platform_start_active_switches:
-    s_trough_1
-    s_trough_2
-    s_trough_3
+  d:
+    switch: s_drain
+
+  1:
+    switch: s_test_1
+
+  2:
+    switch: s_test_2
+
+  3:
+    switch: s_test_3
+
+  4:
+    switch: s_test_4
+
+  5:
+    switch: s_test_5
+
+  6:
+    switch: s_test_6

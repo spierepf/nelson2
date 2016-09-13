@@ -1,10 +1,11 @@
 # config_version=3
 
 mode:
+  start_events: ball_starting
   priority: 100
 
 slide_player:
-  mode_game_started:
+  mode_base_started:
     - type: text
       text: "%score%"
       number_grouping: true
@@ -22,3 +23,15 @@ slide_player:
       v_pos: bottom
       h_pos: right
       font: small
+
+  mode_jackpot_started:
+    - type: text
+      text: SHOOT THE RAINBOW!
+      expire: 3s
+
+  mode_wizard_started:
+    - type: text
+      text: "WIZARD MODE!"
+      font: weltron
+      size: 24
+      expire: 3s

@@ -1,7 +1,7 @@
 #config_version=3
 
 modes:
-  - game
+  - base
   # - carousel_select
   # - carousel_1
   # - carousel_2
