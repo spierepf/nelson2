@@ -21,7 +21,7 @@ class CarouselSelect(Mode):
         self.register_handlers(self.select_item_events, self.select_item)
 
         player = self.machine.game.player
-        if not player.is_player_var('available_modes') or player['available_modes'] == None:
+        if not player.is_player_var('available_modes') or player['available_modes'] == None or player['available_modes'] == []:
             self.log.info("Available modes: " + str(self.items))
             player.available_modes = copy.copy(self.items)
         player.highlighted_mode_index = 0
