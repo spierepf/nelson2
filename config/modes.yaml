@@ -9,5 +9,5 @@ modes:
   # - jackpot
   # - wizard
   # - bonus
-  # - tilt
+  - tilt
   
