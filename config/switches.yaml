@@ -22,9 +22,11 @@ switches:
 
   s_test_1:
     number: 21-6
+    tags: carousel_select_item
 
   s_test_2:
     number: 21-7
+    tags: carousel_next_item
 
   s_test_3:
     number: 21-8

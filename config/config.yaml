@@ -16,7 +16,7 @@ logic_blocks:
   counters:
     carousel_modes_completed:
       enable_events: ball_starting
-      count_events: s_test_1_active, s_test_2_active, s_test_3_active
+      count_events: carousel_1_complete, carousel_2_complete, carousel_3_complete
       event_when_hit: mode_jackpot_started
       count_complete_value: 2
       reset_events: mode_wizard_started
@@ -25,9 +25,9 @@ logic_blocks:
     wizard_mode:
       enable_events: ball_starting
       events:
-        - s_test_1_active,
-        - s_test_2_active,
-        - s_test_3_active,
+        - carousel_1_complete,
+        - carousel_2_complete,
+        - carousel_3_complete,
       events_when_complete: mode_wizard_started
       reset_events: mode_wizard_started
       disable_on_complete: true

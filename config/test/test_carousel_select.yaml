@@ -21,7 +21,3 @@ switch_player:
     - time: 250ms
       switch: s_plunger_lane
       action: activate
-
-    - time: 1s
-      switch: s_plunger_lane
-      action: deactivate

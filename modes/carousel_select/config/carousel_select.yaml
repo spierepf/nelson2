@@ -1,0 +1,62 @@
+# config_version=3
+
+mode:
+  start_events: ball_starting
+  stop_events: carousel_mode_selected
+  priority: 100
+  code: carousel_select.CarouselSelect
+
+slide_player:
+  carousel_1_highlighted:
+    - type: text
+      text: CHOOSE YOUR MODE
+      v_pos: top
+      font: small
+    - type: text
+      text: "MODE 1"
+    - type: text
+      text: << SELECT
+      v_pos: bottom
+      h_pos: left
+      font: small
+    - type: text
+      text: NEXT >>
+      v_pos: bottom
+      h_pos: right
+      font: small
+
+  carousel_2_highlighted:
+    - type: text
+      text: CHOOSE YOUR MODE
+      v_pos: top
+      font: small
+    - type: text
+      text: "MODE 2"
+    - type: text
+      text: << SELECT
+      v_pos: bottom
+      h_pos: left
+      font: small
+    - type: text
+      text: NEXT >>
+      v_pos: bottom
+      h_pos: right
+      font: small
+
+  carousel_3_highlighted:
+    - type: text
+      text: CHOOSE YOUR MODE
+      v_pos: top
+      font: small
+    - type: text
+      text: "MODE 3"
+    - type: text
+      text: << SELECT
+      v_pos: bottom
+      h_pos: left
+      font: small
+    - type: text
+      text: NEXT >>
+      v_pos: bottom
+      h_pos: right
+      font: small
