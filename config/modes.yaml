@@ -6,7 +6,7 @@ modes:
   - carousel_1
   - carousel_2
   - carousel_3
-  # - jackpot
+  - jackpot
   # - wizard
   - bonus
   - tilt

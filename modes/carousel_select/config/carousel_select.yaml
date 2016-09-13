@@ -1,7 +1,7 @@
 # config_version=3
 
 mode:
-  start_events: ball_starting, s_test_4_active
+  start_events: ball_starting, s_test_5_active
   stop_events: carousel_mode_selected
   priority: 100
   code: carousel_select.CarouselSelect

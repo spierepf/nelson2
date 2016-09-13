@@ -29,6 +29,13 @@ slide_player:
       text: SHOOT THE RAINBOW!
       expire: 3s
 
+  jackpot_complete:
+    - type: text
+      text: "JACKPOT!"
+      font: weltron
+      size: 24
+      expire: 3s
+
   mode_wizard_started:
     - type: text
       text: "WIZARD MODE!"

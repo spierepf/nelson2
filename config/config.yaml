@@ -16,7 +16,7 @@ logic_blocks:
     carousel_modes_completed:
       enable_events: ball_starting
       count_events: carousel_1_complete, carousel_2_complete, carousel_3_complete
-      event_when_hit: mode_jackpot_started
+      event_when_hit: jackpot_enabled
       count_complete_value: 2
       reset_events: mode_wizard_started
       disable_on_complete: true

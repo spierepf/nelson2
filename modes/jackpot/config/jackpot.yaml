@@ -1,0 +1,21 @@
+# config_version=3
+
+mode:
+  start_events: jackpot_enabled
+  stop_events: jackpot_complete, timer_jackpot_complete
+  priority: 100
+
+logic_blocks:
+  sequences:
+    jackpot:
+      events:
+        - s_test_4_active
+      events_when_complete: jackpot_complete
+
+timers:
+  jackpot:
+    start_running: true
+    end_value: 20
+    control_events:
+      - event: jackpot_complete
+        action: stop
