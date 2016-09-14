@@ -24,14 +24,9 @@ slide_player:
       h_pos: right
       font: small
 
-  mode_jackpot_started:
-    - type: text
-      text: SHOOT THE RAINBOW!
-      expire: 3s
-
   jackpot_complete:
     - type: text
-      text: "JACKPOT!"
+      text: "JACKPOT!!!"
       font: weltron
       size: 24
       expire: 3s

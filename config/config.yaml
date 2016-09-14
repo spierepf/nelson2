@@ -27,7 +27,7 @@ logic_blocks:
         - carousel_1_complete,
         - carousel_2_complete,
         - carousel_3_complete,
-      events_when_complete: mode_wizard_started
+      events_when_complete: wizard_enabled
       reset_events: mode_wizard_started
       disable_on_complete: true
 

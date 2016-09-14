@@ -26,34 +26,47 @@ switch_player:
       switch: s_plunger_lane
       action: deactivate
 
-    - time: 250ms
-      switch: s_test_1
-      action: hit
-
-    - time: 250ms
+# Complete Mode 1
+    - time: 1s
       switch: s_test_3
       action: hit
 
-    - time: 250ms
+# Get the Jackpot
+    - time: 1s
       switch: s_test_4
       action: hit
 
-    - time: 250ms
+# Lock the ball and enable mode selection
+    - time: 3.5s
+      switch: s_test_5
+      action: hit
+
+# Select Mode 2
+    - time: 1s
       switch: s_test_1
       action: hit
 
-    - time: 250ms
+# Complete Mode 2
+    - time: 1s
       switch: s_test_3
       action: hit
 
-    - time: 250ms
+# Get the Jackpot
+    - time: 1s
       switch: s_test_4
       action: hit
 
-    - time: 250ms
+# Lock the ball and enable mode selection
+    - time: 3.5s
+      switch: s_test_5
+      action: hit
+
+# Select Mode 3
+    - time: 1s
       switch: s_test_1
       action: hit
 
-    - time: 250ms
+# Complete Mode 3 and trigger Wizard Mode
+    - time: 1s
       switch: s_test_3
       action: hit

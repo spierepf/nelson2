@@ -1,0 +1,11 @@
+# config_version=3
+
+mode:
+  start_events: wizard_enabled
+  priority: 200
+
+logic_blocks:
+  counters:
+    wizard:
+      count_events: mode_wizard_started, mode_jackpot_stopped
+      event_when_hit: jackpot_enabled

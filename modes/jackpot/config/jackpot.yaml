@@ -2,20 +2,21 @@
 
 mode:
   start_events: jackpot_enabled
-  stop_events: jackpot_complete, timer_jackpot_complete
+  stop_events: jackpot_complete, timer_jackpot_timer_complete
   priority: 100
 
 logic_blocks:
   sequences:
-    jackpot:
+    jackpot_sequence:
       events:
         - s_test_4_active
       events_when_complete: jackpot_complete
 
 timers:
-  jackpot:
-    start_running: true
-    end_value: 20
+  jackpot_timer:
+    end_value: 5
     control_events:
-      - event: jackpot_complete
-        action: stop
+      - event: mode_jackpot_stopping
+        action: jump
+        value: 0
+    start_running: true
