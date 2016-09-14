@@ -8,4 +8,16 @@ logic_blocks:
   counters:
     wizard:
       count_events: mode_wizard_started, mode_jackpot_stopped
+    start_jackpot:
+      count_events: timer_jackpot_delay_complete
       event_when_hit: jackpot_enabled
+
+timers:
+  jackpot_delay:
+    end_value: 5
+    control_events:
+      - event: player_wizard_count
+        action: start
+      - event: mode_jackpot_stopped
+        action: jump
+        value: 0
