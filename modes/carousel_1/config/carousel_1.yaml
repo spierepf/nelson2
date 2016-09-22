@@ -1,9 +1,10 @@
 # config_version=3
 
 mode:
+  priority: 100
+# code: carousel_1.carousel_1
   start_events: carousel_1_selected
   stop_events: carousel_1_complete, carousel_1_failed
-  priority: 100
 
 logic_blocks:
   sequences:
