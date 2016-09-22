@@ -4,6 +4,33 @@ keyboard:
   s:
     switch: s_start
 
+  d:
+    switch: s_drain
+
+  w:
+    switch: s_tilt
+
+  l:
+    switch: s_slam_tilt
+
+  1:
+    switch: s_test_1
+
+  2:
+    switch: s_test_2
+
+  3:
+    switch: s_test_3
+
+  4:
+    switch: s_test_4
+
+  5:
+    switch: s_test_5
+
+  6:
+    switch: s_test_6
+
 switches:
   s_drain:
     number: 5-0
@@ -124,9 +151,29 @@ switches:
     tags: kingpyn_disable_pullup
 
   s_tilt:
-    number: 21-7
+    number: 21-4
     tags: tilt_warning
 
   s_slam_tilt:
-    number: 21-8
+    number: 21-5
     tags: slam_tilt
+
+  s_test_1:
+    number: 21-6
+    tags: carousel_select_item
+
+  s_test_2:
+    number: 21-7
+    tags: carousel_next_item
+
+  s_test_3:
+    number: 21-8
+
+  s_test_4:
+    number: 21-9
+
+  s_test_5:
+    number: 21-10
+
+  s_test_6:
+    number: 21-11
