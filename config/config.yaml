@@ -17,18 +17,21 @@ logic_blocks:
   counters:
     carousel_modes_completed:
       enable_events: ball_starting
-      count_events: carousel_1_complete, carousel_2_complete, carousel_3_complete
+      count_events: gaming_complete, vendor_complete, auction_complete, photo_complete, cosplay_complete, stargazer_complete
       event_when_hit: jackpot_enabled
-      count_complete_value: 2
+      count_complete_value: 5
       reset_events: mode_wizard_started
       disable_on_complete: true
   accruals:
     wizard_mode:
       enable_events: ball_starting
       events:
-        - carousel_1_complete,
-        - carousel_2_complete,
-        - carousel_3_complete,
+        - gaming_complete,
+        - vendor_complete,
+        - auction_complete,
+        - photo_complete,
+        - cosplay_complete,
+        - stargazer_complete,
       events_when_complete: wizard_enabled
       reset_events: mode_wizard_started
       disable_on_complete: true

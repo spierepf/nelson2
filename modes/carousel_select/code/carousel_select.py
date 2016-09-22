@@ -10,7 +10,14 @@ class CarouselItem:
 
 class CarouselSelect(Mode):
     def mode_init(self):
-        self.items = [CarouselItem('carousel_1'), CarouselItem('carousel_2'), CarouselItem('carousel_3')]
+        self.items = [
+            CarouselItem('gaming'),
+            CarouselItem('vendor'),
+            CarouselItem('auction'),
+            CarouselItem('photo'),
+            CarouselItem('cosplay'),
+            CarouselItem('stargazer'),
+        ]
         self.next_item_events = ['sw_carousel_next_item']
         self.select_item_events = ['sw_carousel_select_item', 'balldevice_plunger_lane_ball_left']
 

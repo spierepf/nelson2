@@ -1,0 +1,14 @@
+# config_version=3
+
+mode:
+  priority: 100
+# code: photo.photo
+  start_events: photo_selected
+  stop_events: photo_complete, photo_failed
+
+logic_blocks:
+  sequences:
+    photo:
+      events:
+        - s_test_3_active
+      events_when_complete: photo_complete, carousel_mode_complete

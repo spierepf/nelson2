@@ -1,0 +1,14 @@
+# config_version=3
+
+mode:
+  priority: 100
+# code: auction.auction
+  start_events: auction_selected
+  stop_events: auction_complete, auction_failed
+
+logic_blocks:
+  sequences:
+    auction:
+      events:
+        - s_test_3_active
+      events_when_complete: auction_complete, carousel_mode_complete

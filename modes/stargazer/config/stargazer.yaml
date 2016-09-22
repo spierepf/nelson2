@@ -1,0 +1,14 @@
+# config_version=3
+
+mode:
+  priority: 100
+# code: stargazer.stargazer
+  start_events: stargazer_selected
+  stop_events: stargazer_complete, stargazer_failed
+
+logic_blocks:
+  sequences:
+    stargazer:
+      events:
+        - s_test_3_active
+      events_when_complete: stargazer_complete, carousel_mode_complete

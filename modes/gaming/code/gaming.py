@@ -1,6 +1,6 @@
 from mpf.system.mode import Mode
 
-class carousel_2(Mode):
+class gaming(Mode):
     def mode_init(self):
         pass
 

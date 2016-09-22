@@ -1,0 +1,14 @@
+# config_version=3
+
+mode:
+  priority: 100
+# code: vendor.vendor
+  start_events: vendor_selected
+  stop_events: vendor_complete, vendor_failed
+
+logic_blocks:
+  sequences:
+    vendor:
+      events:
+        - s_test_3_active
+      events_when_complete: vendor_complete, carousel_mode_complete

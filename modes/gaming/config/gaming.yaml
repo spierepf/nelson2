@@ -1,0 +1,14 @@
+# config_version=3
+
+mode:
+  priority: 100
+# code: gaming.gaming
+  start_events: gaming_selected
+  stop_events: gaming_complete, gaming_failed
+
+logic_blocks:
+  sequences:
+    gaming:
+      events:
+        - s_test_3_active
+      events_when_complete: gaming_complete, carousel_mode_complete
