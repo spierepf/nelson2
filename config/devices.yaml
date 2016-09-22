@@ -22,3 +22,54 @@ ball_devices:
     entrance_count_delay: 300ms
     mechanical_eject: true
     tags: ball_add_live
+
+  kick_out_left:
+    ball_switches: s_kick_out_left
+    eject_coil: c_kick_out_left_eject
+    entrance_count_delay: 300ms
+    exit_count_delay: 3s
+    tags: ball_add_live
+
+  kick_out_right:
+    ball_switches: s_kick_out_right
+    eject_coil: c_kick_out_right_eject
+    entrance_count_delay: 300ms
+    exit_count_delay: 3s
+    tags: ball_add_live
+
+flippers:
+  flipper_left:
+    main_coil: c_flipper_left
+    activation_switch: s_flipper_left
+    enable_events: machine_reset_phase_3
+
+  flipper_right:
+    main_coil: c_flipper_right
+    activation_switch: s_flipper_right
+    enable_events: machine_reset_phase_3
+
+autofire_coils:
+  slingshot_right:
+    coil: c_slingshot_right
+    switch: s_slingshot_right
+    enable_events: machine_reset_phase_3
+
+  slingshot_left:
+    coil: c_slingshot_left
+    switch: s_slingshot_left
+    enable_events: machine_reset_phase_3
+
+  pop_bumper_left:
+    coil: c_pop_bumper_left
+    switch: s_pop_bumper_left
+    enable_events: machine_reset_phase_3
+
+  pop_bumper_right:
+    coil: c_pop_bumper_right
+    switch: s_pop_bumper_right
+    enable_events: machine_reset_phase_3
+
+  pop_bumper_bottom:
+    coil: c_pop_bumper_bottom
+    switch: s_pop_bumper_bottom
+    enable_events: machine_reset_phase_3

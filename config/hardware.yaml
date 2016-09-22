@@ -1,0 +1,5 @@
+#config_version=3
+
+hardware:
+  platform: kingpyn_platform
+  leds: fadecandy
