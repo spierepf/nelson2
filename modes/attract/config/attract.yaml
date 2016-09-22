@@ -1,0 +1,55 @@
+#config_version=3
+
+light_player:
+  mode_attract_started:
+    - show: pop_bumper_left_chase_rainbow
+      repeat: yes
+    - show: pop_bumper_right_chase_rainbow
+      repeat: yes
+    - show: pop_bumper_bottom_chase_rainbow
+      repeat: yes
+    - show: drop_target_centre_arrow_chase_rainbow
+      repeat: yes
+    - show: spinner_arrow_chase_rainbow
+      repeat: yes
+    - show: kick_out_left_arrow_chase_rainbow
+      repeat: yes
+    - show: kick_out_right_arrow_chase_rainbow
+      repeat: yes
+    - show: xp_multiplier_2_chase_rainbow
+      repeat: yes
+    - show: xp_multiplier_3_chase_rainbow
+      repeat: yes
+    - show: xp_multiplier_5_chase_rainbow
+      repeat: yes
+    - show: main_stage_edge_chase_rainbow
+      repeat: yes
+    - show: upper_lane_chase_blue
+      tocks_per_sec: 4
+      repeat: yes
+    - show: drop_target_right_chase_green
+      tocks_per_sec: 4
+      repeat: yes
+    - show: drop_target_left_chase_magenta
+      tocks_per_sec: 4
+      repeat: yes
+    - show: player_bid_chase_rainbow
+      repeat: yes
+    - show: opponent_bid_chase_rainbow
+      repeat: yes
+    - show: xp_bar_chase_rainbow
+      repeat: yes
+    - show: gaming_mode_wave_red
+      repeat: yes
+    - show: vendor_mode_wave_orange
+      repeat: yes
+    - show: auction_mode_wave_yellow
+      repeat: yes
+    - show: photo_mode_wave_green
+      repeat: yes
+    - show: cosplay_mode_wave_blue
+      repeat: yes
+    - show: stargazer_mode_wave_magenta
+      repeat: yes
+    - show: ball_save_chase_rainbow
+      repeat: yes

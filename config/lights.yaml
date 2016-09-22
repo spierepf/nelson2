@@ -1,0 +1,259 @@
+#config_version=3
+
+leds:
+    l_pop_bumper_right_a: { number: 0 }
+    l_pop_bumper_right_b: { number: 1 }
+    l_pop_bumper_right_c: { number: 2 }
+    l_pop_bumper_right_d: { number: 3 }
+    l_pop_bumper_right_e: { number: 4 }
+    l_pop_bumper_right_f: { number: 5 }
+    l_pop_bumper_right_g: { number: 6 }
+    l_pop_bumper_right_h: { number: 7 }
+    l_pop_bumper_right_i: { number: 8 }
+    l_pop_bumper_right_j: { number: 9 }
+    l_pop_bumper_right_k: { number: 10 }
+    l_pop_bumper_right_l: { number: 11 }
+    
+    l_pop_bumper_bottom_a: { number: 12 }
+    l_pop_bumper_bottom_b: { number: 13 }
+    l_pop_bumper_bottom_c: { number: 14 }
+    l_pop_bumper_bottom_d: { number: 15 }
+    l_pop_bumper_bottom_e: { number: 16 }
+    l_pop_bumper_bottom_f: { number: 17 }
+    l_pop_bumper_bottom_g: { number: 18 }
+    l_pop_bumper_bottom_h: { number: 19 }
+    l_pop_bumper_bottom_i: { number: 20 }
+    l_pop_bumper_bottom_j: { number: 21 }
+    l_pop_bumper_bottom_k: { number: 22 }
+    l_pop_bumper_bottom_l: { number: 23 }
+    
+    l_pop_bumper_left_a: { number: 24 }
+    l_pop_bumper_left_b: { number: 25 }
+    l_pop_bumper_left_c: { number: 26 }
+    l_pop_bumper_left_d: { number: 27 }
+    l_pop_bumper_left_e: { number: 28 }
+    l_pop_bumper_left_f: { number: 29 }
+    l_pop_bumper_left_g: { number: 30 }
+    l_pop_bumper_left_h: { number: 31 }
+    l_pop_bumper_left_i: { number: 32 }
+    l_pop_bumper_left_j: { number: 33 }
+    l_pop_bumper_left_k: { number: 34 }
+    l_pop_bumper_left_l: { number: 35 }
+    
+    l_upper_lane_1: { number: 36 }
+    l_upper_lane_2: { number: 37 }
+    l_upper_lane_3: { number: 38 }
+    
+    l_main_stage_edge_a: { number: 39 }
+    l_main_stage_edge_b: { number: 40 }
+    l_main_stage_edge_c: { number: 41 }
+    l_main_stage_edge_d: { number: 42 }
+    l_main_stage_edge_e: { number: 43 }
+    l_main_stage_edge_f: { number: 44 }
+    l_main_stage_edge_g: { number: 45 }
+    l_main_stage_edge_h: { number: 46 }
+    l_main_stage_edge_i: { number: 47 }
+    l_main_stage_edge_j: { number: 48 }
+    l_main_stage_edge_k: { number: 49 }
+    l_main_stage_edge_l: { number: 50 }
+    l_main_stage_edge_m: { number: 51 }
+    
+    l_main_stage_arrow_1_a: { number: 511 }
+    l_main_stage_arrow_1_b: { number: 511 }
+    l_main_stage_arrow_1_c: { number: 511 }
+    l_main_stage_arrow_1_d: { number: 511 }
+    l_main_stage_arrow_1_e: { number: 511 }
+    l_main_stage_arrow_1_f: { number: 511 }
+    l_main_stage_arrow_1_g: { number: 511 }
+    l_main_stage_arrow_1_h: { number: 511 }
+    
+    l_main_stage_arrow_2_a: { number: 511 }
+    l_main_stage_arrow_2_b: { number: 511 }
+    l_main_stage_arrow_2_c: { number: 511 }
+    l_main_stage_arrow_2_d: { number: 511 }
+    l_main_stage_arrow_2_e: { number: 511 }
+    l_main_stage_arrow_2_f: { number: 511 }
+    l_main_stage_arrow_2_g: { number: 511 }
+    l_main_stage_arrow_2_h: { number: 511 }
+
+    l_main_stage_arrow_3_a: { number: 511 }
+    l_main_stage_arrow_3_b: { number: 511 }
+    l_main_stage_arrow_3_c: { number: 511 }
+    l_main_stage_arrow_3_d: { number: 511 }
+    l_main_stage_arrow_3_e: { number: 511 }
+    l_main_stage_arrow_3_f: { number: 511 }
+    l_main_stage_arrow_3_g: { number: 511 }
+    l_main_stage_arrow_3_h: { number: 511 }
+        
+    l_xp_multiplier_2_a: { number: 91 }
+    l_xp_multiplier_2_b: { number: 92 }
+    l_xp_multiplier_2_c: { number: 93 }
+    l_xp_multiplier_2_d: { number: 94 }
+    l_xp_multiplier_2_e: { number: 95 }
+    l_xp_multiplier_2_f: { number: 96 }
+    l_xp_multiplier_2_g: { number: 97 }
+    
+    l_xp_multiplier_3_a: { number: 98 }
+    l_xp_multiplier_3_b: { number: 99 }
+    l_xp_multiplier_3_c: { number: 100 }
+    l_xp_multiplier_3_d: { number: 101 }
+    l_xp_multiplier_3_e: { number: 102 }
+    l_xp_multiplier_3_f: { number: 103 }
+    l_xp_multiplier_3_g: { number: 104 }
+    
+    l_xp_multiplier_5_a: { number: 105 }
+    l_xp_multiplier_5_b: { number: 106 }
+    l_xp_multiplier_5_c: { number: 107 }
+    l_xp_multiplier_5_d: { number: 108 }
+    l_xp_multiplier_5_e: { number: 109 }
+    l_xp_multiplier_5_f: { number: 110 }
+    l_xp_multiplier_5_g: { number: 111 }
+    
+    l_spinner_arrow_a: { number: 79 }
+    l_spinner_arrow_b: { number: 78 }
+    l_spinner_arrow_c: { number: 77 }
+    l_spinner_arrow_d: { number: 76 }
+    l_spinner_arrow_e: { number: 75 }
+    l_spinner_arrow_f: { number: 74 }
+    l_spinner_arrow_g: { number: 73 }
+    l_spinner_arrow_h: { number: 72 }
+    
+    l_drop_target_centre_arrow_a: { number: 71 }
+    l_drop_target_centre_arrow_b: { number: 70 }
+    l_drop_target_centre_arrow_c: { number: 69 }
+    l_drop_target_centre_arrow_d: { number: 68 }
+    l_drop_target_centre_arrow_e: { number: 67 }
+    l_drop_target_centre_arrow_f: { number: 66 }
+    l_drop_target_centre_arrow_g: { number: 65 }
+    l_drop_target_centre_arrow_h: { number: 64 }
+    
+    l_drop_target_left_1: { number: 114 }
+    l_drop_target_left_2: { number: 113 }
+    l_drop_target_left_3: { number: 112 }
+    
+    l_player_bid_a: { number: 455 }
+    l_player_bid_b: { number: 454 }
+    l_player_bid_c: { number: 453 }
+    l_player_bid_d: { number: 452 }
+    l_player_bid_e: { number: 451 }
+    l_player_bid_f: { number: 450 }
+    l_player_bid_g: { number: 449 }
+    l_player_bid_h: { number: 448 }
+    
+    l_opponent_bid_a: { number: 456 }
+    l_opponent_bid_b: { number: 457 }
+    l_opponent_bid_c: { number: 458 }
+    l_opponent_bid_d: { number: 459 }
+    l_opponent_bid_e: { number: 460 }
+    l_opponent_bid_f: { number: 461 }
+    l_opponent_bid_g: { number: 462 }
+    l_opponent_bid_h: { number: 463 }
+    
+    l_xp_bar_a: { number: 464 }
+    l_xp_bar_b: { number: 465 }
+    l_xp_bar_c: { number: 466 }
+    l_xp_bar_d: { number: 467 }
+    l_xp_bar_e: { number: 468 }
+    l_xp_bar_f: { number: 469 }
+    l_xp_bar_g: { number: 470 }
+    l_xp_bar_h: { number: 471 }
+    
+    l_drop_target_right_1: { number: 82 }
+    l_drop_target_right_2: { number: 81 }
+    l_drop_target_right_3: { number: 80 }
+    
+    l_kick_out_left_arrow_a: { number: 122 }
+    l_kick_out_left_arrow_b: { number: 121 }
+    l_kick_out_left_arrow_c: { number: 120 }
+    l_kick_out_left_arrow_d: { number: 119 }
+    l_kick_out_left_arrow_e: { number: 118 }
+    l_kick_out_left_arrow_f: { number: 117 }
+    l_kick_out_left_arrow_g: { number: 116 }
+    l_kick_out_left_arrow_h: { number: 115 }
+    
+    l_kick_out_right_arrow_a: { number: 90 }
+    l_kick_out_right_arrow_b: { number: 89 }
+    l_kick_out_right_arrow_c: { number: 88 }
+    l_kick_out_right_arrow_d: { number: 87 }
+    l_kick_out_right_arrow_e: { number: 86 }
+    l_kick_out_right_arrow_f: { number: 85 }
+    l_kick_out_right_arrow_g: { number: 84 }
+    l_kick_out_right_arrow_h: { number: 83 }
+    
+    l_gaming_mode_a: { number: 472 }
+    l_gaming_mode_b: { number: 473 }
+    l_gaming_mode_c: { number: 474 }
+    
+    l_vendor_mode_a: { number: 487 }
+    l_vendor_mode_b: { number: 488 }
+    l_vendor_mode_c: { number: 489 }
+    
+    l_auction_mode_a: { number: 484 }
+    l_auction_mode_b: { number: 485 }
+    l_auction_mode_c: { number: 486 }
+    
+    l_photo_mode_a: { number: 481 }
+    l_photo_mode_b: { number: 482 }
+    l_photo_mode_c: { number: 483 }
+    
+    l_cosplay_mode_a: { number: 478 }
+    l_cosplay_mode_b: { number: 479 }
+    l_cosplay_mode_c: { number: 480 }
+    
+    l_stargazer_mode_a: { number: 475 }
+    l_stargazer_mode_b: { number: 476 }
+    l_stargazer_mode_c: { number: 477 }
+    
+    l_extra_ball_a: { number: 511 }
+    l_extra_ball_b: { number: 511 }
+    l_extra_ball_c: { number: 511 }
+    l_extra_ball_d: { number: 511 }
+    l_extra_ball_e: { number: 511 }
+    l_extra_ball_f: { number: 511 }
+    l_extra_ball_g: { number: 511 }
+    l_extra_ball_h: { number: 511 }
+    
+    l_jackpot_a: { number: 511 }
+    l_jackpot_b: { number: 511 }
+    l_jackpot_c: { number: 511 }
+    l_jackpot_d: { number: 511 }
+    l_jackpot_e: { number: 511 }
+    l_jackpot_f: { number: 511 }
+    l_jackpot_g: { number: 511 }
+    l_jackpot_h: { number: 511 }
+    
+    l_multiball_a: { number: 511 }
+    l_multiball_b: { number: 511 }
+    l_multiball_c: { number: 511 }
+    l_multiball_d: { number: 511 }
+    l_multiball_e: { number: 511 }
+    l_multiball_f: { number: 511 }
+    l_multiball_g: { number: 511 }
+    l_multiball_h: { number: 511 }
+    
+    l_left_outlane: { number: 511 }
+    l_left_inlane: { number: 511 }
+    l_right_inlane: { number: 511 }
+    l_right_outlane: { number: 511 }
+    
+    l_ball_save_a: { number: 384 }
+    l_ball_save_b: { number: 385 }
+    l_ball_save_c: { number: 386 }
+    l_ball_save_d: { number: 387 }
+    l_ball_save_e: { number: 388 }
+    l_ball_save_f: { number: 389 }
+    l_ball_save_g: { number: 390 }
+    l_ball_save_h: { number: 391 }
+    l_ball_save_i: { number: 392 }
+    l_ball_save_j: { number: 393 }
+    l_ball_save_k: { number: 394 }
+    l_ball_save_l: { number: 395 }
+    
+    l_ball_save_m: { number: 400 }
+    l_ball_save_n: { number: 401 }
+    l_ball_save_o: { number: 402 }
+    l_ball_save_p: { number: 397 }
+    l_ball_save_q: { number: 398 }
+    l_ball_save_r: { number: 399 }
+
+    l_ball_save_s: { number: 396 }
