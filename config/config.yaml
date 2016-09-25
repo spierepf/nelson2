@@ -8,6 +8,8 @@ config:
   - modes.yaml
   - dmd.yaml
   - lights.yaml
+  - light_scripts.yaml
+  - targets.yaml
 
 fonts:
   weltron:

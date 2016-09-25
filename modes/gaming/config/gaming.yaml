@@ -6,9 +6,79 @@ mode:
   start_events: gaming_selected
   stop_events: gaming_complete, gaming_failed
 
+shot_profiles:
+  hit_me:
+    states:
+      - name: active
+        light_script: flash_green
+      - name: complete
+        light_script: on_green
+
+shots:
+  drop_target_left_1:
+    switch: s_drop_target_left_1
+    led: l_drop_target_left_1
+    profile: hit_me
+    reset_events: mode_gaming_stopping
+  drop_target_left_2:
+    switch: s_drop_target_left_2
+    led: l_drop_target_left_2
+    profile: hit_me
+    reset_events: mode_gaming_stopping
+  drop_target_left_3:
+    switch: s_drop_target_left_3
+    led: l_drop_target_left_3
+    profile: hit_me
+    reset_events: mode_gaming_stopping
+  kick_out_left:
+    switch: s_kick_out_left
+    led:
+      - l_kick_out_left_arrow_a
+      - l_kick_out_left_arrow_b
+      - l_kick_out_left_arrow_c
+      - l_kick_out_left_arrow_d
+      - l_kick_out_left_arrow_e
+      - l_kick_out_left_arrow_f
+      - l_kick_out_left_arrow_g
+      - l_kick_out_left_arrow_h
+    profile: hit_me
+    enable_events: drop_target_bank_left_down
+    reset_events: mode_gaming_stopping
+  kick_out_right:
+    switch: s_kick_out_right
+    led:
+      - l_kick_out_right_arrow_a
+      - l_kick_out_right_arrow_b
+      - l_kick_out_right_arrow_c
+      - l_kick_out_right_arrow_d
+      - l_kick_out_right_arrow_e
+      - l_kick_out_right_arrow_f
+      - l_kick_out_right_arrow_g
+      - l_kick_out_right_arrow_h
+    profile: hit_me
+    enable_events: drop_target_bank_left_down
+    reset_events: mode_gaming_stopping
+
+shot_groups:
+  drop_target_bank_left:
+    shots: drop_target_left_1, drop_target_left_2, drop_target_left_3
+
 logic_blocks:
-  sequences:
+  accruals:
     gaming:
       events:
-        - s_test_3_active
+        - kick_out_left_hit
+        - kick_out_right_hit
+      enable_events: drop_target_bank_left_down
+      reset_events: mode_gaming_stopping
       events_when_complete: gaming_complete, carousel_mode_complete
+
+slide_player:
+  gaming_selected:
+    - type: text
+      text: "GAMING BOTS!"
+      expire: 3s
+  drop_target_bank_left_down:
+    - type: text
+      text: "ROLL THE DICE!"
+      expire: 3s
