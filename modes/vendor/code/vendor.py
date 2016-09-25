@@ -92,7 +92,6 @@ class vendor(Mode):
             self.log.info("Vendors.tick() called outside game")
             self.machine.timing.remove(self.timer)
         else:
-            self.log.info("tick")
             self.left_bumper.update()
             self.right_bumper.update()
             self.bottom_bumper.update()
