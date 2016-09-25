@@ -3,7 +3,7 @@
 mode:
   start_events: ball_starting, s_test_5_active
   stop_events: carousel_mode_selected
-  priority: 100
+  priority: 200
   code: carousel_select.CarouselSelect
 
 slide_player:
