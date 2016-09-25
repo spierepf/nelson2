@@ -1,31 +1,31 @@
 #config_version=3
 
 leds:
-    l_pop_bumper_right_a: { number: 0 }
-    l_pop_bumper_right_b: { number: 1 }
-    l_pop_bumper_right_c: { number: 2 }
-    l_pop_bumper_right_d: { number: 3 }
-    l_pop_bumper_right_e: { number: 4 }
-    l_pop_bumper_right_f: { number: 5 }
-    l_pop_bumper_right_g: { number: 6 }
-    l_pop_bumper_right_h: { number: 7 }
-    l_pop_bumper_right_i: { number: 8 }
-    l_pop_bumper_right_j: { number: 9 }
-    l_pop_bumper_right_k: { number: 10 }
-    l_pop_bumper_right_l: { number: 11 }
-    
-    l_pop_bumper_bottom_a: { number: 12 }
-    l_pop_bumper_bottom_b: { number: 13 }
-    l_pop_bumper_bottom_c: { number: 14 }
-    l_pop_bumper_bottom_d: { number: 15 }
-    l_pop_bumper_bottom_e: { number: 16 }
-    l_pop_bumper_bottom_f: { number: 17 }
-    l_pop_bumper_bottom_g: { number: 18 }
-    l_pop_bumper_bottom_h: { number: 19 }
-    l_pop_bumper_bottom_i: { number: 20 }
-    l_pop_bumper_bottom_j: { number: 21 }
-    l_pop_bumper_bottom_k: { number: 22 }
-    l_pop_bumper_bottom_l: { number: 23 }
+    l_pop_bumper_bottom_a: { number: 0 }
+    l_pop_bumper_bottom_b: { number: 1 }
+    l_pop_bumper_bottom_c: { number: 2 }
+    l_pop_bumper_bottom_d: { number: 3 }
+    l_pop_bumper_bottom_e: { number: 4 }
+    l_pop_bumper_bottom_f: { number: 5 }
+    l_pop_bumper_bottom_g: { number: 6 }
+    l_pop_bumper_bottom_h: { number: 7 }
+    l_pop_bumper_bottom_i: { number: 8 }
+    l_pop_bumper_bottom_j: { number: 9 }
+    l_pop_bumper_bottom_k: { number: 10 }
+    l_pop_bumper_bottom_l: { number: 11 }
+
+    l_pop_bumper_right_a: { number: 12 }
+    l_pop_bumper_right_b: { number: 13 }
+    l_pop_bumper_right_c: { number: 14 }
+    l_pop_bumper_right_d: { number: 15 }
+    l_pop_bumper_right_e: { number: 16 }
+    l_pop_bumper_right_f: { number: 17 }
+    l_pop_bumper_right_g: { number: 18 }
+    l_pop_bumper_right_h: { number: 19 }
+    l_pop_bumper_right_i: { number: 20 }
+    l_pop_bumper_right_j: { number: 21 }
+    l_pop_bumper_right_k: { number: 22 }
+    l_pop_bumper_right_l: { number: 23 }
     
     l_pop_bumper_left_a: { number: 24 }
     l_pop_bumper_left_b: { number: 25 }

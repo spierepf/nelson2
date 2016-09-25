@@ -2,13 +2,46 @@
 
 mode:
   priority: 100
-# code: vendor.vendor
+  code: vendor.vendor
   start_events: vendor_selected
   stop_events: vendor_complete, vendor_failed
 
+shots:
+  pop_bumper_left:
+    switch: s_pop_bumper_left
+
+  pop_bumper_right:
+    switch: s_pop_bumper_right
+
+  pop_bumper_bottom:
+    switch: s_pop_bumper_bottom
+
 logic_blocks:
-  sequences:
+  counters:
+    pop_bumper_left_hits:
+      count_events: pop_bumper_left_hit
+      count_complete_value: 12
+      direction: up
+      reset_events: mode_vendor_stopping
+
+    pop_bumper_right_hits:
+      count_events: pop_bumper_right_hit
+      count_complete_value: 12
+      direction: up
+      reset_events: mode_vendor_stopping
+
+    pop_bumper_bottom_hits:
+      count_events: pop_bumper_bottom_hit
+      count_complete_value: 12
+      direction: up
+      reset_events: mode_vendor_stopping
+
     vendor:
-      events:
-        - s_test_3_active
+      count_events:
+        - logicblock_pop_bumper_left_hits_complete
+        - logicblock_pop_bumper_right_hits_complete
+        - logicblock_pop_bumper_bottom_hits_complete
+      count_complete_value: 3
+      direction: up
+      reset_events: mode_vendor_stopping
       events_when_complete: vendor_complete, carousel_mode_complete
