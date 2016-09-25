@@ -1,0 +1,25 @@
+# config_version=3
+
+shots:
+  kick_out_left:
+    switch: s_kick_out_left
+    led:
+      - l_kick_out_left_arrow_a
+      - l_kick_out_left_arrow_b
+      - l_kick_out_left_arrow_c
+      - l_kick_out_left_arrow_d
+      - l_kick_out_left_arrow_e
+      - l_kick_out_left_arrow_f
+      - l_kick_out_left_arrow_g
+      - l_kick_out_left_arrow_h
+  kick_out_right:
+    switch: s_kick_out_right
+    led:
+      - l_kick_out_right_arrow_a
+      - l_kick_out_right_arrow_b
+      - l_kick_out_right_arrow_c
+      - l_kick_out_right_arrow_d
+      - l_kick_out_right_arrow_e
+      - l_kick_out_right_arrow_f
+      - l_kick_out_right_arrow_g
+      - l_kick_out_right_arrow_h
