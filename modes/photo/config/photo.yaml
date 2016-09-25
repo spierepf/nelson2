@@ -6,9 +6,97 @@ mode:
   start_events: photo_selected
   stop_events: photo_complete, photo_failed
 
+
+shot_profiles:
+  hit_me_1:
+    states:
+      - name: active
+        light_script: flash_green
+        tocks_per_sec: 4
+      - name: complete
+        light_script: on_green
+  hit_me_2:
+    states:
+      - name: active
+        light_script: flash_green
+        tocks_per_sec: 6
+      - name: complete
+        light_script: on_green
+  hit_me_3:
+    states:
+      - name: active
+        light_script: flash_green
+        tocks_per_sec: 8
+      - name: complete
+        light_script: on_green
+  hit_me_4:
+    states:
+      - name: active
+        light_script: flash_green
+        tocks_per_sec: 10
+      - name: complete
+        light_script: on_green
+
+shots:
+  drop_target_centre_1:
+    switch: s_drop_target_centre_1
+    led:
+      l_drop_target_centre_arrow_a
+      l_drop_target_centre_arrow_b
+      l_drop_target_centre_arrow_c
+      l_drop_target_centre_arrow_d
+      l_drop_target_centre_arrow_e
+      l_drop_target_centre_arrow_f
+      l_drop_target_centre_arrow_g
+      l_drop_target_centre_arrow_h
+    profile: hit_me_1
+    reset_events: mode_photos_stopping
+  drop_target_centre_2:
+    switch: s_drop_target_centre_2
+    led:
+      l_drop_target_centre_arrow_a
+      l_drop_target_centre_arrow_b
+      l_drop_target_centre_arrow_c
+      l_drop_target_centre_arrow_d
+      l_drop_target_centre_arrow_e
+      l_drop_target_centre_arrow_f
+      l_drop_target_centre_arrow_g
+      l_drop_target_centre_arrow_h
+    profile: hit_me_2
+    enable_events: drop_target_centre_1_hit_me_1_active_hit
+    reset_events: mode_photos_stopping
+  drop_target_centre_3:
+    switch: s_drop_target_centre_3
+    led:
+      l_drop_target_centre_arrow_a
+      l_drop_target_centre_arrow_b
+      l_drop_target_centre_arrow_c
+      l_drop_target_centre_arrow_d
+      l_drop_target_centre_arrow_e
+      l_drop_target_centre_arrow_f
+      l_drop_target_centre_arrow_g
+      l_drop_target_centre_arrow_h
+    profile: hit_me_3
+    enable_events: drop_target_centre_2_hit_me_2_active_hit
+    reset_events: mode_photos_stopping
+  fixed_target:
+    switch: s_fixed_target
+    led:
+      l_drop_target_centre_arrow_a
+      l_drop_target_centre_arrow_b
+      l_drop_target_centre_arrow_c
+      l_drop_target_centre_arrow_d
+      l_drop_target_centre_arrow_e
+      l_drop_target_centre_arrow_f
+      l_drop_target_centre_arrow_g
+      l_drop_target_centre_arrow_h
+    profile: hit_me_4
+    enable_events: drop_target_centre_3_hit_me_3_active_hit
+    reset_events: mode_photos_stopping
+
 logic_blocks:
   sequences:
-    photo:
-      events:
-        - s_test_3_active
+    photos:
+      events: fixed_target_hit_me_4_active_hit
+      reset_events: mode_photos_stopping
       events_when_complete: photo_complete, carousel_mode_complete
