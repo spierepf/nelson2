@@ -160,10 +160,18 @@ light_player:
       repeat: yes
     - show: spinner_arrow_chase_rainbow
       repeat: yes
+    - show: player_bid_chase_rainbow
+      repeat: yes
+    - show: opponent_bid_chase_rainbow
+      repeat: yes
   auction_unhighlighted:
     - show: auction_mode_wave_yellow
       action: stop
     - show: spinner_arrow_chase_rainbow
+      action: stop
+    - show: player_bid_chase_rainbow
+      action: stop
+    - show: opponent_bid_chase_rainbow
       action: stop
 
   photo_highlighted:
