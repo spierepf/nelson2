@@ -6,9 +6,35 @@ mode:
   start_events: stargazer_selected
   stop_events: stargazer_complete, stargazer_failed
 
+shot_profiles:
+  hit_me:
+    states:
+      - name: active
+        light_script: flash_green
+      - name: complete
+        light_script: on_green
+
+shots:
+  kick_out_left:
+    profile: hit_me
+    reset_events: mode_stargazer_stopping
+  kick_out_right:
+    profile: hit_me
+    reset_events: mode_stargazer_stopping
+  spinner:
+    profile: hit_me
+    reset_events: mode_stargazer_stopping
+    enable_events: stargazer_kick_outs_complete
+
+shot_groups:
+  stargazer_kick_outs:
+    shots: kick_out_left, kick_out_right
+    enable_events: mode_stargazer_started
+    reset_events: mode_stargazer_stopping
+
 logic_blocks:
   sequences:
     stargazer:
-      events:
-        - s_test_3_active
+      events: spinner_hit_me_active_hit
+      reset_events: mode_stargazer_stopping
       events_when_complete: stargazer_complete, carousel_mode_complete

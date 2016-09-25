@@ -7,18 +7,6 @@ mode:
   stop_events: auction_complete, auction_failed
 
 shots:
-  spinner:
-    switch: s_spinner
-    led:
-      - l_spinner_arrow_a
-      - l_spinner_arrow_b
-      - l_spinner_arrow_c
-      - l_spinner_arrow_d
-      - l_spinner_arrow_e
-      - l_spinner_arrow_f
-      - l_spinner_arrow_g
-      - l_spinner_arrow_h
-
   auction_collect:
     switch: s_main_stage_entry
     led:
