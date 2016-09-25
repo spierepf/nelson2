@@ -6,9 +6,144 @@ mode:
   start_events: cosplay_selected
   stop_events: cosplay_complete, cosplay_failed
 
+shot_profiles:
+  hit_me:
+    states:
+      - name: active
+        light_script: flash_green
+      - name: complete
+        light_script: on_green
+
+shots:
+  drop_target_right_1:
+    switch: s_drop_target_right_1
+    led: l_drop_target_right_1
+    profile: hit_me
+    reset_events: mode_cosplay_stopping
+  drop_target_right_2:
+    switch: s_drop_target_right_2
+    led: l_drop_target_right_2
+    profile: hit_me
+    reset_events: mode_cosplay_stopping
+  drop_target_right_3:
+    switch: s_drop_target_right_3
+    led: l_drop_target_right_3
+    profile: hit_me
+    reset_events: mode_cosplay_stopping
+  main_stage_entry_1:
+    switch: s_main_stage_entry
+    led:
+      - l_main_stage_arrow_1_a
+      - l_main_stage_arrow_1_b
+      - l_main_stage_arrow_1_c
+      - l_main_stage_arrow_1_d
+      - l_main_stage_arrow_1_e
+      - l_main_stage_arrow_1_f
+      - l_main_stage_arrow_1_g
+      - l_main_stage_arrow_1_h
+      - l_main_stage_arrow_2_a
+      - l_main_stage_arrow_2_b
+      - l_main_stage_arrow_2_c
+      - l_main_stage_arrow_2_d
+      - l_main_stage_arrow_2_e
+      - l_main_stage_arrow_2_f
+      - l_main_stage_arrow_2_g
+      - l_main_stage_arrow_2_h
+      - l_main_stage_arrow_3_a
+      - l_main_stage_arrow_3_b
+      - l_main_stage_arrow_3_c
+      - l_main_stage_arrow_3_d
+      - l_main_stage_arrow_3_e
+      - l_main_stage_arrow_3_f
+      - l_main_stage_arrow_3_g
+      - l_main_stage_arrow_3_h
+      - l_main_stage_edge_a
+      - l_main_stage_edge_b
+      - l_main_stage_edge_c
+      - l_main_stage_edge_d
+      - l_main_stage_edge_e
+      - l_main_stage_edge_f
+      - l_main_stage_edge_g
+      - l_main_stage_edge_h
+      - l_main_stage_edge_i
+      - l_main_stage_edge_j
+      - l_main_stage_edge_k
+      - l_main_stage_edge_l
+      - l_main_stage_edge_m
+    profile: hit_me
+    enable_events: drop_target_bank_right_down
+    reset_events: mode_cosplay_stopping
+  main_stage_entry_2:
+    switch: s_main_stage_entry
+    led:
+      - l_main_stage_arrow_1_a
+      - l_main_stage_arrow_1_b
+      - l_main_stage_arrow_1_c
+      - l_main_stage_arrow_1_d
+      - l_main_stage_arrow_1_e
+      - l_main_stage_arrow_1_f
+      - l_main_stage_arrow_1_g
+      - l_main_stage_arrow_1_h
+      - l_main_stage_arrow_2_a
+      - l_main_stage_arrow_2_b
+      - l_main_stage_arrow_2_c
+      - l_main_stage_arrow_2_d
+      - l_main_stage_arrow_2_e
+      - l_main_stage_arrow_2_f
+      - l_main_stage_arrow_2_g
+      - l_main_stage_arrow_2_h
+      - l_main_stage_edge_a
+      - l_main_stage_edge_b
+      - l_main_stage_edge_c
+      - l_main_stage_edge_d
+      - l_main_stage_edge_e
+      - l_main_stage_edge_f
+      - l_main_stage_edge_g
+      - l_main_stage_edge_h
+      - l_main_stage_edge_i
+      - l_main_stage_edge_j
+      - l_main_stage_edge_k
+      - l_main_stage_edge_l
+      - l_main_stage_edge_m
+    profile: hit_me
+    enable_events: main_stage_entry_1_hit_me_active_hit
+    reset_events: mode_cosplay_stopping
+  main_stage_entry_3:
+    switch: s_main_stage_entry
+    led:
+      - l_main_stage_arrow_2_a
+      - l_main_stage_arrow_2_b
+      - l_main_stage_arrow_2_c
+      - l_main_stage_arrow_2_d
+      - l_main_stage_arrow_2_e
+      - l_main_stage_arrow_2_f
+      - l_main_stage_arrow_2_g
+      - l_main_stage_arrow_2_h
+      - l_main_stage_edge_a
+      - l_main_stage_edge_b
+      - l_main_stage_edge_c
+      - l_main_stage_edge_d
+      - l_main_stage_edge_e
+      - l_main_stage_edge_f
+      - l_main_stage_edge_g
+      - l_main_stage_edge_h
+      - l_main_stage_edge_i
+      - l_main_stage_edge_j
+      - l_main_stage_edge_k
+      - l_main_stage_edge_l
+      - l_main_stage_edge_m
+    profile: hit_me
+    enable_events: main_stage_entry_2_hit_me_active_hit
+    reset_events: mode_cosplay_stopping
+
+shot_groups:
+  drop_target_bank_right:
+    shots: drop_target_right_1, drop_target_right_2, drop_target_right_3
+    reset_events: ball_ended
+
 logic_blocks:
   sequences:
     cosplay:
-      events:
-        - s_test_3_active
+      events: main_stage_entry_3_hit_me_active_hit
+      reset_events: mode_cosplay_stopping
       events_when_complete: cosplay_complete, carousel_mode_complete
