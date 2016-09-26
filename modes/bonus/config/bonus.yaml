@@ -8,7 +8,7 @@ mode:
   code: bonus.Bonus
 
 slide_player:
-  bonus_update_experience_points:
+  mode_bonus_started:
     - type: text
       text: "Exp. Points:"
       font: small
@@ -16,7 +16,7 @@ slide_player:
       x: 4
       persist_slide: true
     - type: text
-      text: "%player|counted_experience_points%"
+      text: "%counted_experience_points%"
       number_grouping: true 
       font: small
       y: 1
@@ -30,7 +30,7 @@ slide_player:
       x: 4
       persist_slide: true
     - type: text
-      text: "%player|counted_experience_points%"
+      text: "%counted_experience_points%"
       number_grouping: true 
       font: small
       y: 1
@@ -55,7 +55,7 @@ slide_player:
       x: 4
       persist_slide: true
     - type: text
-      text: "%player|counted_experience_points%"
+      text: "%counted_experience_points%"
       number_grouping: true 
       font: small
       y: 1
