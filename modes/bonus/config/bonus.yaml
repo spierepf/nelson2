@@ -12,81 +12,215 @@ slide_player:
     - type: text
       text: "Exp. Points:"
       font: small
-      y: 1
-      x: 4
+      y: 0
+      h_pos: left
       persist_slide: true
     - type: text
-      text: "%counted_experience_points%"
+      text: "%counted_experience_points_value%"
       number_grouping: true 
       font: small
-      y: 1
+      y: 0
       h_pos: right
 
-  bonus_update_multiplier:
+  count_experience_points_complete:
     - type: text
       text: "Exp. Points:"
       font: small
-      y: 1
-      x: 4
+      y: 0
+      h_pos: left
       persist_slide: true
     - type: text
-      text: "%counted_experience_points%"
+      text: "%counted_experience_points_value%"
       number_grouping: true 
       font: small
-      y: 1
+      y: 0
       h_pos: right
 
     - type: text
       text: "Multiplier:"
       font: small
-      y: 8
-      x: 6
+      y: 6
+      h_pos: left
     - type: text
-      text: "x%player|counted_multiplier%"
+      text: "x%experience_point_multiplier%"
       font: small
-      y: 8
+      y: 6
       h_pos: right
 
-  bonus_update_bonus:
+  timer_update_bonus_complete:
     - type: text
       text: "Exp. Points:"
       font: small
-      y: 1
-      x: 4
+      y: 0
+      h_pos: left
       persist_slide: true
     - type: text
-      text: "%counted_experience_points%"
+      text: "%counted_experience_points_value%"
       number_grouping: true 
       font: small
-      y: 1
+      y: 0
       h_pos: right
 
     - type: text
       text: "Multiplier:"
       font: small
-      y: 8
-      x: 6
+      y: 6
+      h_pos: left
     - type: text
-      text: "x%player|counted_multiplier%"
+      text: "x%experience_point_multiplier%"
       font: small
-      y: 8
+      y: 6
       h_pos: right
 
     - type: text
       text: "Total Bonus:"
       font: small
-      y: 15
-      x: 1
+      y: 12
+      h_pos: left
     - type: text
-      text: "%player|counted_bonus%"
+      text: "%jackpot_value%"
       number_grouping: true 
       font: small
-      y: 15
+      y: 12
+      h_pos: right
+
+  timer_update_previous_score_complete:
+    - type: text
+      text: "Exp. Points:"
+      font: small
+      y: 0
+      h_pos: left
+      persist_slide: true
+    - type: text
+      text: "%counted_experience_points_value%"
+      number_grouping: true 
+      font: small
+      y: 0
+      h_pos: right
+
+    - type: text
+      text: "Multiplier:"
+      font: small
+      y: 6
+      h_pos: left
+    - type: text
+      text: "x%experience_point_multiplier%"
+      font: small
+      y: 6
+      h_pos: right
+
+    - type: text
+      text: "Total Bonus:"
+      font: small
+      y: 12
+      h_pos: left
+    - type: text
+      text: "%jackpot_value%"
+      number_grouping: true 
+      font: small
+      y: 12
+      h_pos: right
+
+    - type: text
+      text: "Score:"
+      font: small
+      y: 18
+      h_pos: left
+    - type: text
+      text: "%previous_score%"
+      number_grouping: true 
+      font: small
+      y: 18
+      h_pos: right
+
+  timer_update_final_score_complete:
+    - type: text
+      text: "Exp. Points:"
+      font: small
+      y: 0
+      h_pos: left
+      persist_slide: true
+    - type: text
+      text: "%counted_experience_points_value%"
+      number_grouping: true 
+      font: small
+      y: 0
+      h_pos: right
+
+    - type: text
+      text: "Multiplier:"
+      font: small
+      y: 6
+      h_pos: left
+    - type: text
+      text: "x%experience_point_multiplier%"
+      font: small
+      y: 6
+      h_pos: right
+
+    - type: text
+      text: "Total Bonus:"
+      font: small
+      y: 12
+      h_pos: left
+    - type: text
+      text: "%jackpot_value%"
+      number_grouping: true 
+      font: small
+      y: 12
+      h_pos: right
+
+    - type: text
+      text: "Score:"
+      font: small
+      y: 18
+      h_pos: left
+    - type: text
+      text: "%previous_score%"
+      number_grouping: true 
+      font: small
+      y: 18
+      h_pos: right
+
+    - type: shape
+      shape: box
+      y: 24
+      width: 128
+      height: 1
+
+    - type: text
+      text: "Total:"
+      font: small
+      y: 26
+      h_pos: left
+    - type: text
+      text: "%score%"
+      number_grouping: true 
+      font: small
+      y: 26
       h_pos: right
 
 timers:
-  mode_cooldown:
-    end_value: 3
+  update_bonus:
+    end_value: 2
     control_events:
-      - event: bonus_update_bonus
+      - event: count_experience_points_complete
+        action: start
+
+  update_previous_score:
+    end_value: 2
+    control_events:
+      - event: timer_update_bonus_complete
+        action: start
+
+  update_final_score:
+    end_value: 2
+    control_events:
+      - event: timer_update_previous_score_complete
+        action: start
+
+  mode_cooldown:
+    end_value: 2
+    control_events:
+      - event: timer_update_final_score_complete
         action: start
