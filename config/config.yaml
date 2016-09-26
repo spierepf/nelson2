@@ -49,4 +49,5 @@ logic_blocks:
       disable_on_complete: true
 
 scriptlets:
-    carousel_mode_complete_handler.CarouselModeCompleteHandler
+  carousel_mode_complete_handler.CarouselModeCompleteHandler
+  player_experience_points_handler.PlayerExperiencePointsHandler

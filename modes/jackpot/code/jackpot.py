@@ -71,6 +71,7 @@ class jackpot(Mode):
     def target_hit(self, **kwargs):
         self.log.info("Jackpot Mode Target Hit: " + str(self.current_target))
         self.machine.events.post("jackpot_complete")
+        self.machine.events.post("award_jackpot")
 
     def target_missed(self, **kwargs):
         self.log.info("Jackpot Mode Target Missed: " + str(self.current_target))

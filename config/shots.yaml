@@ -35,3 +35,21 @@ shots:
       - l_spinner_arrow_f
       - l_spinner_arrow_g
       - l_spinner_arrow_h
+
+  upper_lane_1:
+    switch: s_upper_lane_1
+    led: l_upper_lane_1
+  upper_lane_2:
+    switch: s_upper_lane_2
+    led: l_upper_lane_2
+  upper_lane_3:
+    switch: s_upper_lane_3
+    led: l_upper_lane_3
+
+shot_groups:
+  upper_lanes:
+    shots: upper_lane_1, upper_lane_2, upper_lane_3
+    rotate_left_events: s_flipper_left_active
+    rotate_right_events: s_flipper_right_active
+    reset_events:
+      upper_lanes_default_lit_complete: 1s

@@ -24,7 +24,7 @@ slide_player:
       h_pos: right
       font: small
 
-  jackpot_complete:
+  award_jackpot:
     - type: text
       text: "JACKPOT!!!"
       font: weltron
@@ -37,3 +37,13 @@ slide_player:
       font: weltron
       size: 24
       expire: 3s
+
+scoring:
+  upper_lane_1_hit:
+    experience_points: 1
+
+  upper_lane_2_hit:
+    experience_points: 1
+
+  upper_lane_3_hit:
+    experience_points: 1
