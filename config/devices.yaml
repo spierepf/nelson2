@@ -42,7 +42,8 @@ ball_locks:
     balls_to_lock: 1
     lock_devices: kick_out_left, kick_out_right
     request_new_balls_to_pf: false
-    enable_events: timer_carousel_select_restart_lock_enable_complete
+    enable_events:
+      carousel_select_restart_lock_enable: 1s
     reset_events: mode_carousel_stopping
     disable_events: mode_carousel_stopped
 

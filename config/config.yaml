@@ -29,7 +29,7 @@ logic_blocks:
     jackpots_stopped:
       enable_events: ball_starting
       count_events: mode_jackpot_stopped
-      event_when_hit: start_carousel_select_restart_lock_enable_timer
+      event_when_hit: carousel_select_restart_lock_enable
       count_complete_value: 5
       reset_events: mode_wizard_stopped
       disable_on_complete: true
