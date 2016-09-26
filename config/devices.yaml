@@ -37,6 +37,15 @@ ball_devices:
     exit_count_delay: 3s
     tags: ball_add_live
 
+ball_locks:
+  carousel_select_restart_lock:
+    balls_to_lock: 1
+    lock_devices: kick_out_left, kick_out_right
+    request_new_balls_to_pf: false
+    enable_events: timer_carousel_select_restart_lock_enable_complete
+    reset_events: mode_carousel_stopping
+    disable_events: mode_carousel_stopped
+
 flippers:
   flipper_left:
     main_coil: c_flipper_left

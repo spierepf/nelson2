@@ -25,6 +25,15 @@ logic_blocks:
       count_complete_value: 5
       reset_events: mode_wizard_started
       disable_on_complete: true
+
+    jackpots_stopped:
+      enable_events: ball_starting
+      count_events: mode_jackpot_stopped
+      event_when_hit: start_carousel_select_restart_lock_enable_timer
+      count_complete_value: 5
+      reset_events: mode_wizard_stopped
+      disable_on_complete: true
+
   accruals:
     wizard_mode:
       enable_events: ball_starting

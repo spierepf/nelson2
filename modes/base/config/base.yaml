@@ -37,3 +37,10 @@ slide_player:
       font: weltron
       size: 24
       expire: 3s
+
+timers:
+  carousel_select_restart_lock_enable:
+    end_value: 1
+    control_events:
+      - event: start_carousel_select_restart_lock_enable_timer
+        action: start
