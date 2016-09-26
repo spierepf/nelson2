@@ -58,6 +58,7 @@ class PlayerExperiencePointsHandler(Scriptlet):
 
         self.machine.events.add_handler("award_jackpot", self.handle_award_jackpot)
         self.machine.events.add_handler("player_experience_points", self.handle_player_experience_points)
+        self.machine.events.add_handler("player_experience_points_multiplier", self.handle_player_experience_points_multiplier)
         self.machine.events.add_handler("upper_lanes_complete", self.handle_upper_lanes_complete)
 
     def fill_xp_bar(self, value):
@@ -79,6 +80,13 @@ class PlayerExperiencePointsHandler(Scriptlet):
 
     def handle_player_experience_points(self, **kwargs):
         self.fill_xp_bar(self.machine.game.player.experience_points)
+
+    def handle_player_experience_points_multiplier(self, **kwargs):
+        player = self.machine.game.player
+        for i in range(0, len(self.xp_multiplier_leds)):
+            c = [0, 255, 0] if i < player.experience_points_multiplier else [0, 0, 0]
+            for led in self.xp_multiplier_leds[i]:
+                led.color(c)
 
     def handle_upper_lanes_complete(self, **kwargs):
         player = self.machine.game.player
