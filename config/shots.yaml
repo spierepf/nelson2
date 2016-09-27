@@ -52,4 +52,12 @@ shot_groups:
     rotate_left_events: s_flipper_left_active
     rotate_right_events: s_flipper_right_active
     reset_events:
-      upper_lanes_default_lit_complete: 1s
+      upper_lanes_default_lit_complete
+
+light_player:
+  upper_lanes_default_lit_complete:
+    show: upper_lane_chase_blue
+    tocks_per_sec: 8
+    repeat: yes
+    num_repeats: 10
+    priority: 1
