@@ -349,18 +349,18 @@ class ColorFlash(Show):
 for leds in ["pop_bumper_left", "pop_bumper_right", "pop_bumper_bottom"]:
 	Chase(Leds(leds), 'red', [RED, BLACK, BLACK]).write()
 	RainbowChase(Leds(leds)).write()
-	# RainbowFade(Leds(leds)).write()
-	# ColorWave(Leds(leds), "red").write()
+	RainbowFade(Leds(leds)).write()
+	ColorWave(Leds(leds), "red").write()
 
 for leds in ["drop_target_centre_arrow", "spinner_arrow", "kick_out_left_arrow", "kick_out_right_arrow"]:
 	Chase(Leds(leds), 'red', [RED] + 22*[BLACK]).write()
 	RainbowChase(Leds(leds), 30).write()
-	# ColorFlash(Leds(leds), "white").write()
+	ColorFlash(Leds(leds), "white").write()
 
 for leds in ["xp_multiplier_2", "xp_multiplier_3", "xp_multiplier_5"]:
     RainbowChase(Leds(leds, 1)).write()
     RainbowChaseCCW(Leds(leds, 1)).write()
-    # RainbowFade(Leds(leds)).write()
+    RainbowFade(Leds(leds)).write()
 
 for leds in ["upper_lane", "drop_target_left", "drop_target_right"]:
     Chase(Leds(leds), 'blue', [BLUE, GRAY, GRAY]).write()
