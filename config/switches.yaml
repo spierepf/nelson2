@@ -50,11 +50,11 @@ switches:
 
   s_flipper_left:
     number: 21-2
-    tags: carousel_select_item
+    tags: left_flipper, carousel_select_item
 
   s_flipper_right:
     number: 21-0
-    tags: carousel_next_item
+    tags: right_flipper, carousel_next_item
 
   s_wizard_cheat:
     number: 21-3
