@@ -64,21 +64,22 @@ class PlayerExperiencePointsHandler(Scriptlet):
         self.machine.events.add_handler("player_experience_point_multiplier_index", self.handle_player_experience_point_multiplier_index)
         self.machine.events.add_handler("upper_lanes_complete", self.handle_upper_lanes_complete)
         self.machine.events.add_handler("count_experience_points", self.handle_count_experience_points)
+        self.machine.events.add_handler("ball_started", self.handle_ball_started)
 
         self.count_experience_points_timer = Timer(callback=self.count_experience_point, frequency=1.0/10.0)
 
+    def fill_bar(self, leds, fg_count, fg, bg=[0,0,0]):
+        for i in range(0, len(leds)):
+            leds[i].color(fg if i < fg_count else bg)
+
     def fill_xp_bar(self, value):
         if value < len(self.xp_bar_leds):
-            bg = [0,0,0]
-            fg = self.xp_bar_colours[0]
-            fg_count = value
+            self.fill_bar(self.xp_bar_leds, value, self.xp_bar_colours[0])
         else:
             bg = self.xp_bar_colours[int(math.floor(value / len(self.xp_bar_leds)) - 1) % len(self.xp_bar_colours)]
             fg = self.xp_bar_colours[int(math.floor(value / len(self.xp_bar_leds))) % len(self.xp_bar_colours)]
             fg_count = value % len(self.xp_bar_leds)
-
-        for i in range(0, len(self.xp_bar_leds)):
-            self.xp_bar_leds[i].color(fg if i < fg_count else bg)
+            self.fill_bar(self.xp_bar_leds, fg_count, fg, bg)
 
     def handle_award_jackpot(self, **kwargs):
         player = self.machine.game.player
@@ -120,12 +121,20 @@ class PlayerExperiencePointsHandler(Scriptlet):
 
     def handle_count_experience_points(self, **kwargs):
         self.log.info("Counting Experience Points")
+        player = self.machine.game.player
+        player.counted_experience_points = 0
+        player.counted_experience_points_value = 0
         self.machine.timing.add(self.count_experience_points_timer)
 
     def count_experience_point(self):
         player = self.machine.game.player
         player.counted_experience_points += 1
         player.counted_experience_points_value += self.experience_point_value
+        self.fill_xp_bar(player.experience_points - player.counted_experience_points)
         if player.counted_experience_points == player.experience_points:
             self.machine.timing.remove(self.count_experience_points_timer)
             self.machine.events.post("count_experience_points_complete")
+
+    def handle_ball_started(self, **kwargs):
+        self.handle_player_experience_points()
+        self.handle_player_experience_point_multiplier_index()
