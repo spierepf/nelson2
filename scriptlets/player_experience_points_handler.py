@@ -128,12 +128,13 @@ class PlayerExperiencePointsHandler(Scriptlet):
 
     def count_experience_point(self):
         player = self.machine.game.player
-        player.counted_experience_points += 1
-        player.counted_experience_points_value += self.experience_point_value
-        self.fill_xp_bar(player.experience_points - player.counted_experience_points)
         if player.counted_experience_points == player.experience_points:
             self.machine.timing.remove(self.count_experience_points_timer)
             self.machine.events.post("count_experience_points_complete")
+        else:
+            player.counted_experience_points += 1
+            player.counted_experience_points_value += self.experience_point_value
+            self.fill_xp_bar(player.experience_points - player.counted_experience_points)
 
     def handle_ball_started(self, **kwargs):
         self.handle_player_experience_points()
