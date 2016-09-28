@@ -5,7 +5,7 @@ class auction(Mode):
     def mode_init(self):
         self.timer = Timer(callback=self.tick, frequency=1.0/5.0)
 
-        self.player_leds = [
+        self.player_bid_leds = [
             self.machine.leds['l_player_bid_a'],
             self.machine.leds['l_player_bid_b'],
             self.machine.leds['l_player_bid_c'],
@@ -16,7 +16,7 @@ class auction(Mode):
             self.machine.leds['l_player_bid_h']
         ]
 
-        self.opponent_leds = [
+        self.opponent_bid_leds = [
             self.machine.leds['l_opponent_bid_a'],
             self.machine.leds['l_opponent_bid_b'],
             self.machine.leds['l_opponent_bid_c'],
@@ -31,17 +31,13 @@ class auction(Mode):
         self.machine.timing.add(self.timer)
 
     def mode_stop(self, **kwargs):
+        self.fill_bar(self.player_bid_leds, 0, [0,0,0])
+        self.fill_bar(self.opponent_bid_leds, 0, [0,0,0])
         self.machine.timing.remove(self.timer)
 
-    def show_fraction(self, fraction, leds, color):
-        count = len(leds) * fraction
-        for i in range(0, int(count)):
-            leds[i].color(color)
-        if fraction < 1.0:
-            partial = [int(i * (count % 1)) for i in color]
-            leds[int(count)].color(partial)
-            for i in range(int(count) + 1, len(leds)):
-                leds[i].color([0, 0, 0])
+    def fill_bar(self, leds, fg_count, fg, bg=[0,0,0]):
+        for i in range(0, len(leds)):
+            leds[i].color(fg if i < fg_count else bg)
 
     def tick(self, **kwargs):
         if self.machine.game == None:
@@ -51,9 +47,9 @@ class auction(Mode):
             player = self.machine.game.player
 
             max_player_bid = float(self.config["logic_blocks"]["counters"]["player_bid"]["count_complete_value"])
-            fraction = min(1.0, player["player_bid_count"] / max_player_bid)
-            self.show_fraction(fraction, self.player_leds, [0, 255, 0])
+            fg_count = int(len(self.player_bid_leds) * min(1.0, player["player_bid_count"] / max_player_bid))
+            self.fill_bar(self.player_bid_leds, fg_count, [0, 255, 0])
 
             max_opponent_bid = float(self.config["timers"]["opponent_bid"]["end_value"])
-            fraction = min(1.0, player["auction_opponent_bid_tick"] / max_opponent_bid)
-            self.show_fraction(fraction, self.opponent_leds, [255, 0, 255])
+            fg_count = int(len(self.opponent_bid_leds) * min(1.0, player["auction_opponent_bid_tick"] / max_opponent_bid))
+            self.fill_bar(self.opponent_bid_leds, fg_count, [255, 0, 255])
