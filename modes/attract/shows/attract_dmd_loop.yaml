@@ -1,0 +1,241 @@
+- tocks: 4
+  display:
+  - type: Movie
+    movie: nyancat
+    repeat: True
+
+- tocks: 3
+  display:
+    - type: image
+      image: hms
+      h_pos: left
+    - type: text
+      text: 'AND'
+      font: small
+    - type: image
+      image: halcon
+      h_pos: right
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top
+
+- tocks: 3
+  display:
+    - type: text
+      text: PROUDLY PRESENT
+      transition:
+        type: move_out
+        duration: 1s
+        direction: left
+
+- tocks: 3
+  display:
+    - type: text
+      text: Nelson
+      font: weltron
+      size: 25
+      transition:
+        type: move_out
+        duration: 1s
+        direction: left
+
+- tocks: 3
+  display:
+    - type: text
+      text: SPECIAL THANKS TO
+      transition:
+        type: move_out
+        duration: 1s
+        direction: left
+
+- tocks: 3
+  display:
+    - type: image
+      image: great_pinball
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top
+
+- tocks: 3
+  display:
+    - type: image
+      image: cpr
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top
+
+- tocks: 3
+  display:
+    - type: text
+      text: 'AND'
+- tocks: 3
+  display:
+    - type: shape
+      shape: box
+      thickness: 0
+      width: 128
+      height: 32
+      color: 07213a
+    - type: image
+      image: nautel
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top
+
+- tocks: 3
+  display:
+    - type: Text
+      text: PRESS START
+      decorators:
+        type: blink
+        repeats: -1
+        on_secs: .5
+        off_secs: .5
+    - type: Text
+      text: FREE PLAY
+      color: 00ff00
+      v_pos: bottom
+      font: small
+      transition:
+        type: move_in
+        duration: 1s
+        direction: right
+
+- tocks: 3
+  display:
+    - type: text
+      text: "%machine|player1_score%"
+      number_grouping: true
+      min_digits: 2
+      font: small
+      v_pos: top
+      h_pos: right
+      x: -80
+      y: 1
+    - type: text
+      text: "%machine|player2_score%"
+      number_grouping: true
+      min_digits: 2
+      font: small
+      v_pos: top
+      h_pos: right
+      x: -1
+      y: 1
+    - type: text
+      text: "%machine|player3_score%"
+      number_grouping: true
+      min_digits: 2
+      font: small
+      v_pos: bottom
+      h_pos: right
+      x: -80
+      y: -10
+    - type: text
+      text: "%machine|player4_score%"
+      number_grouping: true
+      min_digits: 2
+      font: small
+      v_pos: bottom
+      h_pos: right
+      x: -1
+      y: -10
+    - type: Text
+      text: FREE PLAY
+      color: 00ff00
+      v_pos: bottom
+      font: small
+      transition:
+        type: move_in
+        duration: 1s
+        direction: right
+
+- tocks: 2
+  display:
+    - type: text
+      text: "%machine|score1_label%"
+      v_pos: top
+      y: 4
+    - type: text
+      text: "%machine|score1_name% %machine|score1_value%"
+      v_pos: bottom
+      number_grouping: true
+      y: -3
+    - type: shape
+      shape: box
+      width: 128
+      height: 32
+    - type: shape
+      shape: box
+      width: 126
+      height: 30
+      shade: 8
+
+- tocks: 2
+  display:
+    - type: text
+      text: "1. %machine|score2_name% %machine|score2_value%"
+      v_pos: top
+      h_pos: left
+      number_grouping: true
+      y: 3
+      x: 12
+    - type: text
+      text: "2. %machine|score3_name% %machine|score3_value%"
+      v_pos: bottom
+      h_pos: left
+      number_grouping: true
+      y: -3
+      x: 10
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top      
+
+- tocks: 2
+  display:
+    - type: text
+      text: "3. %machine|score4_name% %machine|score4_value%"
+      v_pos: top
+      h_pos: left
+      number_grouping: true
+      y: 3
+      x: 12
+    - type: text
+      text: "4. %machine|score5_name% %machine|score5_value%"
+      v_pos: bottom
+      h_pos: left
+      number_grouping: true
+      y: -3
+      x: 10
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top      
+
+- tocks: 3
+  display:
+    - type: Text
+      text: SAY NO TO SLURM
+      color: ff0000
+      transition:
+        type: move_in
+        duration: 1s
+        direction: top
+    - type: shape
+      shape: box
+      width: 128
+      height: 32
+
+- tocks: 5
+  display:
+    - type: image
+      image: qr_code
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top
+ 
