@@ -1,8 +1,9 @@
 # config_version=3
 
 mode:
-  start_events: ball_starting
   priority: 100
+  code: base.base
+  start_events: ball_starting
 
 ball_saves:
   default:
@@ -48,6 +49,14 @@ slide_player:
       font: weltron
       size: 24
       expire: 3s
+
+  extra_ball_awarded:
+    - type: text
+      text: "EXTRA BALL!"
+      font: weltron
+      size: 24
+      expire: 5s
+
 
   mode_wizard_started:
     - type: text
