@@ -44,7 +44,7 @@ class base(Mode):
             leds[i].color(fg if i < fg_count else bg)
 
     def player_base_ball_save_tick(self, **kwargs):
-        fill_bar(self.ball_save_leds, kwargs['value'], [255,0,0])
+        self.fill_bar(self.ball_save_leds, kwargs['value'], [255,0,0])
 
     def player_score_handler(self, **kwargs):
         if kwargs['prev_value'] < self.extra_ball_threshold and kwargs['value'] > self.extra_ball_threshold:
