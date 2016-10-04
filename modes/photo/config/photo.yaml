@@ -6,6 +6,26 @@ mode:
   start_events: photo_selected
   stop_events: photo_complete, photo_failed
 
+sound_player:
+  photo started:
+    sound: photo_started
+    start_events: mode_photo_started
+
+  hit me 1:
+    sound: ouch_hurt
+    start_events: drop_target_centre_1_hit_me_1_active_hit
+
+  hit me 2:
+    sound: ouch_hurt
+    start_events: drop_target_centre_2_hit_me_2_active_hit
+
+  hit me 3:
+    sound: lets_get_photo
+    start_events: drop_target_centre_3_hit_me_3_active_hit
+
+  hit me 4:
+    sound: look_this_way
+    start_events: fixed_target_hit_me_4_active_hit
 
 shot_profiles:
   hit_me_1:

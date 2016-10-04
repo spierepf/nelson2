@@ -1,0 +1,6 @@
+# config_version=3
+
+sound_player:
+  chaos control:
+    sound: chaos_control
+    start_events: mode_game_started

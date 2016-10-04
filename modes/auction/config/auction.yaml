@@ -6,6 +6,11 @@ mode:
   start_events: auction_selected
   stop_events: auction_complete, auction_failed
 
+sound_player:
+  auction started:
+    sound: auction_started
+    start_events: mode_auction_started
+
 shots:
   auction_collect:
     switch: s_main_stage_entry

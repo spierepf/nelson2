@@ -6,6 +6,11 @@ mode:
   start_events: gaming_selected
   stop_events: gaming_complete, gaming_failed
 
+sound_player:
+  gaming started:
+    sound: gaming_started
+    start_events: mode_gaming_started
+  
 shot_profiles:
   hit_me:
     states:

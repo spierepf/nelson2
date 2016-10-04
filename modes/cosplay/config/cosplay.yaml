@@ -6,6 +6,27 @@ mode:
   start_events: cosplay_selected
   stop_events: cosplay_complete, cosplay_failed
 
+sound_player:
+  cosplay started:
+    sound: cosplay_started
+    start_events: mode_cosplay_started
+
+  drop targets:
+    sound: cosplay_starting
+    start_events: drop_target_bank_right_down
+
+  pose 1:
+    sound: great_job_costume
+    start_events: main_stage_entry_1_hit_me_active_hit
+
+  pose 2:
+    sound: great_job_costume
+    start_events: main_stage_entry_2_hit_me_active_hit
+
+  collect trophy:
+    sound: great_job_costume
+    start_events: main_stage_entry_3_hit_me_active_hit
+
 shot_profiles:
   hit_me:
     states:

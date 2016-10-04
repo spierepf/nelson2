@@ -6,6 +6,23 @@ mode:
   start_events: stargazer_selected
   stop_events: stargazer_complete, stargazer_failed
 
+sound_player:
+  stargazer started:
+    sound: stargazer_started
+    start_events: mode_stargazer_started
+
+  first shoe:
+    sound: thats_one
+    start_events: player_stargazer_step
+
+  second shoe:
+    sound: spin_disco
+    start_events: stargazer_kick_outs_complete
+
+  multiball is a lie:
+    sound: multiball_is_lie
+    start_events: stargazer_complete
+
 shot_profiles:
   hit_me:
     states:

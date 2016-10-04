@@ -2,6 +2,7 @@
 
 config:
   - hardware.yaml
+  - sound_system.yaml
   - switches.yaml
   - coils.yaml
   - devices.yaml
@@ -51,3 +52,11 @@ logic_blocks:
 scriptlets:
   carousel_mode_complete_handler.CarouselModeCompleteHandler
   player_experience_points_handler.PlayerExperiencePointsHandler
+
+bcp:
+  connections:
+    local_display:
+      host: localhost
+      port: 5050
+      connection_attempts: 5
+      require_connection: yes

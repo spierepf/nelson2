@@ -1,0 +1,32 @@
+#config_version=3
+
+sound_system:
+  tracks:
+    voice:
+      volume: 1
+      priority: 2
+      simultaneous_sounds: 1
+      preload: yes
+    sfx:
+      volume: 1
+      priority: 1
+      preload: yes
+      simultaneous_sounds: 7
+  stream:
+    name: music
+    priority: 0
+
+sound_player:
+  waiting to plunge loop:
+    sound: waiting to plunge loop
+    start_events: balldevice_plunger_lane_ball_enter
+    stop_events: balldevice_plunger_lane_ball_left
+    loops: -1
+    volume: 0.05
+  background music:
+    start_events: balldevice_plunger_lane_ball_left
+    stop_events: balldevice_plunger_lane_ball_enter, game_ended
+    sound: base background music
+    loops: -1
+    volume: 0.05
+

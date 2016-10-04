@@ -6,6 +6,23 @@ mode:
   start_events: vendor_selected
   stop_events: vendor_complete, vendor_failed
 
+sound_player:
+  vendor started:
+    sound: vendor_started
+    start_events: mode_vendor_started
+
+  pop bumper left complete:
+    sound: great_shooting
+    start_events: logicblock_pop_bumper_left_hits_complete
+
+  pop bumper right complete:
+    sound: great_shooting
+    start_events: logicblock_pop_bumper_right_hits_complete
+
+  pop bumper bottom complete:
+    sound: great_shooting
+    start_events: logicblock_pop_bumper_bottom_hits_complete
+
 shots:
   pop_bumper_left:
     switch: s_pop_bumper_left

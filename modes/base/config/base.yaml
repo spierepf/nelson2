@@ -8,7 +8,7 @@ mode:
 ball_saves:
   default:
     active_time: 1s
-    enable_events: balldevice_plungerLane_ball_eject_success
+    enable_events: balldevice_plunger_lane_ball_left
     balls_to_save: 1
     debug: yes
     auto_launch: no
@@ -22,6 +22,61 @@ timers:
     control_events:
       - event: ball_save_default_enabled
         action: start
+
+sound_player:
+  lets go:
+    sound: lets_go
+    start_events: mode_base_started
+
+  hey wait for me:
+    sound: hey_wait_for_me
+    start_events: balldevice_plunger_lane_ball_left
+
+  gaming highlighted:
+    sound: gaming_highlighted
+    start_events: gaming_highlighted
+    stop_events: gaming_unhighlighted
+
+  vendor highlighted:
+    sound: vendor_highlighted
+    start_events: vendor_highlighted
+    stop_events: vendor_unhighlighted
+
+  auction highlighted:
+    sound: auction_highlighted
+    start_events: auction_highlighted
+    stop_events: auction_unhighlighted
+
+  photo highlighted:
+    sound: photo_highlighted
+    start_events: photo_highlighted
+    stop_events: photo_unhighlighted
+
+  cosplay highlighted:
+    sound: cosplay_highlighted
+    start_events: cosplay_highlighted
+    stop_events: cosplay_unhighlighted
+
+  stargazer highlighted:
+    sound: stargazer_highlighted
+    start_events: stargazer_highlighted
+    stop_events: stargazer_unhighlighted
+
+  jackpot enabled:
+    sound: jackpot_enabled
+    start_events: jackpot_enabled
+
+  jackpot:
+    sound: jackpot
+    start_events: award_jackpot
+
+  wizard enabled:
+    sound: wizard_enabled
+    start_events: mode_wizard_started
+
+  extra ball:
+    sound: extra_ball_achieved
+    start_events: extra_ball_awarded
 
 slide_player:
   mode_base_started:
