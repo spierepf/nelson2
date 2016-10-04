@@ -40,23 +40,23 @@ leds:
     l_pop_bumper_left_k: { number: 34 }
     l_pop_bumper_left_l: { number: 35 }
     
-    l_upper_lane_1: { number: 36 }
-    l_upper_lane_2: { number: 37 }
-    l_upper_lane_3: { number: 38 }
+    l_upper_lane_1: { number: 192 }
+    l_upper_lane_2: { number: 193 }
+    l_upper_lane_3: { number: 194 }
     
-    l_main_stage_edge_a: { number: 39 }
-    l_main_stage_edge_b: { number: 40 }
-    l_main_stage_edge_c: { number: 41 }
-    l_main_stage_edge_d: { number: 42 }
-    l_main_stage_edge_e: { number: 43 }
-    l_main_stage_edge_f: { number: 44 }
-    l_main_stage_edge_g: { number: 45 }
-    l_main_stage_edge_h: { number: 46 }
-    l_main_stage_edge_i: { number: 47 }
-    l_main_stage_edge_j: { number: 48 }
-    l_main_stage_edge_k: { number: 49 }
-    l_main_stage_edge_l: { number: 50 }
-    l_main_stage_edge_m: { number: 51 }
+    l_main_stage_edge_a: { number: 195 }
+    l_main_stage_edge_b: { number: 196 }
+    l_main_stage_edge_c: { number: 197 }
+    l_main_stage_edge_d: { number: 198 }
+    l_main_stage_edge_e: { number: 199 }
+    l_main_stage_edge_f: { number: 200 }
+    l_main_stage_edge_g: { number: 201 }
+    l_main_stage_edge_h: { number: 202 }
+    l_main_stage_edge_i: { number: 203 }
+    l_main_stage_edge_j: { number: 204 }
+    l_main_stage_edge_k: { number: 205 }
+    l_main_stage_edge_l: { number: 206 }
+    l_main_stage_edge_m: { number: 207 }
     
     l_main_stage_arrow_1_a: { number: 511 }
     l_main_stage_arrow_1_b: { number: 511 }
