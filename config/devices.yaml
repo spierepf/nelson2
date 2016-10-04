@@ -44,8 +44,8 @@ ball_locks:
     request_new_balls_to_pf: false
     enable_events:
       carousel_select_restart_lock_enable: 1s
-    reset_events: mode_carousel_stopping
-    disable_events: mode_carousel_stopped
+    reset_events: mode_carousel_select_stopping
+    disable_events: mode_carousel_select_stopped
 
 flippers:
   flipper_left:
