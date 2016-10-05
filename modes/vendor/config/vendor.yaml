@@ -11,17 +11,17 @@ sound_player:
     sound: vendor_started
     start_events: mode_vendor_started
 
-  pop bumper left complete:
-    sound: great_shooting
-    start_events: logicblock_pop_bumper_left_hits_complete
+  look with your eyes:
+    sound: little metal
+    start_events: play_look_with_your_eyes
 
-  pop bumper right complete:
-    sound: great_shooting
-    start_events: logicblock_pop_bumper_right_hits_complete
+  you break it:
+    sound: medium metal
+    start_events: play_you_break_it
 
-  pop bumper bottom complete:
+  great shooting:
     sound: great_shooting
-    start_events: logicblock_pop_bumper_bottom_hits_complete
+    start_events: play_great_shooting
 
 shots:
   pop_bumper_left:
@@ -62,3 +62,25 @@ logic_blocks:
       direction: up
       reset_events: mode_vendor_stopping
       events_when_complete: vendor_complete, carousel_mode_complete
+
+  accruals:
+    look_with_your_eyes:
+      events:
+        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
+      events_when_complete:
+        play_look_with_your_eyes
+
+    you_break_it:
+      events:
+        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
+        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
+      events_when_complete:
+        play_you_break_it
+
+    great_shooting:
+      events:
+        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
+        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
+        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
+      events_when_complete:
+        play_great_shooting
