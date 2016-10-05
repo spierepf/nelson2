@@ -13,7 +13,7 @@ sound_player:
 
   first shoe:
     sound: thats_one
-    start_events: player_stargazer_step
+    start_events: play_thats_one
 
   second shoe:
     sound: spin_disco
@@ -50,6 +50,13 @@ shot_groups:
     reset_events: mode_stargazer_stopping
 
 logic_blocks:
+  accruals:
+    thats_one:
+      events:
+        - kick_out_left_hit_me_active_hit, kick_out_right_hit_me_active_hit
+      events_when_complete:
+        play_thats_one
+
   sequences:
     stargazer:
       events: spinner_hit_me_active_hit
