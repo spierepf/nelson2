@@ -62,6 +62,10 @@ sound_player:
     start_events: stargazer_highlighted
     stop_events: stargazer_unhighlighted
 
+  gaming started:
+    sound: gaming_started
+    start_events: mode_gaming_started
+
   jackpot enabled:
     sound: jackpot_enabled
     start_events: jackpot_enabled
