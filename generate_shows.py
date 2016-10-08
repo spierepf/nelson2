@@ -325,10 +325,24 @@ class ColorWave(Show):
 
     def show(self):
         color = COLORS[self.color_name]
-    	return gen_show(self.leds, replicate(wave(color, self.length), len(self.leds)), len(self.leds))
+        return gen_show(self.leds, replicate(wave(color, self.length), len(self.leds)), len(self.leds))
     
     def name(self):
         return str(self.leds) + "_wave_" + self.color_name
+
+'''*************************************************************************************************'''
+
+class Solid(Show):
+    def __init__(self, leds, color_name):
+        super(Solid, self).__init__(leds)
+        self.color_name = color_name
+
+    def show(self):
+        color = COLORS[self.color_name]
+        return gen_show(self.leds, [color, color])
+    
+    def name(self):
+        return str(self.leds) + "_solid_" + self.color_name
 
 '''*************************************************************************************************'''
 
@@ -378,3 +392,4 @@ Chase(Leds("ball_save"), "red", [RED] + 18*[BLACK]).write()
 for leds in ["gaming_mode", "vendor_mode", "auction_mode", "photo_mode", "cosplay_mode", "stargazer_mode"]:
     for color in ["red", "orange", "yellow", "green", "blue", "magenta"]:
         ColorWave(Leds(leds), color).write()
+        Solid(Leds(leds), color).write()
