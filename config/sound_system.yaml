@@ -12,6 +12,7 @@ sound_system:
       priority: 1
       preload: yes
       simultaneous_sounds: 7
+      buffer: 256
   stream:
     name: music
     priority: 0
@@ -22,11 +23,11 @@ sound_player:
     start_events: balldevice_plunger_lane_ball_enter
     stop_events: balldevice_plunger_lane_ball_left
     loops: -1
-    volume: 0.5
+    volume: 0.005
   background music:
     start_events: balldevice_plunger_lane_ball_left
     stop_events: balldevice_plunger_lane_ball_enter, game_ended
     sound: base background music
     loops: -1
-    volume: 0.5
+    volume: 0.005
 

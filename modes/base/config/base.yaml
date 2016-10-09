@@ -82,6 +82,50 @@ sound_player:
     sound: extra_ball_achieved
     start_events: extra_ball_awarded
 
+  pop bumper left:
+    sound: little metal
+    start_events: pop_bumper_left_hit
+
+  pop bumper right:
+    sound: medium metal
+    start_events: pop_bumper_right_hit
+
+  pop bumper bottom:
+    sound: big metal
+    start_events: pop_bumper_bottom_hit
+
+  lanes:
+    sound: fail
+    start_events: upper_lane_1_hit, upper_lane_2_hit, upper_lane_3_hit
+
+  kickouts:
+    sound: explosion
+    start_events: balldevice_kick_out_left_ball_enter, balldevice_kick_out_right_ball_enter
+
+  targets:
+    sound: standup hit unlit
+    start_events: drop_target_left_1_down, drop_target_left_2_down, drop_target_left_3_down, drop_target_centre_1_down, drop_target_centre_2_down, drop_target_centre_3_down, drop_target_right_1_down, drop_target_right_2_down, drop_target_right_3_down, fixed_target_hit
+
+  slingshots:
+    sound: tiny laser
+    start_events: slingshot_left_hit, slingshot_right_hit, spinner_hit
+
+  slingshots:
+    sound: tiny laser
+    start_events: spinner_hit
+
+  outlanes:
+    sound: bad_feeling
+    start_events: outlane_left_hit, outlane_right_hit
+
+  inlanes:
+    sound: little swoosh
+    start_events: inlane_left_hit, inlane_right_hit
+    
+  drain:
+    sound: sad_trombone
+    start_events: balldevice_drain_ball_enter
+
 slide_player:
   mode_base_started:
     - type: text
@@ -124,12 +168,91 @@ slide_player:
       size: 24
       expire: 3s
 
+light_player:
+  carousel_select_restart_lock_enable:
+    - show: kick_out_left_arrow_chase_rainbow
+      repeat: yes
+    - show: kick_out_right_arrow_chase_rainbow
+      repeat: yes
+  mode_carousel_select_starting:
+    - show: kick_out_left_arrow_chase_rainbow
+      action: stop
+    - show: kick_out_right_arrow_chase_rainbow
+      action: stop
+  pop_bumper_left_hit:
+    - show: pop_bumper_left_solid_white
+  pop_bumper_right_hit:
+    - show: pop_bumper_right_solid_white
+  pop_bumper_bottom_hit:
+    - show: pop_bumper_bottom_solid_white
+
 scoring:
   upper_lane_1_hit:
+    score: 100
     experience_points: 1
 
   upper_lane_2_hit:
+    score: 100
     experience_points: 1
 
   upper_lane_3_hit:
+    score: 100
     experience_points: 1
+
+  pop_bumper_left_hit:
+    score: 10
+
+  pop_bumper_right_hit:
+    score: 10
+
+  pop_bumper_bottom_hit:
+    score: 10
+
+  drop_target_left_1_down:
+    score: 100
+  drop_target_left_2_down:
+    score: 100
+  drop_target_left_3_down:
+    score: 100
+
+  drop_target_right_1_down:
+    score: 100
+  drop_target_right_2_down:
+    score: 100
+  drop_target_right_3_down:
+    score: 100
+
+  drop_target_centre_1_down:
+    score: 1000
+  drop_target_centre_2_down:
+    score: 1000
+  drop_target_centre_2_down:
+    score: 1000
+
+  fixed_target_hit:
+    score: 5000
+
+  balldevice_kick_out_right_ball_enter:
+    score: 1000
+  balldevice_kick_out_left_ball_enter:
+    score: 1000
+
+  slingshot_left_hit:
+    score: 10
+  slingshot_right_hit:
+    score: 10
+
+  outlane_left_hit:
+    score: 1000
+  inlane_left_hit:
+    score: 100
+  inlane_right_hit:
+    score: 100
+  outlane_right_hit:
+    score: 1000
+
+  spinner_hit:
+    score: 100
+
+  main_stage_entry_hit:
+    score: 1000

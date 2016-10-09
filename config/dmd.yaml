@@ -1,7 +1,11 @@
 #config_version=3
 
+smartmatrix:
+    port: /dev/ttyACM0
+    use_separate_thread: yes
+
 dmd:
-    physical: no
+    physical: yes
     width: 128
     height: 32
     type: color

@@ -16,18 +16,12 @@ shot_profiles:
 
 shots:
   drop_target_left_1:
-    switch: s_drop_target_left_1
-    led: l_drop_target_left_1
     profile: hit_me
     reset_events: mode_gaming_stopping
   drop_target_left_2:
-    switch: s_drop_target_left_2
-    led: l_drop_target_left_2
     profile: hit_me
     reset_events: mode_gaming_stopping
   drop_target_left_3:
-    switch: s_drop_target_left_3
-    led: l_drop_target_left_3
     profile: hit_me
     reset_events: mode_gaming_stopping
   kick_out_left:
@@ -62,3 +56,27 @@ slide_player:
     - type: text
       text: "ROLL THE DICE!"
       expire: 3s
+
+sound_player:
+  bested my gaming bots:
+    sound: bested_mcnabs
+    start_events: drop_target_bank_left_down
+  first roll:
+    sound: save_vs_con_crud
+    start_events: kick_out_left_hit
+  second roll:
+    sound: curses_foiled
+    start_events: kick_out_right_hit
+
+scoring:
+  drop_target_bank_left_down:
+    score: 10000
+
+  kick_out_left_hit:
+    score: 20000
+
+  kick_out_right_hit:
+    score: 20000
+
+  gaming_complete:
+    score: 100000

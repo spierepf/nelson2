@@ -1,6 +1,15 @@
 # config_version=3
 
 shots:
+  pop_bumper_left:
+    switch: s_pop_bumper_left
+
+  pop_bumper_right:
+    switch: s_pop_bumper_right
+
+  pop_bumper_bottom:
+    switch: s_pop_bumper_bottom
+
   kick_out_left:
     switch: s_kick_out_left
     led:
@@ -45,6 +54,58 @@ shots:
   upper_lane_3:
     switch: s_upper_lane_3
     led: l_upper_lane_3
+
+  outlane_right:
+    switch: s_outlane_right
+    led: l_outlane_right_a, l_outlane_right_b, l_outlane_right_c
+  inlane_right:
+    switch: s_inlane_right
+    led: l_inlane_right_a, l_inlane_right_b, l_inlane_right_c
+
+  outlane_left:
+    switch: s_outlane_left
+    led: l_outlane_left_a, l_outlane_left_b, l_outlane_left_c
+  inlane_left:
+    switch: s_inlane_left
+    led: l_inlane_left_a, l_inlane_left_b, l_inlane_left_c
+
+  drop_target_left_1:
+    switch: s_drop_target_left_1
+    led: l_drop_target_left_1
+  drop_target_left_2:
+    switch: s_drop_target_left_2
+    led: l_drop_target_left_2
+  drop_target_left_3:
+    switch: s_drop_target_left_3
+    led: l_drop_target_left_3
+
+  drop_target_centre_1:
+    switch: s_drop_target_centre_1
+  drop_target_centre_2:
+    switch: s_drop_target_centre_2
+  drop_target_centre_3:
+    switch: s_drop_target_centre_3
+
+  drop_target_right_1:
+    switch: s_drop_target_right_1
+    led: l_drop_target_right_1
+  drop_target_right_2:
+    switch: s_drop_target_right_2
+    led: l_drop_target_right_2
+  drop_target_right_3:
+    switch: s_drop_target_right_3
+    led: l_drop_target_right_3
+
+  fixed_target:
+    switch: s_fixed_target
+
+  slingshot_left:
+    switch: s_slingshot_left
+  slingshot_right:
+    switch: s_slingshot_right
+
+  main_stage_entry:
+    switch: s_main_stage_entry
 
 shot_groups:
   upper_lanes:

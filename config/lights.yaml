@@ -58,33 +58,6 @@ leds:
     l_main_stage_edge_l: { number: 206 }
     l_main_stage_edge_m: { number: 207 }
     
-    l_main_stage_arrow_1_a: { number: 511 }
-    l_main_stage_arrow_1_b: { number: 511 }
-    l_main_stage_arrow_1_c: { number: 511 }
-    l_main_stage_arrow_1_d: { number: 511 }
-    l_main_stage_arrow_1_e: { number: 511 }
-    l_main_stage_arrow_1_f: { number: 511 }
-    l_main_stage_arrow_1_g: { number: 511 }
-    l_main_stage_arrow_1_h: { number: 511 }
-    
-    l_main_stage_arrow_2_a: { number: 511 }
-    l_main_stage_arrow_2_b: { number: 511 }
-    l_main_stage_arrow_2_c: { number: 511 }
-    l_main_stage_arrow_2_d: { number: 511 }
-    l_main_stage_arrow_2_e: { number: 511 }
-    l_main_stage_arrow_2_f: { number: 511 }
-    l_main_stage_arrow_2_g: { number: 511 }
-    l_main_stage_arrow_2_h: { number: 511 }
-
-    l_main_stage_arrow_3_a: { number: 511 }
-    l_main_stage_arrow_3_b: { number: 511 }
-    l_main_stage_arrow_3_c: { number: 511 }
-    l_main_stage_arrow_3_d: { number: 511 }
-    l_main_stage_arrow_3_e: { number: 511 }
-    l_main_stage_arrow_3_f: { number: 511 }
-    l_main_stage_arrow_3_g: { number: 511 }
-    l_main_stage_arrow_3_h: { number: 511 }
-        
     l_xp_multiplier_2_a: { number: 91 }
     l_xp_multiplier_2_b: { number: 92 }
     l_xp_multiplier_2_c: { number: 93 }
@@ -231,10 +204,48 @@ leds:
     l_multiball_g: { number: 511 }
     l_multiball_h: { number: 511 }
     
-    l_left_outlane: { number: 511 }
-    l_left_inlane: { number: 511 }
-    l_right_inlane: { number: 511 }
-    l_right_outlane: { number: 511 }
+    l_main_stage_arrow_1_a: { number: 343 }
+    l_main_stage_arrow_1_b: { number: 342 }
+    l_main_stage_arrow_1_c: { number: 341 }
+    l_main_stage_arrow_1_d: { number: 340 }
+    l_main_stage_arrow_1_e: { number: 339 }
+    l_main_stage_arrow_1_f: { number: 338 }
+    l_main_stage_arrow_1_g: { number: 337 }
+    l_main_stage_arrow_1_h: { number: 336 }
+    
+    l_main_stage_arrow_2_a: { number: 335 }
+    l_main_stage_arrow_2_b: { number: 334 }
+    l_main_stage_arrow_2_c: { number: 333 }
+    l_main_stage_arrow_2_d: { number: 332 }
+    l_main_stage_arrow_2_e: { number: 331 }
+    l_main_stage_arrow_2_f: { number: 330 }
+    l_main_stage_arrow_2_g: { number: 329 }
+    l_main_stage_arrow_2_h: { number: 328 }
+
+    l_main_stage_arrow_3_a: { number: 327 }
+    l_main_stage_arrow_3_b: { number: 326 }
+    l_main_stage_arrow_3_c: { number: 325 }
+    l_main_stage_arrow_3_d: { number: 324 }
+    l_main_stage_arrow_3_e: { number: 323 }
+    l_main_stage_arrow_3_f: { number: 322 }
+    l_main_stage_arrow_3_g: { number: 321 }
+    l_main_stage_arrow_3_h: { number: 320 }
+
+    l_outlane_right_a: { number: 511 }
+    l_outlane_right_b: { number: 511 }
+    l_outlane_right_c: { number: 511 }
+    
+    l_inlane_right_a: { number: 511 }
+    l_inlane_right_b: { number: 511 }
+    l_inlane_right_c: { number: 511 }
+    
+    l_outlane_left_a: { number: 344 }
+    l_outlane_left_b: { number: 345 }
+    l_outlane_left_c: { number: 346 }
+    
+    l_inlane_left_a: { number: 347 }
+    l_inlane_left_b: { number: 348 }
+    l_inlane_left_c: { number: 349 }
     
     l_ball_save_a: { number: 384 }
     l_ball_save_b: { number: 385 }

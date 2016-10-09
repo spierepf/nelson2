@@ -361,15 +361,16 @@ class ColorFlash(Show):
 '''*************************************************************************************************'''
 
 for leds in ["pop_bumper_left", "pop_bumper_right", "pop_bumper_bottom"]:
-	Chase(Leds(leds), 'red', [RED, BLACK, BLACK]).write()
-	RainbowChase(Leds(leds)).write()
-	RainbowFade(Leds(leds)).write()
-	ColorWave(Leds(leds), "red").write()
+    Chase(Leds(leds), 'red', [RED, BLACK, BLACK]).write()
+    RainbowChase(Leds(leds)).write()
+    RainbowFade(Leds(leds)).write()
+    ColorWave(Leds(leds), "red").write()
+    Solid(Leds(leds), "white").write()
 
 for leds in ["drop_target_centre_arrow", "spinner_arrow", "kick_out_left_arrow", "kick_out_right_arrow"]:
-	Chase(Leds(leds), 'red', [RED] + 22*[BLACK]).write()
-	RainbowChase(Leds(leds), 30).write()
-	ColorFlash(Leds(leds), "white").write()
+    Chase(Leds(leds), 'red', [RED] + 22*[BLACK]).write()
+    RainbowChase(Leds(leds), 30).write()
+    ColorFlash(Leds(leds), "white").write()
 
 for leds in ["xp_multiplier_2", "xp_multiplier_3", "xp_multiplier_5"]:
     RainbowChase(Leds(leds, 1)).write()
@@ -386,6 +387,7 @@ RainbowChase(Leds("player_bid")).write()
 RainbowChase(Leds("opponent_bid")).write()
 RainbowChase(Leds("xp_bar")).write()
 RainbowChase(Leds("ball_save")).write()
+RainbowChase(Leds("main_stage_arrow")).write()
 
 Chase(Leds("ball_save"), "red", [RED] + 18*[BLACK]).write()
 
@@ -393,3 +395,7 @@ for leds in ["gaming_mode", "vendor_mode", "auction_mode", "photo_mode", "cospla
     for color in ["red", "orange", "yellow", "green", "blue", "magenta"]:
         ColorWave(Leds(leds), color).write()
         Solid(Leds(leds), color).write()
+
+for leds in ["outlane_left", "inlane_left", "inlane_right", "outlane_right"]:
+    RainbowChase(Leds(leds)).write()
+    RainbowFade(Leds(leds)).write()

@@ -2,4 +2,5 @@
 
 hardware:
   platform: kingpyn_platform
+  dmd: smartmatrix
   leds: fadecandy

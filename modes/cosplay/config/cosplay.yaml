@@ -37,18 +37,12 @@ shot_profiles:
 
 shots:
   drop_target_right_1:
-    switch: s_drop_target_right_1
-    led: l_drop_target_right_1
     profile: hit_me
     reset_events: mode_cosplay_stopping
   drop_target_right_2:
-    switch: s_drop_target_right_2
-    led: l_drop_target_right_2
     profile: hit_me
     reset_events: mode_cosplay_stopping
   drop_target_right_3:
-    switch: s_drop_target_right_3
-    led: l_drop_target_right_3
     profile: hit_me
     reset_events: mode_cosplay_stopping
   main_stage_entry_1:
@@ -62,22 +56,6 @@ shots:
       - l_main_stage_arrow_1_f
       - l_main_stage_arrow_1_g
       - l_main_stage_arrow_1_h
-      - l_main_stage_arrow_2_a
-      - l_main_stage_arrow_2_b
-      - l_main_stage_arrow_2_c
-      - l_main_stage_arrow_2_d
-      - l_main_stage_arrow_2_e
-      - l_main_stage_arrow_2_f
-      - l_main_stage_arrow_2_g
-      - l_main_stage_arrow_2_h
-      - l_main_stage_arrow_3_a
-      - l_main_stage_arrow_3_b
-      - l_main_stage_arrow_3_c
-      - l_main_stage_arrow_3_d
-      - l_main_stage_arrow_3_e
-      - l_main_stage_arrow_3_f
-      - l_main_stage_arrow_3_g
-      - l_main_stage_arrow_3_h
       - l_main_stage_edge_a
       - l_main_stage_edge_b
       - l_main_stage_edge_c
@@ -97,14 +75,6 @@ shots:
   main_stage_entry_2:
     switch: s_main_stage_entry
     led:
-      - l_main_stage_arrow_1_a
-      - l_main_stage_arrow_1_b
-      - l_main_stage_arrow_1_c
-      - l_main_stage_arrow_1_d
-      - l_main_stage_arrow_1_e
-      - l_main_stage_arrow_1_f
-      - l_main_stage_arrow_1_g
-      - l_main_stage_arrow_1_h
       - l_main_stage_arrow_2_a
       - l_main_stage_arrow_2_b
       - l_main_stage_arrow_2_c
@@ -132,14 +102,14 @@ shots:
   main_stage_entry_3:
     switch: s_main_stage_entry
     led:
-      - l_main_stage_arrow_2_a
-      - l_main_stage_arrow_2_b
-      - l_main_stage_arrow_2_c
-      - l_main_stage_arrow_2_d
-      - l_main_stage_arrow_2_e
-      - l_main_stage_arrow_2_f
-      - l_main_stage_arrow_2_g
-      - l_main_stage_arrow_2_h
+      - l_main_stage_arrow_3_a
+      - l_main_stage_arrow_3_b
+      - l_main_stage_arrow_3_c
+      - l_main_stage_arrow_3_d
+      - l_main_stage_arrow_3_e
+      - l_main_stage_arrow_3_f
+      - l_main_stage_arrow_3_g
+      - l_main_stage_arrow_3_h
       - l_main_stage_edge_a
       - l_main_stage_edge_b
       - l_main_stage_edge_c

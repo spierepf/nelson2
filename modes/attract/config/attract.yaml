@@ -59,3 +59,13 @@ light_player:
       repeat: yes
     - show: ball_save_chase_rainbow
       repeat: yes
+    - show: outlane_left_fade_rainbow
+      repeat: yes
+    - show: inlane_left_fade_rainbow
+      repeat: yes
+    - show: inlane_right_fade_rainbow
+      repeat: yes
+    - show: outlane_right_fade_rainbow
+      repeat: yes
+    - show: main_stage_arrow_chase_rainbow
+      repeat: yes
