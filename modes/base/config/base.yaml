@@ -88,6 +88,37 @@ sound_player:
     sound: great_shooting
     start_events: vendor_complete
 
+  auction started:
+    sound: auction_started
+    start_events: mode_auction_started
+  auction bid 1:
+    sound: chant-TEN-01
+    start_events: auction_bid_1
+  auction bid 2:
+    sound: chant-TWENTY-02
+    start_events: auction_bid_2
+  auction bid 3:
+    sound: chant-THIRTY-04
+    start_events: auction_bid_3
+  auction bid 4:
+    sound: chant-FORTY-01
+    start_events: auction_bid_4
+  auction bid 5:
+    sound: chant-FIFTY-01
+    start_events: auction_bid_5
+  auction bid 6:
+    sound: chant-SIXTY-01
+    start_events: auction_bid_6
+  auction bid 7:
+    sound: chant-SEVENTY-01
+    start_events: auction_bid_7
+  auction player wins:
+    sound: auction_sold_credits
+    start_events: logicblock_player_bid_complete
+  auction player loses:
+    sound: auction_sold_villain
+    start_events: timer_opponent_bid_complete
+
   jackpot enabled:
     sound: jackpot_enabled
     start_events: jackpot_enabled

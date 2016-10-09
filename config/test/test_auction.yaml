@@ -34,7 +34,7 @@ switch_player:
       switch: s_plunger_lane
       action: deactivate
 
-    - time: 1s
+    - time: 10s
       switch: s_spinner
       action: hit
     - time: 100ms
@@ -64,7 +64,7 @@ switch_player:
     - time: 100ms
       switch: s_spinner
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_spinner
       action: hit
     - time: 100ms
@@ -94,7 +94,7 @@ switch_player:
     - time: 100ms
       switch: s_spinner
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_spinner
       action: hit
     - time: 100ms
@@ -124,7 +124,7 @@ switch_player:
     - time: 100ms
       switch: s_spinner
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_spinner
       action: hit
     - time: 100ms
@@ -154,7 +154,7 @@ switch_player:
     - time: 100ms
       switch: s_spinner
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_spinner
       action: hit
     - time: 100ms
@@ -184,7 +184,7 @@ switch_player:
     - time: 100ms
       switch: s_spinner
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_spinner
       action: hit
     - time: 100ms
@@ -214,7 +214,7 @@ switch_player:
     - time: 100ms
       switch: s_spinner
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_spinner
       action: hit
     - time: 100ms
@@ -244,7 +244,7 @@ switch_player:
     - time: 100ms
       switch: s_spinner
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_spinner
       action: hit
     - time: 100ms
@@ -274,6 +274,6 @@ switch_player:
     - time: 100ms
       switch: s_spinner
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_main_stage_entry
       action: hit

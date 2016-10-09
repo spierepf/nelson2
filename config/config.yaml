@@ -49,6 +49,20 @@ logic_blocks:
       reset_events: mode_wizard_started
       disable_on_complete: true
 
+event_player:
+  gaming_failed:
+    carousel_select_restart_lock_enable
+  vendor_failed:
+    carousel_select_restart_lock_enable
+  auction_failed:
+    carousel_select_restart_lock_enable
+  photo_failed:
+    carousel_select_restart_lock_enable
+  cosplay_failed:
+    carousel_select_restart_lock_enable
+  stargazer_failed:
+    carousel_select_restart_lock_enable
+
 scriptlets:
   carousel_mode_complete_handler.CarouselModeCompleteHandler
   player_experience_points_handler.PlayerExperiencePointsHandler

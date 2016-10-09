@@ -29,6 +29,7 @@ class auction(Mode):
 
     def mode_start(self, **kwargs):
         self.machine.timing.add(self.timer)
+        self.last_bid = 0
 
     def mode_stop(self, **kwargs):
         self.fill_bar(self.player_bid_leds, 0, [0,0,0])
@@ -38,6 +39,11 @@ class auction(Mode):
     def fill_bar(self, leds, fg_count, fg, bg=[0,0,0]):
         for i in range(0, len(leds)):
             leds[i].color(fg if i < fg_count else bg)
+
+    def update_bid(self, bid):
+        if bid > self.last_bid:
+            self.last_bid = bid
+            self.machine.events.post("auction_bid_{}".format(self.last_bid))
 
     def tick(self, **kwargs):
         if self.machine.game == None:
@@ -49,7 +55,9 @@ class auction(Mode):
             max_player_bid = float(self.config["logic_blocks"]["counters"]["player_bid"]["count_complete_value"])
             fg_count = int(len(self.player_bid_leds) * min(1.0, player["player_bid_count"] / max_player_bid))
             self.fill_bar(self.player_bid_leds, fg_count, [0, 255, 0])
+            self.update_bid(fg_count)
 
             max_opponent_bid = float(self.config["timers"]["opponent_bid"]["end_value"])
             fg_count = int(len(self.opponent_bid_leds) * min(1.0, player["auction_opponent_bid_tick"] / max_opponent_bid))
             self.fill_bar(self.opponent_bid_leds, fg_count, [255, 0, 255])
+            self.update_bid(fg_count)
