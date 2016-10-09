@@ -5,7 +5,7 @@ from mpf.devices.ball_save import BallSave
 class base(Mode):
     def mode_init(self):
         self.log.info("Initializing Base Mode")
-        self.extra_ball_threshold = 50000
+        self.extra_ball_threshold = 5000000
         self.ball_save_leds = [
             self.machine.leds['l_ball_save_s'],
             self.machine.leds['l_ball_save_r'],
