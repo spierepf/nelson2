@@ -30,7 +30,7 @@ switch_player:
       switch: s_plunger_lane
       action: deactivate
 
-    - time: 100ms
+    - time: 10s
       switch: s_pop_bumper_left
       action: hit
     - time: 100ms
@@ -67,7 +67,7 @@ switch_player:
       switch: s_pop_bumper_left
       action: hit
 
-    - time: 100ms
+    - time: 10s
       switch: s_pop_bumper_right
       action: hit
     - time: 100ms
@@ -104,7 +104,7 @@ switch_player:
       switch: s_pop_bumper_right
       action: hit
 
-    - time: 100ms
+    - time: 10s
       switch: s_pop_bumper_bottom
       action: hit
     - time: 100ms

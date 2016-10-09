@@ -65,6 +65,28 @@ sound_player:
   gaming started:
     sound: gaming_started
     start_events: mode_gaming_started
+  gaming stage 1:
+    sound: bested_mcnabs
+    start_events: logicblock_gaming_stage_1_complete
+  gaming stage 2:
+    sound: save_vs_con_crud
+    start_events: logicblock_gaming_stage_2_complete
+  gaming complete:
+    sound: curses_foiled
+    start_events: gaming_complete
+
+  vendor started:
+    sound: sale_action_figures
+    start_events: mode_vendor_started
+  vendor stage 1:
+    sound: look_with_eyes
+    start_events: logicblock_vendor_stage_1_complete
+  vendor stage 2:
+    sound: you_break_it
+    start_events: logicblock_vendor_stage_2_complete
+  vendor complete:
+    sound: great_shooting
+    start_events: vendor_complete
 
   jackpot enabled:
     sound: jackpot_enabled

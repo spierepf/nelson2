@@ -22,11 +22,11 @@ switch_player:
       switch: s_plunger_lane
       action: activate
 
-    - time: 1s
+    - time: 10s
       switch: s_plunger_lane
       action: deactivate
 
-    - time: 1s
+    - time: 10s
       switch: s_drop_target_left_1
       action: activate
 
@@ -38,18 +38,18 @@ switch_player:
       switch: s_drop_target_left_3
       action: activate
 
-    - time: 1s
+    - time: 10s
       switch: s_kick_out_right
       action: activate
 
-    - time: 1s
+    - time: 10s
       switch: s_kick_out_right
       action: deactivate
 
-    - time: 1s
+    - time: 10s
       switch: s_kick_out_left
       action: activate
 
-    - time: 1s
+    - time: 10s
       switch: s_kick_out_left
       action: deactivate

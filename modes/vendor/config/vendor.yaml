@@ -6,23 +6,6 @@ mode:
   start_events: vendor_selected
   stop_events: vendor_complete, vendor_failed
 
-sound_player:
-  vendor started:
-    sound: vendor_started
-    start_events: mode_vendor_started
-
-  look with your eyes:
-    sound: little metal
-    start_events: play_look_with_your_eyes
-
-  you break it:
-    sound: medium metal
-    start_events: play_you_break_it
-
-  great shooting:
-    sound: great_shooting
-    start_events: play_great_shooting
-
 shots:
   pop_bumper_left:
     switch: s_pop_bumper_left
@@ -53,34 +36,29 @@ logic_blocks:
       direction: up
       reset_events: mode_vendor_stopping
 
+  sequences:
+    vendor_stage_1:
+      events:
+        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
+      reset_events: mode_vendor_stopping
+    vendor_stage_2:
+      events:
+        - logicblock_vendor_stage_1_complete
+        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
+      reset_events: mode_vendor_stopping
     vendor:
-      count_events:
-        - logicblock_pop_bumper_left_hits_complete
-        - logicblock_pop_bumper_right_hits_complete
-        - logicblock_pop_bumper_bottom_hits_complete
-      count_complete_value: 3
-      direction: up
+      events:
+        - logicblock_vendor_stage_2_complete
+        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
       reset_events: mode_vendor_stopping
       events_when_complete: vendor_complete, carousel_mode_complete
 
-  accruals:
-    look_with_your_eyes:
-      events:
-        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
-      events_when_complete:
-        play_look_with_your_eyes
+scoring:
+  logicblock_vendor_stage_1_complete:
+    score: 10000
 
-    you_break_it:
-      events:
-        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
-        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
-      events_when_complete:
-        play_you_break_it
+  logicblock_vendor_stage_2_complete:
+    score: 20000
 
-    great_shooting:
-      events:
-        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
-        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
-        - logicblock_pop_bumper_left_hits_complete, logicblock_pop_bumper_right_hits_complete, logicblock_pop_bumper_bottom_hits_complete
-      events_when_complete:
-        play_great_shooting
+  vendor_complete:
+    score: 120000
