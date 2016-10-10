@@ -42,7 +42,7 @@ switch_player:
       switch: s_plunger_lane
       action: deactivate
 
-    - time: 1s
+    - time: 10s
       switch: s_drop_target_right_1
       action: activate
     - time: 1s
@@ -51,12 +51,12 @@ switch_player:
     - time: 1s
       switch: s_drop_target_right_3
       action: activate
-    - time: 1s
+    - time: 10s
       switch: s_main_stage_entry
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_main_stage_entry
       action: hit
-    - time: 1s
+    - time: 10s
       switch: s_main_stage_entry
       action: hit

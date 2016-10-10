@@ -6,27 +6,6 @@ mode:
   start_events: cosplay_selected
   stop_events: cosplay_complete, cosplay_failed
 
-sound_player:
-  cosplay started:
-    sound: cosplay_started
-    start_events: mode_cosplay_started
-
-  drop targets:
-    sound: cosplay_starting
-    start_events: drop_target_bank_right_down
-
-  pose 1:
-    sound: great_job_costume
-    start_events: main_stage_entry_1_hit_me_active_hit
-
-  pose 2:
-    sound: great_job_costume
-    start_events: main_stage_entry_2_hit_me_active_hit
-
-  collect trophy:
-    sound: great_job_costume
-    start_events: main_stage_entry_3_hit_me_active_hit
-
 shot_profiles:
   hit_me:
     states:
@@ -134,7 +113,37 @@ shot_groups:
 
 logic_blocks:
   sequences:
+    cosplay_stage_1:
+      events:
+        - drop_target_bank_right_down
+      reset_events: mode_cosplay_stopping
+    cosplay_stage_2:
+      events:
+        - logicblock_cosplay_stage_1_complete
+        - main_stage_entry_1_hit_me_active_hit
+      reset_events: mode_cosplay_stopping
+    cosplay_stage_3:
+      events:
+        - logicblock_cosplay_stage_2_complete
+        - main_stage_entry_2_hit_me_active_hit
+      reset_events: mode_cosplay_stopping
     cosplay:
-      events: main_stage_entry_3_hit_me_active_hit
+      events:
+        - logicblock_cosplay_stage_3_complete
+        - main_stage_entry_3_hit_me_active_hit
       reset_events: mode_cosplay_stopping
       events_when_complete: cosplay_complete, carousel_mode_complete
+
+
+scoring:
+  logicblock_cosplay_stage_1_complete:
+    score: 10000
+
+  logicblock_cosplay_stage_2_complete:
+    score: 15000
+
+  logicblock_cosplay_stage_3_complete:
+    score: 25000
+
+  cosplay_complete:
+    score: 100000
