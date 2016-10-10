@@ -6,27 +6,6 @@ mode:
   start_events: photo_selected
   stop_events: photo_complete, photo_failed
 
-sound_player:
-  photo started:
-    sound: photo_started
-    start_events: mode_photo_started
-
-  hit me 1:
-    sound: ouch_hurt
-    start_events: drop_target_centre_1_hit_me_1_active_hit
-
-  hit me 2:
-    sound: ouch_hurt
-    start_events: drop_target_centre_2_hit_me_2_active_hit
-
-  hit me 3:
-    sound: lets_get_photo
-    start_events: drop_target_centre_3_hit_me_3_active_hit
-
-  hit me 4:
-    sound: look_this_way
-    start_events: fixed_target_hit_me_4_active_hit
-
 shot_profiles:
   hit_me_1:
     states:
@@ -116,7 +95,36 @@ shots:
 
 logic_blocks:
   sequences:
-    photos:
-      events: fixed_target_hit_me_4_active_hit
+    photo_stage_1:
+      events:
+        - drop_target_centre_1_hit_me_1_active_hit
+      reset_events: mode_photos_stopping
+    photo_stage_2:
+      events:
+        - logicblock_photo_stage_1_complete
+        - drop_target_centre_2_hit_me_2_active_hit
+      reset_events: mode_photos_stopping
+    photo_stage_3:
+      events:
+        - logicblock_photo_stage_2_complete
+        - drop_target_centre_3_hit_me_3_active_hit
+      reset_events: mode_photos_stopping
+    photo:
+      events:
+        - logicblock_photo_stage_3_complete
+        - fixed_target_hit_me_4_active_hit
       reset_events: mode_photos_stopping
       events_when_complete: photo_complete, carousel_mode_complete
+
+scoring:
+  logicblock_photo_stage_1_complete:
+    score: 10000
+
+  logicblock_photo_stage_2_complete:
+    score: 15000
+
+  logicblock_photo_stage_3_complete:
+    score: 25000
+
+  photo_complete:
+    score: 100000

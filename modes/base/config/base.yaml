@@ -119,6 +119,25 @@ sound_player:
     sound: auction_sold_villain
     start_events: timer_opponent_bid_complete
 
+  photo started part one:
+    sound: i_want_picture
+    start_events: mode_photo_starting
+  photo started part two:
+    sound: red_shirt_bots
+    start_events: mode_photo_started
+  photo stage 1:
+    sound: each_bot_more_powerful
+    start_events: logicblock_photo_stage_1_complete
+  photo stage 2:
+    sound: ouch_hurt
+    start_events: logicblock_photo_stage_2_complete
+  photo stage 3:
+    sound: lets_get_photo
+    start_events: logicblock_photo_stage_3_complete
+  photo complete:
+    sound: look_this_way
+    start_events: photo_complete
+
   jackpot enabled:
     sound: jackpot_enabled
     start_events: jackpot_enabled

@@ -34,19 +34,19 @@ switch_player:
       switch: s_flipper_right
       action: hit
 
-    - time: 1s
+    - time: 10s
       switch: s_plunger_lane
       action: deactivate
 
-    - time: 5s
+    - time: 10s
       switch: s_drop_target_centre_1
       action: activate
-    - time: 5s
+    - time: 10s
       switch: s_drop_target_centre_2
       action: activate
-    - time: 5s
+    - time: 10s
       switch: s_drop_target_centre_3
       action: activate
-    - time: 5s
+    - time: 10s
       switch: s_fixed_target
       action: hit
