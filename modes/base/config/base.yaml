@@ -154,6 +154,19 @@ sound_player:
     sound: great_job_costume
     start_events: cosplay_complete
 
+  stargazer started:
+    sound: stargazer_started
+    start_events: mode_stargazer_started
+  stargazer stage 1:
+    sound: thats_one
+    start_events: logicblock_stargazer_stage_1_complete
+  stargazer stage 2:
+    sound: spin_disco
+    start_events: logicblock_stargazer_stage_2_complete
+  stargazer complete:
+    sound: multiball_is_lie
+    start_events: stargazer_complete
+
   jackpot enabled:
     sound: jackpot_enabled
     start_events: jackpot_enabled

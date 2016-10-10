@@ -42,11 +42,11 @@ switch_player:
       switch: s_flipper_right
       action: hit
 
-    - time: 1s
+    - time: 15s
       switch: s_plunger_lane
       action: deactivate
 
-    - time: 1s
+    - time: 10s
       switch: s_kick_out_right
       action: activate
 
@@ -54,7 +54,7 @@ switch_player:
       switch: s_kick_out_right
       action: deactivate
 
-    - time: 1s
+    - time: 10s
       switch: s_kick_out_left
       action: activate
 
@@ -62,6 +62,6 @@ switch_player:
       switch: s_kick_out_left
       action: deactivate
 
-    - time: 1s
+    - time: 10s
       switch: s_spinner
       action: hit

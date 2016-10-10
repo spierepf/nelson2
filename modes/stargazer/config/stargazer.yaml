@@ -6,23 +6,6 @@ mode:
   start_events: stargazer_selected
   stop_events: stargazer_complete, stargazer_failed
 
-sound_player:
-  stargazer started:
-    sound: stargazer_started
-    start_events: mode_stargazer_started
-
-  first shoe:
-    sound: thats_one
-    start_events: play_thats_one
-
-  second shoe:
-    sound: spin_disco
-    start_events: stargazer_kick_outs_complete
-
-  multiball is a lie:
-    sound: multiball_is_lie
-    start_events: stargazer_complete
-
 shot_profiles:
   hit_me:
     states:
@@ -58,7 +41,28 @@ logic_blocks:
         play_thats_one
 
   sequences:
+    stargazer_stage_1:
+      events: 
+        - kick_out_left_hit_me_active_hit, kick_out_right_hit_me_active_hit
+      reset_events: mode_stargazer_stopping
+    stargazer_stage_2:
+      events:
+        - logicblock_stargazer_stage_1_complete 
+        - kick_out_left_hit_me_active_hit, kick_out_right_hit_me_active_hit
+      reset_events: mode_stargazer_stopping
     stargazer:
-      events: spinner_hit_me_active_hit
+      events:
+        - logicblock_stargazer_stage_2_complete
+        - spinner_hit_me_active_hit
       reset_events: mode_stargazer_stopping
       events_when_complete: stargazer_complete, carousel_mode_complete
+
+scoring:
+  logicblock_stargazer_stage_1_complete:
+    score: 10000
+
+  logicblock_stargazer_stage_2_complete:
+    score: 20000
+
+  stargazer_complete:
+    score: 120000
