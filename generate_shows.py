@@ -16,7 +16,7 @@ LIGHTGRAY = (192, 192, 192);
 """
  * The color gray.  In the default sRGB space.
 """
-GRAY      = (128, 128, 128);
+GRAY      = (112, 128, 128);
 
 """
  * The color dark gray.  In the default sRGB space.
@@ -68,6 +68,9 @@ CYAN      = (0, 255, 255);
 """
 BLUE      = (0, 0, 255);
 
+HC_PURPLE = (49, 27, 83);
+HC_GREEN = (157, 203, 60);
+
 with open('config/lights.yaml', 'r') as f:
     LEDS = yaml.load(f)["leds"]
 
@@ -84,7 +87,9 @@ COLORS = {
     "green": GREEN,
     "magenta": MAGENTA,
     "cyan": CYAN,
-    "blue": BLUE
+    "blue": BLUE,
+    "hc_purple": HC_PURPLE,
+    "hc_green": HC_GREEN,
 }
 
 def find_leds(prefix):
@@ -188,7 +193,13 @@ def wave(color, length):
     for i in range(length):
         retval.append(darker(color, (1 + math.cos(2*math.pi * i / length)) / 2))
     return retval
-        
+
+def bicolor_wave(color1, color2, length):
+    retval = []
+    for i in range(length):
+        retval.append(blend(color1, (1 + math.cos(2*math.pi * i / length)) / 2, color2))
+    return retval
+
 def replicate(pattern, count):
     retval = []
     for item in pattern:
@@ -332,6 +343,40 @@ class ColorWave(Show):
 
 '''*************************************************************************************************'''
 
+class BiColorWave(Show):
+    def __init__(self, leds, color_name1, color_name2, length=60):
+        super(BiColorWave, self).__init__(leds)
+        self.color_name1 = color_name1
+        self.color_name2 = color_name2
+        self.length = length
+
+    def show(self):
+        color1 = COLORS[self.color_name1]
+        color2 = COLORS[self.color_name2]
+        return gen_show(self.leds, replicate(bicolor_wave(color1, color2, self.length), len(self.leds)), len(self.leds))
+    
+    def name(self):
+        return str(self.leds) + "_wave_" + self.color_name1 + "_" + self.color_name2
+
+'''*************************************************************************************************'''
+
+class BiColorChase(Show):
+    def __init__(self, leds, color_name1, color_name2, length=60):
+        super(BiColorChase, self).__init__(leds)
+        self.color_name1 = color_name1
+        self.color_name2 = color_name2
+        self.length = length
+
+    def show(self):
+        color1 = COLORS[self.color_name1]
+        color2 = COLORS[self.color_name2]
+        return gen_show(self.leds, bicolor_wave(color1, color2, self.length))
+    
+    def name(self):
+        return str(self.leds) + "_chase_" + self.color_name1 + "_" + self.color_name2
+
+'''*************************************************************************************************'''
+
 class Solid(Show):
     def __init__(self, leds, color_name):
         super(Solid, self).__init__(leds)
@@ -360,6 +405,20 @@ class ColorFlash(Show):
 
 '''*************************************************************************************************'''
 
+class ColorBlink(Show):
+    def __init__(self, leds, color_name):
+        super(ColorBlink, self).__init__(leds)
+        self.color_name = color_name
+
+    def show(self):
+        color = COLORS[self.color_name]
+        return gen_show(self.leds, replicate([color, COLORS['black']]*2 + [COLORS['black']]*22, len(self.leds)), len(self.leds))
+    
+    def name(self):
+        return str(self.leds) + "_blink_" + self.color_name
+
+'''*************************************************************************************************'''
+
 for leds in ["pop_bumper_left", "pop_bumper_right", "pop_bumper_bottom"]:
     Chase(Leds(leds), 'red', [RED, BLACK, BLACK]).write()
     RainbowChase(Leds(leds)).write()
@@ -372,15 +431,20 @@ for leds in ["drop_target_centre_arrow", "spinner_arrow", "kick_out_left_arrow",
     RainbowChase(Leds(leds), 30).write()
     ColorFlash(Leds(leds), "white").write()
 
+for leds in ["kick_out_left_arrow", "kick_out_right_arrow", "drop_target_centre_arrow", "spinner_arrow"]:
+    BiColorChase(Leds(leds), "green", "magenta", 30).write()
+
 for leds in ["xp_multiplier_2", "xp_multiplier_3", "xp_multiplier_5"]:
     RainbowChase(Leds(leds, 1)).write()
     RainbowChaseCCW(Leds(leds, 1)).write()
     RainbowFade(Leds(leds)).write()
+    for color in ["red", "orange", "yellow", "green", "blue", "magenta"]:
+        ColorWave(Leds(leds), color).write()
 
 for leds in ["upper_lane", "drop_target_left", "drop_target_right"]:
-    Chase(Leds(leds), 'blue', [BLUE, GRAY, GRAY]).write()
-    Chase(Leds(leds), 'green', [GREEN, GRAY, GRAY]).write()
-    Chase(Leds(leds), 'magenta', [MAGENTA, GRAY, GRAY]).write()
+    Chase(Leds(leds), 'blue', [BLUE, darker(BLUE), darker(BLUE)]).write()
+    Chase(Leds(leds), 'green', [GREEN, darker(GREEN), darker(GREEN)]).write()
+    Chase(Leds(leds), 'magenta', [MAGENTA, darker(MAGENTA), darker(MAGENTA)]).write()
 
 RainbowChase(Leds("main_stage_edge")).write()
 RainbowChase(Leds("player_bid")).write()
@@ -390,6 +454,7 @@ RainbowChase(Leds("ball_save")).write()
 RainbowChase(Leds("main_stage_arrow")).write()
 
 Chase(Leds("ball_save"), "red", [RED] + 18*[BLACK]).write()
+ColorWave(Leds("ball_save"), "red").write()
 
 for leds in ["gaming_mode", "vendor_mode", "auction_mode", "photo_mode", "cosplay_mode", "stargazer_mode"]:
     for color in ["red", "orange", "yellow", "green", "blue", "magenta"]:
@@ -399,3 +464,9 @@ for leds in ["gaming_mode", "vendor_mode", "auction_mode", "photo_mode", "cospla
 for leds in ["outlane_left", "inlane_left", "inlane_right", "outlane_right"]:
     RainbowChase(Leds(leds)).write()
     RainbowFade(Leds(leds)).write()
+
+for leds in ["extra_ball", "jackpot", "multiball"]:
+    RainbowChase(Leds(leds)).write()
+    ColorWave(Leds(leds), "magenta").write()
+    for color in ["red", "orange", "yellow", "green", "blue", "magenta"]:
+        ColorBlink(Leds(leds), color).write()

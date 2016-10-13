@@ -5,7 +5,7 @@ from mpf.devices.ball_save import BallSave
 class base(Mode):
     def mode_init(self):
         self.log.info("Initializing Base Mode")
-        self.extra_ball_threshold = 5000000
+        self.extra_ball_threshold = 5000
         self.ball_save_leds = [
             self.machine.leds['l_ball_save_s'],
             self.machine.leds['l_ball_save_r'],
@@ -47,5 +47,6 @@ class base(Mode):
         self.fill_bar(self.ball_save_leds, kwargs['value'], [255,0,0])
 
     def player_score_handler(self, **kwargs):
-        if kwargs['prev_value'] < self.extra_ball_threshold and kwargs['value'] > self.extra_ball_threshold:
-            self.machine.game.award_extra_ball()
+        pass
+        # if kwargs['prev_value'] < self.extra_ball_threshold and kwargs['value'] > self.extra_ball_threshold:
+        #     self.machine.game.award_extra_ball()

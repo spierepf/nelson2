@@ -57,6 +57,14 @@ logic_blocks:
       reset_events: mode_stargazer_stopping
       events_when_complete: stargazer_complete, carousel_mode_complete
 
+light_player:
+  logicblock_stargazer_stage_2_complete:
+    - show: multiball_wave_magenta
+      repeat: yes
+  mode_stargazer_stopping:
+    - show: multiball_wave_magenta
+      action: stop
+
 scoring:
   logicblock_stargazer_stage_1_complete:
     score: 10000

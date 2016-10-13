@@ -5,7 +5,7 @@ import math
 
 class PlayerExperiencePointsHandler(Scriptlet):
     def on_load(self):
-        self.experience_point_value = 1000
+        self.experience_point_value = 50
         self.experience_point_multipliers = [1, 2, 3, 5]
 
         self.xp_bar_leds = [
@@ -66,7 +66,7 @@ class PlayerExperiencePointsHandler(Scriptlet):
         self.machine.events.add_handler("count_experience_points", self.handle_count_experience_points)
         self.machine.events.add_handler("ball_started", self.handle_ball_started)
 
-        self.count_experience_points_timer = Timer(callback=self.count_experience_point, frequency=1.0/10.0)
+        self.count_experience_points_timer = Timer(callback=self.count_experience_point, frequency=1.0/30.0)
 
     def fill_bar(self, leds, fg_count, fg, bg=[0,0,0]):
         for i in range(0, len(leds)):

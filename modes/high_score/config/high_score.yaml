@@ -4,10 +4,10 @@ high_score:
   categories:
   - score:
       - GRAND CHAMPION
-      - HIGH SCORE 1
       - HIGH SCORE 2
       - HIGH SCORE 3
       - HIGH SCORE 4
+      - HIGH SCORE 5
 
 slide_player:
   high_score:
@@ -35,7 +35,7 @@ slide_player:
       font: medium
       v_pos: bottom
       selected_char_color: 0
-      selected_char_bg: 15
+      selected_char_bg: ffffff
       char_x_offset: 1
       char_y_offset: 1
       char_width: 7

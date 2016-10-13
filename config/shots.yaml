@@ -115,9 +115,40 @@ shot_groups:
     reset_events:
       upper_lanes_default_lit_complete
 
+  lower_lanes:
+    shots: outlane_left, inlane_left, inlane_right, outlane_right
+    rotate_left_events: s_flipper_left_active
+    rotate_right_events: s_flipper_right_active
+    reset_events:
+      lower_lanes_default_lit_complete: 1s
+
+  drop_target_bank_left:
+    shots: drop_target_left_1, drop_target_left_2, drop_target_left_3
+    reset_events:
+      drop_target_bank_left_default_lit_complete
+
+  drop_target_bank_right:
+    shots: drop_target_right_1, drop_target_right_2, drop_target_right_3
+    reset_events:
+      drop_target_bank_right_default_lit_complete
+
 light_player:
   upper_lanes_default_lit_complete:
     show: upper_lane_chase_blue
+    tocks_per_sec: 8
+    repeat: yes
+    num_repeats: 10
+    priority: 1
+
+  drop_target_bank_left_default_lit_complete:
+    show: drop_target_left_chase_blue
+    tocks_per_sec: 8
+    repeat: yes
+    num_repeats: 10
+    priority: 1
+
+  drop_target_bank_right_default_lit_complete:
+    show: drop_target_right_chase_blue
     tocks_per_sec: 8
     repeat: yes
     num_repeats: 10

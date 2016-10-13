@@ -16,15 +16,15 @@ coils:
     number: 21-2
 
   c_pop_bumper_bottom:
-    pulse_ms: 8
+    pulse_ms: 6
     number: 10-0
 
   c_pop_bumper_left:
-    pulse_ms: 8
+    pulse_ms: 6
     number: 10-1
 
   c_pop_bumper_right:
-    pulse_ms: 8
+    pulse_ms: 6
     number: 10-2
 
   c_drop_target_left_reset:

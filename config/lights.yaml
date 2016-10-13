@@ -176,34 +176,7 @@ leds:
     l_stargazer_mode_a: { number: 475 }
     l_stargazer_mode_b: { number: 476 }
     l_stargazer_mode_c: { number: 477 }
-    
-    l_extra_ball_a: { number: 511 }
-    l_extra_ball_b: { number: 511 }
-    l_extra_ball_c: { number: 511 }
-    l_extra_ball_d: { number: 511 }
-    l_extra_ball_e: { number: 511 }
-    l_extra_ball_f: { number: 511 }
-    l_extra_ball_g: { number: 511 }
-    l_extra_ball_h: { number: 511 }
-    
-    l_jackpot_a: { number: 511 }
-    l_jackpot_b: { number: 511 }
-    l_jackpot_c: { number: 511 }
-    l_jackpot_d: { number: 511 }
-    l_jackpot_e: { number: 511 }
-    l_jackpot_f: { number: 511 }
-    l_jackpot_g: { number: 511 }
-    l_jackpot_h: { number: 511 }
-    
-    l_multiball_a: { number: 511 }
-    l_multiball_b: { number: 511 }
-    l_multiball_c: { number: 511 }
-    l_multiball_d: { number: 511 }
-    l_multiball_e: { number: 511 }
-    l_multiball_f: { number: 511 }
-    l_multiball_g: { number: 511 }
-    l_multiball_h: { number: 511 }
-    
+        
     l_main_stage_arrow_1_a: { number: 343 }
     l_main_stage_arrow_1_b: { number: 342 }
     l_main_stage_arrow_1_c: { number: 341 }
@@ -229,15 +202,7 @@ leds:
     l_main_stage_arrow_3_e: { number: 323 }
     l_main_stage_arrow_3_f: { number: 322 }
     l_main_stage_arrow_3_g: { number: 321 }
-    l_main_stage_arrow_3_h: { number: 320 }
-
-    l_outlane_right_a: { number: 511 }
-    l_outlane_right_b: { number: 511 }
-    l_outlane_right_c: { number: 511 }
-    
-    l_inlane_right_a: { number: 511 }
-    l_inlane_right_b: { number: 511 }
-    l_inlane_right_c: { number: 511 }
+    l_main_stage_arrow_3_h: { number: 320 }    
     
     l_outlane_left_a: { number: 344 }
     l_outlane_left_b: { number: 345 }
@@ -246,6 +211,38 @@ leds:
     l_inlane_left_a: { number: 347 }
     l_inlane_left_b: { number: 348 }
     l_inlane_left_c: { number: 349 }
+
+    l_extra_ball_a: { number: 350 }
+    l_extra_ball_b: { number: 351 }
+    l_extra_ball_c: { number: 352 }
+    l_extra_ball_d: { number: 353 }
+    l_extra_ball_e: { number: 354 }
+    l_extra_ball_f: { number: 355 }
+    l_extra_ball_g: { number: 356 }
+    
+    l_jackpot_a: { number: 357 }
+    l_jackpot_b: { number: 358 }
+    l_jackpot_c: { number: 359 }
+    l_jackpot_d: { number: 360 }
+    l_jackpot_e: { number: 361 }
+    l_jackpot_f: { number: 362 }
+    l_jackpot_g: { number: 363 }
+    
+    l_multiball_a: { number: 364 }
+    l_multiball_b: { number: 365 }
+    l_multiball_c: { number: 366 }
+    l_multiball_d: { number: 367 }
+    l_multiball_e: { number: 368 }
+    l_multiball_f: { number: 369 }
+    l_multiball_g: { number: 370 }
+
+    l_inlane_right_a: { number: 371 }
+    l_inlane_right_b: { number: 372 }
+    l_inlane_right_c: { number: 373 }
+
+    l_outlane_right_a: { number: 374 }
+    l_outlane_right_b: { number: 375 }
+    l_outlane_right_c: { number: 376 }
     
     l_ball_save_a: { number: 384 }
     l_ball_save_b: { number: 385 }

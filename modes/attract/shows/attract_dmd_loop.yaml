@@ -31,10 +31,16 @@
 
 - tocks: 3
   display:
+    - type: shape
+      shape: box
+      thickness: 0
+      width: 128
+      height: 32
+      color: 311b53
     - type: text
-      text: Nelson
+      text: Nelson Mania
       font: weltron
-      size: 25
+      size: 22
       transition:
         type: move_out
         duration: 1s
@@ -51,6 +57,12 @@
 
 - tocks: 3
   display:
+    - type: shape
+      shape: box
+      thickness: 0
+      width: 128
+      height: 32
+      color: ffffff
     - type: image
       image: great_pinball
       transition:
@@ -60,6 +72,12 @@
 
 - tocks: 3
   display:
+    - type: shape
+      shape: box
+      thickness: 0
+      width: 128
+      height: 32
+      color: ffffff
     - type: image
       image: cpr
       transition:
@@ -177,14 +195,14 @@
 - tocks: 2
   display:
     - type: text
-      text: "1. %machine|score2_name% %machine|score2_value%"
+      text: "2. %machine|score2_name% %machine|score2_value%"
       v_pos: top
       h_pos: left
       number_grouping: true
       y: 3
       x: 12
     - type: text
-      text: "2. %machine|score3_name% %machine|score3_value%"
+      text: "3. %machine|score3_name% %machine|score3_value%"
       v_pos: bottom
       h_pos: left
       number_grouping: true
@@ -198,14 +216,14 @@
 - tocks: 2
   display:
     - type: text
-      text: "3. %machine|score4_name% %machine|score4_value%"
+      text: "4. %machine|score4_name% %machine|score4_value%"
       v_pos: top
       h_pos: left
       number_grouping: true
       y: 3
       x: 12
     - type: text
-      text: "4. %machine|score5_name% %machine|score5_value%"
+      text: "5. %machine|score5_name% %machine|score5_value%"
       v_pos: bottom
       h_pos: left
       number_grouping: true
@@ -229,13 +247,3 @@
       shape: box
       width: 128
       height: 32
-
-- tocks: 5
-  display:
-    - type: image
-      image: qr_code
-      transition:
-        type: move_out
-        duration: 1s
-        direction: top
- 

@@ -7,15 +7,16 @@ mode:
 
 ball_saves:
   default:
-    active_time: 1s
+    active_time: 19s
     enable_events: balldevice_plunger_lane_ball_left
+    disable_events: timer_ball_save_complete
     balls_to_save: 1
     debug: yes
     auto_launch: no
 
 timers:
   ball_save:
-    start_value: 1
+    start_value: 38
     end_value: 0
     direction: down
     tick_interval: 0.5s
@@ -287,6 +288,13 @@ light_player:
   pop_bumper_bottom_hit:
     - show: pop_bumper_bottom_solid_white
 
+  extra_ball_awarded:
+    - show: extra_ball_wave_magenta
+      repeat: yes
+  ball_ending:
+    - show: extra_ball_wave_magenta
+      action: stop
+      
 scoring:
   upper_lane_1_hit:
     score: 100
@@ -302,58 +310,84 @@ scoring:
 
   pop_bumper_left_hit:
     score: 10
+    experience_points: 1
 
   pop_bumper_right_hit:
     score: 10
+    experience_points: 1
 
   pop_bumper_bottom_hit:
     score: 10
+    experience_points: 1
 
   drop_target_left_1_down:
     score: 100
+    experience_points: 1
   drop_target_left_2_down:
     score: 100
+    experience_points: 1
   drop_target_left_3_down:
     score: 100
+    experience_points: 1
 
   drop_target_right_1_down:
     score: 100
+    experience_points: 1
   drop_target_right_2_down:
     score: 100
+    experience_points: 1
   drop_target_right_3_down:
     score: 100
+    experience_points: 1
 
   drop_target_centre_1_down:
     score: 1000
+    experience_points: 1
   drop_target_centre_2_down:
     score: 1000
+    experience_points: 1
   drop_target_centre_2_down:
     score: 1000
+    experience_points: 1
 
   fixed_target_hit:
     score: 5000
+    experience_points: 1
 
   balldevice_kick_out_right_ball_enter:
     score: 1000
+    experience_points: 1
   balldevice_kick_out_left_ball_enter:
     score: 1000
+    experience_points: 1
 
   slingshot_left_hit:
     score: 10
+    experience_points: 1
   slingshot_right_hit:
     score: 10
+    experience_points: 1
 
   outlane_left_hit:
     score: 1000
+    experience_points: 1
   inlane_left_hit:
     score: 100
+    experience_points: 1
   inlane_right_hit:
     score: 100
+    experience_points: 1
   outlane_right_hit:
     score: 1000
+    experience_points: 1
 
   spinner_hit:
     score: 100
+    experience_points: 1
 
   main_stage_entry_hit:
     score: 1000
+    experience_points: 1
+
+  lower_lanes_default_lit_complete:
+    score: 5000

@@ -224,3 +224,11 @@ timers:
     control_events:
       - event: timer_update_final_score_complete
         action: start
+
+sound_player:
+  experience point count:
+    sound: tiny laser
+    start_events: player_counted_experience_points
+  experience point line:
+    sound: explosion
+    start_events: count_experience_points_complete, timer_update_bonus_complete, timer_update_previous_score_complete, timer_update_final_score_complete

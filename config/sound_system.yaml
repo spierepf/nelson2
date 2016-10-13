@@ -23,11 +23,11 @@ sound_player:
     start_events: balldevice_plunger_lane_ball_enter
     stop_events: balldevice_plunger_lane_ball_left
     loops: -1
-    volume: 0.005
+    volume: 0.35
   background music:
     start_events: balldevice_plunger_lane_ball_left
     stop_events: balldevice_plunger_lane_ball_enter, game_ended
     sound: base background music
     loops: -1
-    volume: 0.005
+    volume: 0.35
 
