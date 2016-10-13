@@ -8,11 +8,11 @@ show_player:
 
 light_player:
   mode_attract_started:
-    - show: pop_bumper_left_chase_rainbow
+    - show: pop_bumper_left_chase_green_magenta
       repeat: yes
-    - show: pop_bumper_right_chase_rainbow
+    - show: pop_bumper_right_chase_green_magenta
       repeat: yes
-    - show: pop_bumper_bottom_chase_rainbow
+    - show: pop_bumper_bottom_chase_green_magenta
       repeat: yes
     - show: drop_target_centre_arrow_chase_green_magenta
       repeat: yes
@@ -39,11 +39,11 @@ light_player:
     - show: drop_target_left_chase_magenta
       tocks_per_sec: 4
       repeat: yes
-    - show: player_bid_chase_rainbow
+    - show: player_bid_wave_green
       repeat: yes
-    - show: opponent_bid_chase_rainbow
+    - show: opponent_bid_wave_magenta
       repeat: yes
-    - show: xp_bar_chase_rainbow
+    - show: xp_bar_fade_rainbow
       repeat: yes
     - show: gaming_mode_wave_red
       repeat: yes
@@ -69,10 +69,10 @@ light_player:
       repeat: yes
     - show: main_stage_arrow_chase_rainbow
       repeat: yes
-    - show: jackpot_chase_rainbow
+    - show: jackpot_solid_magenta
       repeat: yes
-    - show: extra_ball_chase_rainbow
+    - show: extra_ball_solid_green
       repeat: yes
-    - show: multiball_chase_rainbow
+    - show: multiball_solid_green
       repeat: yes
 

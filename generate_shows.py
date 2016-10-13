@@ -361,11 +361,11 @@ class BiColorWave(Show):
 '''*************************************************************************************************'''
 
 class BiColorChase(Show):
-    def __init__(self, leds, color_name1, color_name2, length=60):
+    def __init__(self, leds, color_name1, color_name2, length=None):
         super(BiColorChase, self).__init__(leds)
         self.color_name1 = color_name1
         self.color_name2 = color_name2
-        self.length = length
+        self.length = len(leds) if length==None else length
 
     def show(self):
         color1 = COLORS[self.color_name1]
@@ -407,7 +407,7 @@ class ColorFlash(Show):
 
 class ColorBlink(Show):
     def __init__(self, leds, color_name):
-        super(ColorBlink, self).__init__(leds)
+        super(ColorFlash, self).__init__(leds)
         self.color_name = color_name
 
     def show(self):
@@ -420,24 +420,25 @@ class ColorBlink(Show):
 '''*************************************************************************************************'''
 
 for leds in ["pop_bumper_left", "pop_bumper_right", "pop_bumper_bottom"]:
-    Chase(Leds(leds), 'red', [RED, BLACK, BLACK]).write()
+    # Chase(Leds(leds), 'red', [RED, BLACK, BLACK]).write()
     RainbowChase(Leds(leds)).write()
-    RainbowFade(Leds(leds)).write()
-    ColorWave(Leds(leds), "red").write()
-    Solid(Leds(leds), "white").write()
+    BiColorChase(Leds(leds), "green", "magenta").write()
+    # RainbowFade(Leds(leds)).write()
+    # ColorWave(Leds(leds), "red").write()
+    # Solid(Leds(leds), "white").write()
 
-for leds in ["drop_target_centre_arrow", "spinner_arrow", "kick_out_left_arrow", "kick_out_right_arrow"]:
-    Chase(Leds(leds), 'red', [RED] + 22*[BLACK]).write()
-    RainbowChase(Leds(leds), 30).write()
-    ColorFlash(Leds(leds), "white").write()
+# for leds in ["drop_target_centre_arrow", "spinner_arrow", "kick_out_left_arrow", "kick_out_right_arrow"]:
+#     Chase(Leds(leds), 'red', [RED] + 22*[BLACK]).write()
+#     RainbowChase(Leds(leds), 30).write()
+#     ColorFlash(Leds(leds), "white").write()
 
 for leds in ["kick_out_left_arrow", "kick_out_right_arrow", "drop_target_centre_arrow", "spinner_arrow"]:
     BiColorChase(Leds(leds), "green", "magenta", 30).write()
 
 for leds in ["xp_multiplier_2", "xp_multiplier_3", "xp_multiplier_5"]:
-    RainbowChase(Leds(leds, 1)).write()
-    RainbowChaseCCW(Leds(leds, 1)).write()
-    RainbowFade(Leds(leds)).write()
+    # RainbowChase(Leds(leds, 1)).write()
+    # RainbowChaseCCW(Leds(leds, 1)).write()
+    # RainbowFade(Leds(leds)).write()
     for color in ["red", "orange", "yellow", "green", "blue", "magenta"]:
         ColorWave(Leds(leds), color).write()
 
@@ -447,10 +448,12 @@ for leds in ["upper_lane", "drop_target_left", "drop_target_right"]:
     Chase(Leds(leds), 'magenta', [MAGENTA, darker(MAGENTA), darker(MAGENTA)]).write()
 
 RainbowChase(Leds("main_stage_edge")).write()
-RainbowChase(Leds("player_bid")).write()
-RainbowChase(Leds("opponent_bid")).write()
-RainbowChase(Leds("xp_bar")).write()
-RainbowChase(Leds("ball_save")).write()
+# RainbowChase(Leds("player_bid")).write()
+# RainbowChase(Leds("opponent_bid")).write()
+ColorWave(Leds("player_bid"), "green").write()
+ColorWave(Leds("opponent_bid"), "magenta").write()
+RainbowFade(Leds("xp_bar")).write()
+# RainbowChase(Leds("ball_save")).write()
 RainbowChase(Leds("main_stage_arrow")).write()
 
 Chase(Leds("ball_save"), "red", [RED] + 18*[BLACK]).write()
@@ -462,11 +465,10 @@ for leds in ["gaming_mode", "vendor_mode", "auction_mode", "photo_mode", "cospla
         Solid(Leds(leds), color).write()
 
 for leds in ["outlane_left", "inlane_left", "inlane_right", "outlane_right"]:
-    RainbowChase(Leds(leds)).write()
+    # RainbowChase(Leds(leds)).write()
     RainbowFade(Leds(leds)).write()
 
 for leds in ["extra_ball", "jackpot", "multiball"]:
-    RainbowChase(Leds(leds)).write()
-    ColorWave(Leds(leds), "magenta").write()
-    for color in ["red", "orange", "yellow", "green", "blue", "magenta"]:
-        ColorBlink(Leds(leds), color).write()
+    # RainbowChase(Leds(leds)).write()
+    Solid(Leds(leds), "green").write()
+    Solid(Leds(leds), "magenta").write()
