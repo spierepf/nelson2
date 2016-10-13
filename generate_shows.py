@@ -419,56 +419,75 @@ class ColorBlink(Show):
 
 '''*************************************************************************************************'''
 
-for leds in ["pop_bumper_left", "pop_bumper_right", "pop_bumper_bottom"]:
-    # Chase(Leds(leds), 'red', [RED, BLACK, BLACK]).write()
-    RainbowChase(Leds(leds)).write()
-    BiColorChase(Leds(leds), "green", "magenta").write()
-    # RainbowFade(Leds(leds)).write()
-    # ColorWave(Leds(leds), "red").write()
-    # Solid(Leds(leds), "white").write()
-
-# for leds in ["drop_target_centre_arrow", "spinner_arrow", "kick_out_left_arrow", "kick_out_right_arrow"]:
-#     Chase(Leds(leds), 'red', [RED] + 22*[BLACK]).write()
-#     RainbowChase(Leds(leds), 30).write()
-#     ColorFlash(Leds(leds), "white").write()
-
-for leds in ["kick_out_left_arrow", "kick_out_right_arrow", "drop_target_centre_arrow", "spinner_arrow"]:
-    BiColorChase(Leds(leds), "green", "magenta", 30).write()
-
-for leds in ["xp_multiplier_2", "xp_multiplier_3", "xp_multiplier_5"]:
-    # RainbowChase(Leds(leds, 1)).write()
-    # RainbowChaseCCW(Leds(leds, 1)).write()
-    # RainbowFade(Leds(leds)).write()
-    for color in ["red", "orange", "yellow", "green", "blue", "magenta"]:
-        ColorWave(Leds(leds), color).write()
+''' attract mode '''
+for leds in ["ball_save"]:
+    ColorWave(Leds(leds), "red").write()
 
 for leds in ["upper_lane", "drop_target_left", "drop_target_right"]:
     Chase(Leds(leds), 'blue', [BLUE, darker(BLUE), darker(BLUE)]).write()
     Chase(Leds(leds), 'green', [GREEN, darker(GREEN), darker(GREEN)]).write()
     Chase(Leds(leds), 'magenta', [MAGENTA, darker(MAGENTA), darker(MAGENTA)]).write()
 
-RainbowChase(Leds("main_stage_edge")).write()
-# RainbowChase(Leds("player_bid")).write()
-# RainbowChase(Leds("opponent_bid")).write()
-ColorWave(Leds("player_bid"), "green").write()
-ColorWave(Leds("opponent_bid"), "magenta").write()
-RainbowFade(Leds("xp_bar")).write()
-# RainbowChase(Leds("ball_save")).write()
-RainbowChase(Leds("main_stage_arrow")).write()
-
-Chase(Leds("ball_save"), "red", [RED] + 18*[BLACK]).write()
-ColorWave(Leds("ball_save"), "red").write()
-
-for leds in ["gaming_mode", "vendor_mode", "auction_mode", "photo_mode", "cosplay_mode", "stargazer_mode"]:
-    for color in ["red", "orange", "yellow", "green", "blue", "magenta"]:
-        ColorWave(Leds(leds), color).write()
-        Solid(Leds(leds), color).write()
-
-for leds in ["outlane_left", "inlane_left", "inlane_right", "outlane_right"]:
-    # RainbowChase(Leds(leds)).write()
-    RainbowFade(Leds(leds)).write()
-
 for leds in ["extra_ball", "jackpot", "multiball"]:
-    # RainbowChase(Leds(leds)).write()
     Solid(Leds(leds), "green").write()
     Solid(Leds(leds), "magenta").write()
+
+for leds in ["kick_out_left_arrow", "kick_out_right_arrow", "drop_target_centre_arrow", "spinner_arrow"]:
+    BiColorChase(Leds(leds), "green", "magenta", 30).write()
+
+for leds in ["outlane_left", "inlane_left", "inlane_right", "outlane_right", "xp_bar"]:
+    RainbowFade(Leds(leds)).write()
+
+for leds in ["main_stage_edge", "main_stage_arrow"]:
+    RainbowChase(Leds(leds)).write()
+
+for leds in ["opponent_bid"]:
+    ColorWave(Leds(leds), "magenta").write()
+
+for leds in ["player_bid"]:
+    ColorWave(Leds(leds), "green").write()
+
+for leds in ["pop_bumper_left", "pop_bumper_right", "pop_bumper_bottom"]:
+    BiColorChase(Leds(leds), "green", "magenta").write()
+
+for leds in ["xp_multiplier_2", "xp_multiplier_3", "xp_multiplier_5"]:
+    for color in ["red", "orange", "yellow"]:
+        ColorWave(Leds(leds), color).write()
+
+''' base mode '''
+for leds in ["extra_ball"]:
+    ColorWave(Leds(leds), "magenta").write()    
+
+for leds in ["kick_out_left_arrow", "kick_out_right_arrow"]:
+    RainbowChase(Leds(leds), 30).write()
+
+for leds in ["pop_bumper_left", "pop_bumper_right", "pop_bumper_bottom"]:
+    Solid(Leds(leds), "white").write()
+
+''' carousel select: gaming mode '''
+for leds in ["gaming_mode", "drop_target_left", "kick_out_left_arrow", "kick_out_right_arrow"]:
+    ColorWave(Leds(leds), "red").write()
+
+''' carousel select: vendor mode '''
+for leds in ["vendor_mode", "pop_bumper_left", "pop_bumper_right", "pop_bumper_bottom"]:
+    ColorWave(Leds(leds), "orange").write()
+
+''' carousel select: auction mode '''
+for leds in ["auction_mode", "spinner_arrow", "main_stage", "player_bid", "opponent_bid"]:
+    ColorWave(Leds(leds), "yellow").write()
+
+''' carousel select: photo mode '''
+for leds in ["photo_mode", "drop_target_centre_arrow"]:
+    ColorWave(Leds(leds), "green").write()
+
+''' carousel select: cosplay mode '''
+for leds in ["cosplay_mode", "drop_target_right", "main_stage"]:
+    ColorWave(Leds(leds), "blue").write()
+
+''' carousel select: stargazer mode '''
+for leds in ["stargazer_mode", "kick_out_left_arrow", "kick_out_right_arrow", "spinner_arrow", "multiball"]:
+    ColorWave(Leds(leds), "magenta").write()
+
+''' jackpot mode '''
+for leds in ["jackpot", "kick_out_right_arrow"]:
+    RainbowFade(Leds(leds)).write()

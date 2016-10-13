@@ -21,16 +21,16 @@ shots:
 
 light_player:
   mode_jackpot_started:
-    - show: jackpot_chase_rainbow
+    - show: jackpot_fade_rainbow
       repeat: yes
   mode_jackpot_stopping:
-    - show: jackpot_chase_rainbow
+    - show: jackpot_fade_rainbow
       action: stop
   enable_jackpot_mode_shot_kickout_right:
-    - show: kick_out_right_arrow_chase_rainbow
+    - show: kick_out_right_arrow_fade_rainbow
       repeat: yes
   disable_jackpot_mode_shot_kickout_right:
-    - show: kick_out_right_arrow_chase_rainbow
+    - show: kick_out_right_arrow_fade_rainbow
       action: stop
 
 # logic_blocks:

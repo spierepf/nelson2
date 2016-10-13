@@ -125,107 +125,105 @@ light_player:
   gaming_highlighted:
     - show: gaming_mode_wave_red
       repeat: yes
-    - show: drop_target_left_chase_magenta
-      tocks_per_sec: 4
+    - show: drop_target_left_wave_red
       repeat: yes
-    - show: kick_out_left_arrow_chase_rainbow
+    - show: kick_out_left_arrow_wave_red
       repeat: yes
-    - show: kick_out_right_arrow_chase_rainbow
+    - show: kick_out_right_arrow_wave_red
       repeat: yes
   gaming_unhighlighted:
     - show: gaming_mode_wave_red
       action: stop
-    - show: drop_target_left_chase_magenta
+    - show: drop_target_left_wave_red
       action: stop
-    - show: kick_out_left_arrow_chase_rainbow
+    - show: kick_out_left_arrow_wave_red
       action: stop
-    - show: kick_out_right_arrow_chase_rainbow
+    - show: kick_out_right_arrow_wave_red
       action: stop
 
   vendor_highlighted:
     - show: vendor_mode_wave_orange
       repeat: yes
-    - show: pop_bumper_left_chase_rainbow
+    - show: pop_bumper_left_wave_orange
       repeat: yes
-    - show: pop_bumper_right_chase_rainbow
+    - show: pop_bumper_right_wave_orange
       repeat: yes
-    - show: pop_bumper_bottom_chase_rainbow
+    - show: pop_bumper_bottom_wave_orange
       repeat: yes
   vendor_unhighlighted:
     - show: vendor_mode_wave_orange
       action: stop
-    - show: pop_bumper_left_chase_rainbow
+    - show: pop_bumper_left_wave_orange
       action: stop
-    - show: pop_bumper_right_chase_rainbow
+    - show: pop_bumper_right_wave_orange
       action: stop
-    - show: pop_bumper_bottom_chase_rainbow
+    - show: pop_bumper_bottom_wave_orange
       action: stop
 
   auction_highlighted:
     - show: auction_mode_wave_yellow
       repeat: yes
-    - show: spinner_arrow_chase_rainbow
+    - show: spinner_arrow_wave_yellow
       repeat: yes
-    - show: player_bid_chase_rainbow
+    - show: player_bid_wave_yellow
       repeat: yes
-    - show: opponent_bid_chase_rainbow
+    - show: opponent_bid_wave_yellow
       repeat: yes
   auction_unhighlighted:
     - show: auction_mode_wave_yellow
       action: stop
-    - show: spinner_arrow_chase_rainbow
+    - show: spinner_arrow_wave_yellow
       action: stop
-    - show: player_bid_chase_rainbow
+    - show: player_bid_wave_yellow
       action: stop
-    - show: opponent_bid_chase_rainbow
+    - show: opponent_bid_wave_yellow
       action: stop
 
   photo_highlighted:
     - show: photo_mode_wave_green
       repeat: yes
-    - show: drop_target_centre_arrow_chase_rainbow
+    - show: drop_target_centre_arrow_wave_green
       repeat: yes
   photo_unhighlighted:
     - show: photo_mode_wave_green
       action: stop
-    - show: drop_target_centre_arrow_chase_rainbow
+    - show: drop_target_centre_arrow_wave_green
       action: stop
 
   cosplay_highlighted:
     - show: cosplay_mode_wave_blue
       repeat: yes
-    - show: main_stage_edge_chase_rainbow
+    - show: main_stage_wave_blue
       repeat: yes
-    - show: drop_target_right_chase_green
-      tocks_per_sec: 4
+    - show: drop_target_right_wave_blue
       repeat: yes
   cosplay_unhighlighted:
     - show: cosplay_mode_wave_blue
       action: stop
-    - show: main_stage_edge_chase_rainbow
+    - show: main_stage_wave_blue
       action: stop
-    - show: drop_target_right_chase_green
+    - show: drop_target_right_wave_blue
       action: stop
 
   stargazer_highlighted:
     - show: stargazer_mode_wave_magenta
       repeat: yes
-    - show: kick_out_left_arrow_chase_rainbow
+    - show: kick_out_left_arrow_wave_magenta
       repeat: yes
-    - show: kick_out_right_arrow_chase_rainbow
+    - show: kick_out_right_arrow_wave_magenta
       repeat: yes
-    - show: spinner_arrow_chase_rainbow
+    - show: spinner_arrow_wave_magenta
       repeat: yes
-    - show: multiball_chase_rainbow
+    - show: multiball_wave_magenta
       repeat: yes
   stargazer_unhighlighted:
     - show: stargazer_mode_wave_magenta
       action: stop
-    - show: kick_out_left_arrow_chase_rainbow
+    - show: kick_out_left_arrow_wave_magenta
       action: stop
-    - show: kick_out_right_arrow_chase_rainbow
+    - show: kick_out_right_arrow_wave_magenta
       action: stop
-    - show: spinner_arrow_chase_rainbow
+    - show: spinner_arrow_wave_magenta
       action: stop
-    - show: multiball_chase_rainbow
+    - show: multiball_wave_magenta
       action: stop
