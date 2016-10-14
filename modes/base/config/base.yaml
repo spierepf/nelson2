@@ -120,12 +120,9 @@ sound_player:
     sound: auction_sold_villain
     start_events: timer_opponent_bid_complete
 
-  photo started part one:
+  photo started:
     sound: i_want_picture
     start_events: mode_photo_starting
-  photo started part two:
-    sound: red_shirt_bots
-    start_events: mode_photo_started
   photo stage 1:
     sound: each_bot_more_powerful
     start_events: logicblock_photo_stage_1_complete
