@@ -489,5 +489,5 @@ for leds in ["stargazer_mode", "kick_out_left_arrow", "kick_out_right_arrow", "s
     ColorWave(Leds(leds), "magenta").write()
 
 ''' jackpot mode '''
-for leds in ["jackpot", "kick_out_right_arrow"]:
+for leds in ["jackpot", "pop_bumper_left", "pop_bumper_right", "pop_bumper_bottom", "spinner_arrow", "main_stage", "kick_out_left_arrow", "kick_out_right_arrow"]:
     RainbowFade(Leds(leds)).write()

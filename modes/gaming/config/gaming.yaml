@@ -10,9 +10,9 @@ shot_profiles:
   hit_me:
     states:
       - name: active
-        light_script: flash_green
+        light_script: flash_red
       - name: complete
-        light_script: on_green
+        light_script: on_red
 
 shots:
   drop_target_left_1:

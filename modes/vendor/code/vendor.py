@@ -33,7 +33,7 @@ class vendor(Mode):
     def mode_init(self):
         self.timer = Timer(callback=self.tick, frequency=1.0/5.0)
 
-        self.left_bumper = VendorBumper(self.machine, "pop_bumper_left_hits_count", [0, 0, 255], [0, 0, 255/3], [
+        self.left_bumper = VendorBumper(self.machine, "pop_bumper_left_hits_count", [255, 255, 0], [255/3, 255/3, 0/3], [
                                 self.machine.leds['l_pop_bumper_left_a'],
                                 self.machine.leds['l_pop_bumper_left_b'],
                                 self.machine.leds['l_pop_bumper_left_c'],
@@ -48,7 +48,7 @@ class vendor(Mode):
                                 self.machine.leds['l_pop_bumper_left_l'],
                             ])
 
-        self.right_bumper = VendorBumper(self.machine, "pop_bumper_right_hits_count", [0, 0, 255], [0, 0, 255/3], [
+        self.right_bumper = VendorBumper(self.machine, "pop_bumper_right_hits_count", [255, 255, 0], [255/3, 255/3, 0/3], [
                                 self.machine.leds['l_pop_bumper_right_a'],
                                 self.machine.leds['l_pop_bumper_right_b'],
                                 self.machine.leds['l_pop_bumper_right_c'],
@@ -63,7 +63,7 @@ class vendor(Mode):
                                 self.machine.leds['l_pop_bumper_right_l'],
                             ])
 
-        self.bottom_bumper = VendorBumper(self.machine, "pop_bumper_bottom_hits_count", [0, 0, 255], [0, 0, 255/3], [
+        self.bottom_bumper = VendorBumper(self.machine, "pop_bumper_bottom_hits_count", [255, 255, 0], [255/3, 255/3, 0/3], [
                                 self.machine.leds['l_pop_bumper_bottom_a'],
                                 self.machine.leds['l_pop_bumper_bottom_b'],
                                 self.machine.leds['l_pop_bumper_bottom_c'],

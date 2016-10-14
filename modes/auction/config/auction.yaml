@@ -6,6 +6,14 @@ mode:
   start_events: auction_selected
   stop_events: auction_complete, auction_failed
 
+shot_profiles:
+  hit_me:
+    states:
+      - name: active
+        light_script: flash_yellow
+      - name: complete
+        light_script: on_yellow
+
 shots:
   auction_collect:
     switch: s_main_stage_entry
@@ -77,3 +85,13 @@ timers:
 event_player:
   timer_opponent_bid_complete:
     auction_failed
+
+scoring:
+  spinner_hit:
+    score: 250
+
+  logicblock_player_bid_complete:
+    score: 30000
+
+  auction_complete:
+    score: 100000

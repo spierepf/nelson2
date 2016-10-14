@@ -4,7 +4,7 @@ mode:
   priority: 100
   code: jackpot.jackpot
   start_events: jackpot_enabled
-  stop_events: jackpot_complete, timer_jackpot_timer_complete
+  stop_events: jackpot_complete, timer_jackpot_complete
 
 shot_profiles:
   jackpot:
@@ -12,12 +12,61 @@ shot_profiles:
       - name: active
 
 shots:
+  pop_bumper_left:
+    profile: jackpot
+    tags: jackpot_shot
+    enable_events: enable_jackpot_mode_shot_pop_bumper_left
+    disable_events: disable_jackpot_mode_shot_pop_bumper_left
+    reset_events: disable_jackpot_mode_shot_pop_bumper_left
+
+  pop_bumper_right:
+    profile: jackpot
+    tags: jackpot_shot
+    enable_events: enable_jackpot_mode_shot_pop_bumper_right
+    disable_events: disable_jackpot_mode_shot_pop_bumper_right
+    reset_events: disable_jackpot_mode_shot_pop_bumper_right
+
+  pop_bumper_bottom:
+    profile: jackpot
+    tags: jackpot_shot
+    enable_events: enable_jackpot_mode_shot_pop_bumper_bottom
+    disable_events: disable_jackpot_mode_shot_pop_bumper_bottom
+    reset_events: disable_jackpot_mode_shot_pop_bumper_bottom
+
+  spinner:
+    profile: jackpot
+    tags: jackpot_shot
+    enable_events: enable_jackpot_mode_shot_spinner
+    disable_events: disable_jackpot_mode_shot_spinner
+    reset_events: disable_jackpot_mode_shot_spinner
+
+  main_stage_entry:
+    profile: jackpot
+    tags: jackpot_shot
+    enable_events: enable_jackpot_mode_shot_main_stage_entry
+    disable_events: disable_jackpot_mode_shot_main_stage_entry
+    reset_events: disable_jackpot_mode_shot_main_stage_entry
+
+  kick_out_left:
+    profile: jackpot
+    tags: jackpot_shot
+    enable_events: enable_jackpot_mode_shot_kick_out_left
+    disable_events: disable_jackpot_mode_shot_kick_out_left
+    reset_events: disable_jackpot_mode_shot_kick_out_left
+
   kick_out_right:
     profile: jackpot
     tags: jackpot_shot
-    enable_events: enable_jackpot_mode_shot_kickout_right
-    disable_events: disable_jackpot_mode_shot_kickout_right
-    reset_events: disable_jackpot_mode_shot_kickout_right
+    enable_events: enable_jackpot_mode_shot_kick_out_right
+    disable_events: disable_jackpot_mode_shot_kick_out_right
+    reset_events: disable_jackpot_mode_shot_kick_out_right
+
+  # xxxxx:
+  #   profile: jackpot
+  #   tags: jackpot_shot
+  #   enable_events: enable_jackpot_mode_shot_xxxxx
+  #   disable_events: disable_jackpot_mode_shot_xxxxx
+  #   reset_events: disable_jackpot_mode_shot_xxxxx
 
 light_player:
   mode_jackpot_started:
@@ -26,23 +75,66 @@ light_player:
   mode_jackpot_stopping:
     - show: jackpot_fade_rainbow
       action: stop
-  enable_jackpot_mode_shot_kickout_right:
+
+  enable_jackpot_mode_shot_pop_bumper_left:
+    - show: pop_bumper_left_fade_rainbow
+      repeat: yes
+  disable_jackpot_mode_shot_pop_bumper_left:
+    - show: pop_bumper_left_fade_rainbow
+      action: stop
+
+  enable_jackpot_mode_shot_pop_bumper_right:
+    - show: pop_bumper_right_fade_rainbow
+      repeat: yes
+  disable_jackpot_mode_shot_pop_bumper_right:
+    - show: pop_bumper_right_fade_rainbow
+      action: stop
+
+  enable_jackpot_mode_shot_pop_bumper_bottom:
+    - show: pop_bumper_bottom_fade_rainbow
+      repeat: yes
+  disable_jackpot_mode_shot_pop_bumper_bottom:
+    - show: pop_bumper_bottom_fade_rainbow
+      action: stop
+
+  enable_jackpot_mode_shot_spinner:
+    - show: spinner_arrow_fade_rainbow
+      repeat: yes
+  disable_jackpot_mode_shot_spinner:
+    - show: spinner_arrow_fade_rainbow
+      action: stop
+
+  enable_jackpot_mode_shot_main_stage_entry:
+    - show: main_stage_fade_rainbow
+      repeat: yes
+  disable_jackpot_mode_shot_main_stage_entry:
+    - show: main_stage_fade_rainbow
+      action: stop
+
+  enable_jackpot_mode_shot_kick_out_left:
+    - show: kick_out_left_arrow_fade_rainbow
+      repeat: yes
+  disable_jackpot_mode_shot_kick_out_left:
+    - show: kick_out_left_arrow_fade_rainbow
+      action: stop
+
+  enable_jackpot_mode_shot_kick_out_right:
     - show: kick_out_right_arrow_fade_rainbow
       repeat: yes
-  disable_jackpot_mode_shot_kickout_right:
+  disable_jackpot_mode_shot_kick_out_right:
     - show: kick_out_right_arrow_fade_rainbow
       action: stop
 
-# logic_blocks:
-#   sequences:
-#     jackpot_sequence:
-#       events:
-#         - s_test_4_active
-#       events_when_complete: jackpot_complete
+  # enable_jackpot_mode_shot_xxxxx:
+  #   - show: xxxxx_fade_rainbow
+  #     repeat: yes
+  # disable_jackpot_mode_shot_xxxxx:
+  #   - show: xxxxx_fade_rainbow
+  #     action: stop
 
 timers:
-  jackpot_timer:
-    end_value: 5
+  jackpot:
+    end_value: 15
     control_events:
       - event: mode_jackpot_stopping
         action: jump

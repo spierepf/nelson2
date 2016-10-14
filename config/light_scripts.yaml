@@ -1,6 +1,33 @@
 # config_version=3
 
 light_scripts:
+  flash_red:
+    - tocks: 1
+      color: ff0000
+    - tocks: 1
+      color: 000000
+  on_red:
+    - tocks: 1
+      color: ff0000
+
+  flash_orange:
+    - tocks: 1
+      color: ffc800
+    - tocks: 1
+      color: 000000
+  on_orange:
+    - tocks: 1
+      color: ffc800
+
+  flash_yellow:
+    - tocks: 1
+      color: ffff00
+    - tocks: 1
+      color: 000000
+  on_yellow:
+    - tocks: 1
+      color: ffff00
+
   flash_green:
     - tocks: 1
       color: 00ff00
@@ -9,3 +36,21 @@ light_scripts:
   on_green:
     - tocks: 1
       color: 00ff00
+
+  flash_blue:
+    - tocks: 1
+      color: 0000ff
+    - tocks: 1
+      color: 000000
+  on_blue:
+    - tocks: 1
+      color: 0000ff
+
+  flash_magenta:
+    - tocks: 1
+      color: ff00ff
+    - tocks: 1
+      color: 000000
+  on_magenta:
+    - tocks: 1
+      color: ff00ff
