@@ -62,22 +62,22 @@ switches:
 
   s_outlane_right:
     number: 5-6
-    debounce_open: 5
+    # debounce_open: 5
     debounce_close: 5
 
   s_inlane_right:
     number: 5-7
-    debounce_open: 5
+    # debounce_open: 5
     debounce_close: 5
 
   s_inlane_left:
     number: 5-8
-    debounce_open: 5
+    # debounce_open: 5
     debounce_close: 5
 
   s_outlane_left:
     number: 5-9
-    debounce_open: 5
+    # debounce_open: 5
     debounce_close: 5
 
   s_plunger_lane:
@@ -94,17 +94,17 @@ switches:
 
   s_upper_lane_1:
     number: 10-7
-    debounce_open: 5
+    # debounce_open: 5
     debounce_close: 5
 
   s_upper_lane_2:
     number: 10-8
-    debounce_open: 5
+    # debounce_open: 5
     debounce_close: 5
 
   s_upper_lane_3:
     number: 10-9
-    debounce_open: 5
+    # debounce_open: 5
     debounce_close: 5
 
   s_spinner:
@@ -120,27 +120,27 @@ switches:
 
   s_pop_bumper_left:
     number: 10-2
-    debounce_open: 2
+    # debounce_open: 2
     debounce_close: 2
 
   s_pop_bumper_bottom:
     number: 10-1
-    debounce_open: 2
+    # debounce_open: 2
     debounce_close: 2
 
   s_pop_bumper_right:
     number: 10-3
-    debounce_open: 2
+    # debounce_open: 2
     debounce_close: 2
 
   s_slingshot_right:
     number: 5-10
-    debounce_open: 2
+    # debounce_open: 2
     debounce_close: 2
     
   s_slingshot_left:
     number: 5-11
-    debounce_open: 2
+    # debounce_open: 2
     debounce_close: 2
     
   s_kick_out_right:
@@ -169,12 +169,12 @@ switches:
     
   s_fixed_target:
     number: 1-11
-    debounce_open: 2
+    # debounce_open: 2
     debounce_close: 2
     
   s_main_stage_entry:
     number: 10-11
-    debounce_open: 2
+    # debounce_open: 2
     debounce_close: 2
 
   s_tilt:
