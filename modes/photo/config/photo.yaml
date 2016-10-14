@@ -38,57 +38,17 @@ shot_profiles:
 
 shots:
   drop_target_centre_1:
-    switch: s_drop_target_centre_1
-    led:
-      l_drop_target_centre_arrow_a
-      l_drop_target_centre_arrow_b
-      l_drop_target_centre_arrow_c
-      l_drop_target_centre_arrow_d
-      l_drop_target_centre_arrow_e
-      l_drop_target_centre_arrow_f
-      l_drop_target_centre_arrow_g
-      l_drop_target_centre_arrow_h
     profile: hit_me_1
     reset_events: mode_photo_stopping
   drop_target_centre_2:
-    switch: s_drop_target_centre_2
-    led:
-      l_drop_target_centre_arrow_a
-      l_drop_target_centre_arrow_b
-      l_drop_target_centre_arrow_c
-      l_drop_target_centre_arrow_d
-      l_drop_target_centre_arrow_e
-      l_drop_target_centre_arrow_f
-      l_drop_target_centre_arrow_g
-      l_drop_target_centre_arrow_h
     profile: hit_me_2
     enable_events: drop_target_centre_1_hit_me_1_active_hit
     reset_events: mode_photo_stopping
   drop_target_centre_3:
-    switch: s_drop_target_centre_3
-    led:
-      l_drop_target_centre_arrow_a
-      l_drop_target_centre_arrow_b
-      l_drop_target_centre_arrow_c
-      l_drop_target_centre_arrow_d
-      l_drop_target_centre_arrow_e
-      l_drop_target_centre_arrow_f
-      l_drop_target_centre_arrow_g
-      l_drop_target_centre_arrow_h
     profile: hit_me_3
     enable_events: drop_target_centre_2_hit_me_2_active_hit
     reset_events: mode_photo_stopping
   fixed_target:
-    switch: s_fixed_target
-    led:
-      l_drop_target_centre_arrow_a
-      l_drop_target_centre_arrow_b
-      l_drop_target_centre_arrow_c
-      l_drop_target_centre_arrow_d
-      l_drop_target_centre_arrow_e
-      l_drop_target_centre_arrow_f
-      l_drop_target_centre_arrow_g
-      l_drop_target_centre_arrow_h
     profile: hit_me_4
     enable_events: drop_target_centre_3_hit_me_3_active_hit
     reset_events: mode_photo_stopping

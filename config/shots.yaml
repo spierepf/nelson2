@@ -81,10 +81,37 @@ shots:
 
   drop_target_centre_1:
     switch: s_drop_target_centre_1
+    led:
+      l_drop_target_centre_arrow_a
+      l_drop_target_centre_arrow_b
+      l_drop_target_centre_arrow_c
+      l_drop_target_centre_arrow_d
+      l_drop_target_centre_arrow_e
+      l_drop_target_centre_arrow_f
+      l_drop_target_centre_arrow_g
+      l_drop_target_centre_arrow_h
   drop_target_centre_2:
     switch: s_drop_target_centre_2
+    led:
+      l_drop_target_centre_arrow_a
+      l_drop_target_centre_arrow_b
+      l_drop_target_centre_arrow_c
+      l_drop_target_centre_arrow_d
+      l_drop_target_centre_arrow_e
+      l_drop_target_centre_arrow_f
+      l_drop_target_centre_arrow_g
+      l_drop_target_centre_arrow_h
   drop_target_centre_3:
     switch: s_drop_target_centre_3
+    led:
+      l_drop_target_centre_arrow_a
+      l_drop_target_centre_arrow_b
+      l_drop_target_centre_arrow_c
+      l_drop_target_centre_arrow_d
+      l_drop_target_centre_arrow_e
+      l_drop_target_centre_arrow_f
+      l_drop_target_centre_arrow_g
+      l_drop_target_centre_arrow_h
 
   drop_target_right_1:
     switch: s_drop_target_right_1
@@ -98,6 +125,15 @@ shots:
 
   fixed_target:
     switch: s_fixed_target
+    led:
+      l_drop_target_centre_arrow_a
+      l_drop_target_centre_arrow_b
+      l_drop_target_centre_arrow_c
+      l_drop_target_centre_arrow_d
+      l_drop_target_centre_arrow_e
+      l_drop_target_centre_arrow_f
+      l_drop_target_centre_arrow_g
+      l_drop_target_centre_arrow_h
 
   slingshot_left:
     switch: s_slingshot_left
