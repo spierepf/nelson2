@@ -229,7 +229,7 @@ sound_player:
     start_events: balldevice_drain_ball_enter
 
   main stage entry:
-    sound: applause
+    sound: applause3
     start_events: main_stage_entry_hit
 
 slide_player:
