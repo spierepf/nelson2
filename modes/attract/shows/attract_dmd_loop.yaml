@@ -1,3 +1,52 @@
+- tocks: 20
+  display:
+  - type: text
+    text: Voices
+    font: small
+    h_pos: center
+    y: 1
+  - type: text
+    text: Computer
+    font: small
+    h_pos: right
+    y: 8
+  - type: text
+    text: Floyd Peyton
+    font: small
+    h_pos: left
+    y: 8
+  - type: text
+    text: Sidekick
+    font: small
+    h_pos: right
+    y: 14
+  - type: text
+    text: Fat Apollo
+    font: small
+    h_pos: left
+    y: 14
+  - type: text
+    text: Villain
+    font: small
+    h_pos: right
+    y: 20
+  - type: text
+    text: Sandra Butler
+    font: small
+    h_pos: left
+    y: 20
+  - type: text
+    text: Auctioneer
+    font: small
+    h_pos: right
+    y: 26
+  - type: text
+    text: Mark Mayhew
+    font: small
+    h_pos: left
+    y: 26
+
+
 - tocks: 4
   display:
   - type: Movie
