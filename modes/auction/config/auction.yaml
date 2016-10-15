@@ -10,11 +10,20 @@ light_player:
   mode_auction_started:
     - show: auction_mode_wave_yellow
       repeat: yes
+    - leds: l_spinner_arrow_a
+      script: flash_yellow
+      tocks_per_sec: 8
+      repeat: true
   mode_auction_stopping:
     - show: auction_mode_wave_yellow
       action: stop
+    - leds: l_spinner_arrow_a
+      script: flash_yellow
+      tocks_per_sec: 8
+      action: stop
+
 shot_profiles:
-  hit_me:
+  auction:
     states:
       - name: active
         light_script: flash_yellow
@@ -62,7 +71,7 @@ shots:
       - l_main_stage_edge_k
       - l_main_stage_edge_l
       - l_main_stage_edge_m
-    profile: hit_me
+    profile: auction
     enable_events: logicblock_player_bid_complete
     reset_events: mode_auction_stopping
 
@@ -76,7 +85,7 @@ logic_blocks:
 
   sequences:
     auction:
-      events: auction_collect_hit_me_active_hit
+      events: auction_collect_auction_active_hit
       reset_events: mode_auction_stopping
       events_when_complete: auction_complete, carousel_mode_complete
 

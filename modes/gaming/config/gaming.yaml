@@ -15,7 +15,7 @@ light_player:
       action: stop
 
 shot_profiles:
-  hit_me:
+  gaming:
     states:
       - name: active
         light_script: flash_red
@@ -24,20 +24,20 @@ shot_profiles:
 
 shots:
   drop_target_left_1:
-    profile: hit_me
+    profile: gaming
     reset_events: mode_gaming_stopping
   drop_target_left_2:
-    profile: hit_me
+    profile: gaming
     reset_events: mode_gaming_stopping
   drop_target_left_3:
-    profile: hit_me
+    profile: gaming
     reset_events: mode_gaming_stopping
   kick_out_left:
-    profile: hit_me
+    profile: gaming
     enable_events: drop_target_bank_left_down
     reset_events: mode_gaming_stopping
   kick_out_right:
-    profile: hit_me
+    profile: gaming
     enable_events: drop_target_bank_left_down
     reset_events: mode_gaming_stopping
 
@@ -54,12 +54,12 @@ logic_blocks:
     gaming_stage_2:
       events:
         - logicblock_gaming_stage_1_complete
-        - kick_out_left_hit_me_active_hit, kick_out_right_hit_me_active_hit
+        - kick_out_left_gaming_active_hit, kick_out_right_gaming_active_hit
       reset_events: mode_gaming_stopping
     gaming:
       events:
         - logicblock_gaming_stage_2_complete
-        - kick_out_left_hit_me_active_hit, kick_out_right_hit_me_active_hit
+        - kick_out_left_gaming_active_hit, kick_out_right_gaming_active_hit
       enable_events: drop_target_bank_left_down
       reset_events: mode_gaming_stopping
       events_when_complete: gaming_complete, carousel_mode_complete

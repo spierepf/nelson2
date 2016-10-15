@@ -15,28 +15,28 @@ light_player:
       action: stop
 
 shot_profiles:
-  hit_me_1:
+  photo_1:
     states:
       - name: active
         light_script: flash_green
         tocks_per_sec: 4
       - name: complete
         light_script: on_green
-  hit_me_2:
+  photo_2:
     states:
       - name: active
         light_script: flash_green
         tocks_per_sec: 6
       - name: complete
         light_script: on_green
-  hit_me_3:
+  photo_3:
     states:
       - name: active
         light_script: flash_green
         tocks_per_sec: 8
       - name: complete
         light_script: on_green
-  hit_me_4:
+  photo_4:
     states:
       - name: active
         light_script: flash_green
@@ -46,41 +46,41 @@ shot_profiles:
 
 shots:
   drop_target_centre_1:
-    profile: hit_me_1
+    profile: photo_1
     reset_events: mode_photo_stopping
   drop_target_centre_2:
-    profile: hit_me_2
-    enable_events: drop_target_centre_1_hit_me_1_active_hit
+    profile: photo_2
+    enable_events: drop_target_centre_1_photo_1_active_hit
     reset_events: mode_photo_stopping
   drop_target_centre_3:
-    profile: hit_me_3
-    enable_events: drop_target_centre_2_hit_me_2_active_hit
+    profile: photo_3
+    enable_events: drop_target_centre_2_photo_2_active_hit
     reset_events: mode_photo_stopping
   fixed_target:
-    profile: hit_me_4
-    enable_events: drop_target_centre_3_hit_me_3_active_hit
+    profile: photo_4
+    enable_events: drop_target_centre_3_photo_3_active_hit
     reset_events: mode_photo_stopping
 
 logic_blocks:
   sequences:
     photo_stage_1:
       events:
-        - drop_target_centre_1_hit_me_1_active_hit
+        - drop_target_centre_1_photo_1_active_hit
       reset_events: mode_photo_stopping
     photo_stage_2:
       events:
         - logicblock_photo_stage_1_complete
-        - drop_target_centre_2_hit_me_2_active_hit
+        - drop_target_centre_2_photo_2_active_hit
       reset_events: mode_photo_stopping
     photo_stage_3:
       events:
         - logicblock_photo_stage_2_complete
-        - drop_target_centre_3_hit_me_3_active_hit
+        - drop_target_centre_3_photo_3_active_hit
       reset_events: mode_photo_stopping
     photo:
       events:
         - logicblock_photo_stage_3_complete
-        - fixed_target_hit_me_4_active_hit
+        - fixed_target_photo_4_active_hit
       reset_events: mode_photo_stopping
       events_when_complete: photo_complete, carousel_mode_complete
 

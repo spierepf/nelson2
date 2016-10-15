@@ -13,15 +13,6 @@ light_player:
   mode_vendor_stopping:
     - show: vendor_mode_wave_orange
       action: stop
-shots:
-  pop_bumper_left:
-    switch: s_pop_bumper_left
-
-  pop_bumper_right:
-    switch: s_pop_bumper_right
-
-  pop_bumper_bottom:
-    switch: s_pop_bumper_bottom
 
 logic_blocks:
   counters:
