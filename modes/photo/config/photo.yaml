@@ -6,6 +6,14 @@ mode:
   start_events: photo_selected
   stop_events: photo_complete, photo_failed
 
+light_player:
+  mode_photo_started:
+    - show: photo_mode_wave_green
+      repeat: yes
+  mode_photo_stopping:
+    - show: photo_mode_wave_green
+      action: stop
+
 shot_profiles:
   hit_me_1:
     states:

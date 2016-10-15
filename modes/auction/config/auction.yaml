@@ -6,6 +6,13 @@ mode:
   start_events: auction_selected
   stop_events: auction_complete, auction_failed
 
+light_player:
+  mode_auction_started:
+    - show: auction_mode_wave_yellow
+      repeat: yes
+  mode_auction_stopping:
+    - show: auction_mode_wave_yellow
+      action: stop
 shot_profiles:
   hit_me:
     states:

@@ -6,6 +6,13 @@ mode:
   start_events: vendor_selected
   stop_events: vendor_complete, vendor_failed
 
+light_player:
+  mode_vendor_started:
+    - show: vendor_mode_wave_orange
+      repeat: yes
+  mode_vendor_stopping:
+    - show: vendor_mode_wave_orange
+      action: stop
 shots:
   pop_bumper_left:
     switch: s_pop_bumper_left

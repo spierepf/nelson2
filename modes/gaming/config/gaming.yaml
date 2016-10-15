@@ -6,6 +6,14 @@ mode:
   start_events: gaming_selected
   stop_events: gaming_complete, gaming_failed
 
+light_player:
+  mode_gaming_started:
+    - show: gaming_mode_wave_red
+      repeat: yes
+  mode_gaming_stopping:
+    - show: gaming_mode_wave_red
+      action: stop
+
 shot_profiles:
   hit_me:
     states:

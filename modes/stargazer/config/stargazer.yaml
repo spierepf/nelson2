@@ -6,6 +6,14 @@ mode:
   start_events: stargazer_selected
   stop_events: stargazer_complete, stargazer_failed
 
+light_player:
+  mode_stargazer_started:
+    - show: stargazer_mode_wave_magenta
+      repeat: yes
+  mode_stargazer_stopping:
+    - show: stargazer_mode_wave_magenta
+      action: stop
+
 shot_profiles:
   hit_me:
     states:

@@ -6,6 +6,14 @@ mode:
   start_events: cosplay_selected
   stop_events: cosplay_complete, cosplay_failed
 
+light_player:
+  mode_cosplay_started:
+    - show: cosplay_mode_wave_blue
+      repeat: yes
+  mode_cosplay_stopping:
+    - show: cosplay_mode_wave_blue
+      action: stop
+
 shot_profiles:
   hit_me:
     states:
