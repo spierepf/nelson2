@@ -71,13 +71,13 @@ shots:
 
   drop_target_left_1:
     switch: s_drop_target_left_1
-    led: l_drop_target_left_1
+    led: l_drop_target_left_1_a, l_drop_target_left_1_b, l_drop_target_left_1_c 
   drop_target_left_2:
     switch: s_drop_target_left_2
-    led: l_drop_target_left_2
+    led: l_drop_target_left_2_a, l_drop_target_left_2_b, l_drop_target_left_2_c 
   drop_target_left_3:
     switch: s_drop_target_left_3
-    led: l_drop_target_left_3
+    led: l_drop_target_left_3_a, l_drop_target_left_3_b, l_drop_target_left_3_c 
 
   drop_target_centre_1:
     switch: s_drop_target_centre_1
@@ -115,13 +115,13 @@ shots:
 
   drop_target_right_1:
     switch: s_drop_target_right_1
-    led: l_drop_target_right_1
+    led: l_drop_target_right_1_a, l_drop_target_right_1_b, l_drop_target_right_1_c
   drop_target_right_2:
     switch: s_drop_target_right_2
-    led: l_drop_target_right_2
+    led: l_drop_target_right_2_a, l_drop_target_right_2_b, l_drop_target_right_2_c
   drop_target_right_3:
     switch: s_drop_target_right_3
-    led: l_drop_target_right_3
+    led: l_drop_target_right_3_a, l_drop_target_right_3_b, l_drop_target_right_3_c
 
   fixed_target:
     switch: s_fixed_target

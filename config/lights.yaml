@@ -1,6 +1,9 @@
 #config_version=3
 
 leds:
+###############################################################################
+# CHANNEL 0 LEDS 0-63
+
     l_pop_bumper_bottom_a: { number: 0 }
     l_pop_bumper_bottom_b: { number: 1 }
     l_pop_bumper_bottom_c: { number: 2 }
@@ -39,7 +42,84 @@ leds:
     l_pop_bumper_left_j: { number: 33 }
     l_pop_bumper_left_k: { number: 34 }
     l_pop_bumper_left_l: { number: 35 }
+
+
+###############################################################################
+# CHANNEL 1 LEDS 64-127
+
+    l_spinner_arrow_a: { number: 71 }
+    l_spinner_arrow_b: { number: 70 }
+    l_spinner_arrow_c: { number: 69 }
+    l_spinner_arrow_d: { number: 68 }
+    l_spinner_arrow_e: { number: 67 }
+    l_spinner_arrow_f: { number: 66 }
+    l_spinner_arrow_g: { number: 65 }
+    l_spinner_arrow_h: { number: 64 }
+
+    l_drop_target_centre_arrow_a: { number: 72 }
+    l_drop_target_centre_arrow_b: { number: 73 }
+    l_drop_target_centre_arrow_c: { number: 74 }
+    l_drop_target_centre_arrow_d: { number: 75 }
+    l_drop_target_centre_arrow_e: { number: 76 }
+    l_drop_target_centre_arrow_f: { number: 77 }
+    l_drop_target_centre_arrow_g: { number: 78 }
+    l_drop_target_centre_arrow_h: { number: 79 }
+
+    l_drop_target_right_1_a: { number: 88 }
+    l_drop_target_right_1_b: { number: 87 }
+    l_drop_target_right_1_c: { number: 86 }
+    l_drop_target_right_2_a: { number: 85 }
+    l_drop_target_right_2_b: { number: 84 }
+    l_drop_target_right_2_c: { number: 83 }
+    l_drop_target_right_3_a: { number: 82 }
+    l_drop_target_right_3_b: { number: 81 }
+    l_drop_target_right_3_c: { number: 80 }
+
+    l_kick_out_right_arrow_a: { number: 89 }
+    l_kick_out_right_arrow_b: { number: 90 }
+    l_kick_out_right_arrow_c: { number: 91 }
+    l_kick_out_right_arrow_d: { number: 92 }
+    l_kick_out_right_arrow_e: { number: 93 }
+    l_kick_out_right_arrow_f: { number: 94 }
+    l_kick_out_right_arrow_g: { number: 95 }
+    l_kick_out_right_arrow_h: { number: 96 }
+
+    l_xp_multiplier_2_a: { number: 97 }
+    l_xp_multiplier_2_b: { number: 98 }
+    l_xp_multiplier_2_c: { number: 99 }
+    l_xp_multiplier_2_d: { number: 100 }
+    l_xp_multiplier_2_e: { number: 101 }
+    l_xp_multiplier_2_f: { number: 102 }
+    l_xp_multiplier_2_g: { number: 103 }
     
+    l_xp_multiplier_3_a: { number: 104 }
+    l_xp_multiplier_3_b: { number: 105 }
+    l_xp_multiplier_3_c: { number: 106 }
+    l_xp_multiplier_3_d: { number: 107 }
+    l_xp_multiplier_3_e: { number: 108 }
+    l_xp_multiplier_3_f: { number: 109 }
+    l_xp_multiplier_3_g: { number: 110 }
+    
+    l_xp_multiplier_5_a: { number: 111 }
+    l_xp_multiplier_5_b: { number: 112 }
+    l_xp_multiplier_5_c: { number: 113 }
+    l_xp_multiplier_5_d: { number: 114 }
+    l_xp_multiplier_5_e: { number: 115 }
+    l_xp_multiplier_5_f: { number: 116 }
+    l_xp_multiplier_5_g: { number: 117 }
+
+    l_drop_target_left_1_a: { number: 118 }
+    l_drop_target_left_1_b: { number: 119 }
+    l_drop_target_left_1_c: { number: 120 }
+    l_drop_target_left_2_a: { number: 121 }
+    l_drop_target_left_2_b: { number: 122 }
+    l_drop_target_left_2_c: { number: 123 }
+    l_drop_target_left_3_a: { number: 124 }
+    l_drop_target_left_3_b: { number: 125 }
+    l_drop_target_left_3_c: { number: 126 }
+    
+###############################################################################
+# CHANNEL 2 LEDS 128-191
     l_upper_lane_1: { number: 192 }
     l_upper_lane_2: { number: 193 }
     l_upper_lane_3: { number: 194 }
@@ -58,125 +138,9 @@ leds:
     l_main_stage_edge_l: { number: 206 }
     l_main_stage_edge_m: { number: 207 }
     
-    l_xp_multiplier_2_a: { number: 91 }
-    l_xp_multiplier_2_b: { number: 92 }
-    l_xp_multiplier_2_c: { number: 93 }
-    l_xp_multiplier_2_d: { number: 94 }
-    l_xp_multiplier_2_e: { number: 95 }
-    l_xp_multiplier_2_f: { number: 96 }
-    l_xp_multiplier_2_g: { number: 97 }
-    
-    l_xp_multiplier_3_a: { number: 98 }
-    l_xp_multiplier_3_b: { number: 99 }
-    l_xp_multiplier_3_c: { number: 100 }
-    l_xp_multiplier_3_d: { number: 101 }
-    l_xp_multiplier_3_e: { number: 102 }
-    l_xp_multiplier_3_f: { number: 103 }
-    l_xp_multiplier_3_g: { number: 104 }
-    
-    l_xp_multiplier_5_a: { number: 105 }
-    l_xp_multiplier_5_b: { number: 106 }
-    l_xp_multiplier_5_c: { number: 107 }
-    l_xp_multiplier_5_d: { number: 108 }
-    l_xp_multiplier_5_e: { number: 109 }
-    l_xp_multiplier_5_f: { number: 110 }
-    l_xp_multiplier_5_g: { number: 111 }
-    
-    l_spinner_arrow_a: { number: 79 }
-    l_spinner_arrow_b: { number: 78 }
-    l_spinner_arrow_c: { number: 77 }
-    l_spinner_arrow_d: { number: 76 }
-    l_spinner_arrow_e: { number: 75 }
-    l_spinner_arrow_f: { number: 74 }
-    l_spinner_arrow_g: { number: 73 }
-    l_spinner_arrow_h: { number: 72 }
-    
-    l_drop_target_centre_arrow_a: { number: 71 }
-    l_drop_target_centre_arrow_b: { number: 70 }
-    l_drop_target_centre_arrow_c: { number: 69 }
-    l_drop_target_centre_arrow_d: { number: 68 }
-    l_drop_target_centre_arrow_e: { number: 67 }
-    l_drop_target_centre_arrow_f: { number: 66 }
-    l_drop_target_centre_arrow_g: { number: 65 }
-    l_drop_target_centre_arrow_h: { number: 64 }
-    
-    l_drop_target_left_1: { number: 114 }
-    l_drop_target_left_2: { number: 113 }
-    l_drop_target_left_3: { number: 112 }
-    
-    l_player_bid_a: { number: 455 }
-    l_player_bid_b: { number: 454 }
-    l_player_bid_c: { number: 453 }
-    l_player_bid_d: { number: 452 }
-    l_player_bid_e: { number: 451 }
-    l_player_bid_f: { number: 450 }
-    l_player_bid_g: { number: 449 }
-    l_player_bid_h: { number: 448 }
-    
-    l_opponent_bid_a: { number: 456 }
-    l_opponent_bid_b: { number: 457 }
-    l_opponent_bid_c: { number: 458 }
-    l_opponent_bid_d: { number: 459 }
-    l_opponent_bid_e: { number: 460 }
-    l_opponent_bid_f: { number: 461 }
-    l_opponent_bid_g: { number: 462 }
-    l_opponent_bid_h: { number: 463 }
-    
-    l_xp_bar_a: { number: 464 }
-    l_xp_bar_b: { number: 465 }
-    l_xp_bar_c: { number: 466 }
-    l_xp_bar_d: { number: 467 }
-    l_xp_bar_e: { number: 468 }
-    l_xp_bar_f: { number: 469 }
-    l_xp_bar_g: { number: 470 }
-    l_xp_bar_h: { number: 471 }
-    
-    l_drop_target_right_1: { number: 82 }
-    l_drop_target_right_2: { number: 81 }
-    l_drop_target_right_3: { number: 80 }
-    
-    l_kick_out_left_arrow_a: { number: 122 }
-    l_kick_out_left_arrow_b: { number: 121 }
-    l_kick_out_left_arrow_c: { number: 120 }
-    l_kick_out_left_arrow_d: { number: 119 }
-    l_kick_out_left_arrow_e: { number: 118 }
-    l_kick_out_left_arrow_f: { number: 117 }
-    l_kick_out_left_arrow_g: { number: 116 }
-    l_kick_out_left_arrow_h: { number: 115 }
-    
-    l_kick_out_right_arrow_a: { number: 90 }
-    l_kick_out_right_arrow_b: { number: 89 }
-    l_kick_out_right_arrow_c: { number: 88 }
-    l_kick_out_right_arrow_d: { number: 87 }
-    l_kick_out_right_arrow_e: { number: 86 }
-    l_kick_out_right_arrow_f: { number: 85 }
-    l_kick_out_right_arrow_g: { number: 84 }
-    l_kick_out_right_arrow_h: { number: 83 }
-    
-    l_gaming_mode_a: { number: 472 }
-    l_gaming_mode_b: { number: 473 }
-    l_gaming_mode_c: { number: 474 }
-    
-    l_vendor_mode_a: { number: 487 }
-    l_vendor_mode_b: { number: 488 }
-    l_vendor_mode_c: { number: 489 }
-    
-    l_auction_mode_a: { number: 484 }
-    l_auction_mode_b: { number: 485 }
-    l_auction_mode_c: { number: 486 }
-    
-    l_photo_mode_a: { number: 481 }
-    l_photo_mode_b: { number: 482 }
-    l_photo_mode_c: { number: 483 }
-    
-    l_cosplay_mode_a: { number: 478 }
-    l_cosplay_mode_b: { number: 479 }
-    l_cosplay_mode_c: { number: 480 }
-    
-    l_stargazer_mode_a: { number: 475 }
-    l_stargazer_mode_b: { number: 476 }
-    l_stargazer_mode_c: { number: 477 }
-        
+
+###############################################################################
+# CHANNEL 5 LEDS 320-383
     l_main_stage_arrow_1_a: { number: 343 }
     l_main_stage_arrow_1_b: { number: 342 }
     l_main_stage_arrow_1_c: { number: 341 }
@@ -203,47 +167,58 @@ leds:
     l_main_stage_arrow_3_f: { number: 322 }
     l_main_stage_arrow_3_g: { number: 321 }
     l_main_stage_arrow_3_h: { number: 320 }    
-    
-    l_outlane_left_a: { number: 344 }
-    l_outlane_left_b: { number: 345 }
-    l_outlane_left_c: { number: 346 }
-    
-    l_inlane_left_a: { number: 347 }
-    l_inlane_left_b: { number: 348 }
-    l_inlane_left_c: { number: 349 }
 
-    l_extra_ball_a: { number: 350 }
-    l_extra_ball_b: { number: 351 }
-    l_extra_ball_c: { number: 352 }
-    l_extra_ball_d: { number: 353 }
-    l_extra_ball_e: { number: 354 }
-    l_extra_ball_f: { number: 355 }
-    l_extra_ball_g: { number: 356 }
-    
-    l_jackpot_a: { number: 357 }
-    l_jackpot_b: { number: 358 }
-    l_jackpot_c: { number: 359 }
-    l_jackpot_d: { number: 360 }
-    l_jackpot_e: { number: 361 }
-    l_jackpot_f: { number: 362 }
-    l_jackpot_g: { number: 363 }
-    
-    l_multiball_a: { number: 364 }
-    l_multiball_b: { number: 365 }
-    l_multiball_c: { number: 366 }
-    l_multiball_d: { number: 367 }
-    l_multiball_e: { number: 368 }
-    l_multiball_f: { number: 369 }
-    l_multiball_g: { number: 370 }
+    l_kick_out_left_arrow_a: { number: 344 }
+    l_kick_out_left_arrow_b: { number: 345 }
+    l_kick_out_left_arrow_c: { number: 346 }
+    l_kick_out_left_arrow_d: { number: 347 }
+    l_kick_out_left_arrow_e: { number: 348 }
+    l_kick_out_left_arrow_f: { number: 349 }
+    l_kick_out_left_arrow_g: { number: 350 }
+    l_kick_out_left_arrow_h: { number: 351 }
 
-    l_inlane_right_a: { number: 371 }
-    l_inlane_right_b: { number: 372 }
-    l_inlane_right_c: { number: 373 }
-
-    l_outlane_right_a: { number: 374 }
-    l_outlane_right_b: { number: 375 }
-    l_outlane_right_c: { number: 376 }
+    l_outlane_left_a: { number: 352 }
+    l_outlane_left_b: { number: 353 }
+    l_outlane_left_c: { number: 354 }
     
+    l_inlane_left_a: { number: 355 }
+    l_inlane_left_b: { number: 356 }
+    l_inlane_left_c: { number: 357 }
+
+    l_extra_ball_a: { number: 358 }
+    l_extra_ball_b: { number: 359 }
+    l_extra_ball_c: { number: 360 }
+    l_extra_ball_d: { number: 361 }
+    l_extra_ball_e: { number: 362 }
+    l_extra_ball_f: { number: 363 }
+    l_extra_ball_g: { number: 364 }
+    
+    l_jackpot_a: { number: 365 }
+    l_jackpot_b: { number: 366 }
+    l_jackpot_c: { number: 367 }
+    l_jackpot_d: { number: 368 }
+    l_jackpot_e: { number: 369 }
+    l_jackpot_f: { number: 370 }
+    l_jackpot_g: { number: 371 }
+    
+    l_multiball_a: { number: 372 }
+    l_multiball_b: { number: 373 }
+    l_multiball_c: { number: 374 }
+    l_multiball_d: { number: 375 }
+    l_multiball_e: { number: 376 }
+    l_multiball_f: { number: 377 }
+    l_multiball_g: { number: 378 }
+
+    l_inlane_right_a: { number: 379 }
+    l_inlane_right_b: { number: 380 }
+    l_inlane_right_c: { number: 381 }
+
+    l_outlane_right_a: { number: 382 }
+    l_outlane_right_b: { number: 383 }
+    l_outlane_right_c: { number: 511 }
+
+###############################################################################
+# CHANNEL 6 LEDS 384-447
     l_ball_save_a: { number: 384 }
     l_ball_save_b: { number: 385 }
     l_ball_save_c: { number: 386 }
@@ -265,3 +240,57 @@ leds:
     l_ball_save_r: { number: 399 }
 
     l_ball_save_s: { number: 396 }
+
+###############################################################################
+# CHANNEL 7 LEDS 448-511
+
+    l_player_bid_a: { number: 455 }
+    l_player_bid_b: { number: 454 }
+    l_player_bid_c: { number: 453 }
+    l_player_bid_d: { number: 452 }
+    l_player_bid_e: { number: 451 }
+    l_player_bid_f: { number: 450 }
+    l_player_bid_g: { number: 449 }
+    l_player_bid_h: { number: 448 }
+    
+    l_opponent_bid_a: { number: 456 }
+    l_opponent_bid_b: { number: 457 }
+    l_opponent_bid_c: { number: 458 }
+    l_opponent_bid_d: { number: 459 }
+    l_opponent_bid_e: { number: 460 }
+    l_opponent_bid_f: { number: 461 }
+    l_opponent_bid_g: { number: 462 }
+    l_opponent_bid_h: { number: 463 }
+    
+    l_xp_bar_a: { number: 464 }
+    l_xp_bar_b: { number: 465 }
+    l_xp_bar_c: { number: 466 }
+    l_xp_bar_d: { number: 467 }
+    l_xp_bar_e: { number: 468 }
+    l_xp_bar_f: { number: 469 }
+    l_xp_bar_g: { number: 470 }
+    l_xp_bar_h: { number: 471 }
+        
+    l_gaming_mode_a: { number: 472 }
+    l_gaming_mode_b: { number: 473 }
+    l_gaming_mode_c: { number: 474 }
+
+    l_stargazer_mode_a: { number: 475 }
+    l_stargazer_mode_b: { number: 476 }
+    l_stargazer_mode_c: { number: 477 }
+
+    l_cosplay_mode_a: { number: 478 }
+    l_cosplay_mode_b: { number: 479 }
+    l_cosplay_mode_c: { number: 480 }
+
+    l_photo_mode_a: { number: 481 }
+    l_photo_mode_b: { number: 482 }
+    l_photo_mode_c: { number: 483 }
+    
+    l_auction_mode_a: { number: 484 }
+    l_auction_mode_b: { number: 485 }
+    l_auction_mode_c: { number: 486 }
+    
+    l_vendor_mode_a: { number: 487 }
+    l_vendor_mode_b: { number: 488 }
+    l_vendor_mode_c: { number: 489 }
