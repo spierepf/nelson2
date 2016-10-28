@@ -134,7 +134,7 @@ light_player:
 
 timers:
   jackpot:
-    end_value: 15
+    end_value: 30
     control_events:
       - event: mode_jackpot_stopping
         action: jump

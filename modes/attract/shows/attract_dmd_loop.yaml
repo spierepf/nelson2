@@ -1,4 +1,4 @@
-- tocks: 20
+- tocks: 5
   display:
   - type: text
     text: Voices
@@ -134,7 +134,7 @@
         duration: 1s
         direction: top
 
-- tocks: 3
+- tocks: 1
   display:
     - type: text
       text: 'AND'
