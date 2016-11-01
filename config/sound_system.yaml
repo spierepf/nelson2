@@ -19,7 +19,7 @@ sound_system:
 
 sound_player:
   waiting to plunge loop:
-    sound: waiting to plunge loop
+    sound: POL-gt-garage-short
     start_events: balldevice_plunger_lane_ball_enter
     stop_events: balldevice_plunger_lane_ball_left
     loops: -1
@@ -27,7 +27,7 @@ sound_player:
   background music:
     start_events: balldevice_plunger_lane_ball_left
     stop_events: balldevice_plunger_lane_ball_enter, game_ended
-    sound: base background music
+    sound: POL-crazy-escape-long
     loops: -1
     volume: 0.35
 
