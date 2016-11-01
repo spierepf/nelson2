@@ -13,6 +13,9 @@ config:
   - targets.yaml
   - shots.yaml
 
+game:
+  max_players: 1
+
 fonts:
   weltron:
     file: WELTRON2.TTF
