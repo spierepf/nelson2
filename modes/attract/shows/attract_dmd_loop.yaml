@@ -46,6 +46,145 @@
     h_pos: left
     y: 26
 
+- tocks: 5
+  display:
+  - type: text
+    text: Halifax Makerspace
+    font: small
+    h_pos: center
+    y: 1
+  - type: text
+    text: Peter Spierenburg
+    font: small
+    h_pos: center
+    y: 8
+  - type: text
+    text: Adam Cox
+    font: small
+    h_pos: center
+    y: 14
+  - type: text
+    text: Adam Smith
+    font: small
+    h_pos: center
+    y: 20
+  - type: text
+    text: Shawn Wilson
+    font: small
+    h_pos: center
+    y: 26
+
+- tocks: 5
+  display:
+  - type: text
+    text: Heartfelt Thanks To
+    font: small
+    h_pos: center
+    y: 1
+  - type: text
+    text: Mission Pinball
+    font: small
+    h_pos: center
+    y: 8
+  - type: text
+    text: Halifax Central Library
+    font: small
+    h_pos: center
+    y: 14
+  - type: text
+    text: The Discovery Centre
+    font: small
+    h_pos: center
+    y: 20
+  - type: text
+    text: NSCAD
+    font: small
+    h_pos: center
+    y: 26
+
+- tocks: 5
+  display:
+  - type: text
+    text: Heartfelt Thanks To
+    font: small
+    h_pos: center
+    y: 1
+  - type: text
+    text: Doug Parsons
+    font: small
+    h_pos: center
+    y: 8
+  - type: text
+    text: Chris McDonald
+    font: small
+    h_pos: center
+    y: 14
+  - type: text
+    text: Chris Townsend
+    font: small
+    h_pos: center
+    y: 20
+  - type: text
+    text: Robert Spierenburg
+    font: small
+    h_pos: center
+    y: 26
+
+- tocks: 5
+  display:
+  - type: text
+    text: Heartfelt Thanks To
+    font: small
+    h_pos: center
+    y: 1
+  - type: text
+    text: Claudio Zamai
+    font: small
+    h_pos: center
+    y: 8
+  - type: text
+    text: Eric Richardson
+    font: small
+    h_pos: center
+    y: 14
+  - type: text
+    text: Jeffrey Dunlop
+    font: small
+    h_pos: center
+    y: 20
+  - type: text
+    text: Matthew Skinner
+    font: small
+    h_pos: center
+    y: 26
+
+- tocks: 5
+  display:
+  - type: text
+    text: Heartfelt Thanks To
+    font: small
+    h_pos: center
+    y: 1
+  - type: text
+    text: Nathan Ryan
+    font: small
+    h_pos: center
+    y: 8
+  - type: text
+    text: Allan Carver
+    font: small
+    h_pos: center
+    y: 14
+#  - type: text
+#    text: xxx
+#    font: small
+#    h_pos: center
+#    y: 20
+#  - type: text
+#    text: xxx
+#    font: small
+#    h_pos: center
+#    y: 26
 
 - tocks: 4
   display:
