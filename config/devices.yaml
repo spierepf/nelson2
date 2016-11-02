@@ -10,7 +10,8 @@ ball_devices:
     tags: drain
 
   trough:
-    ball_switches: s_trough_1, s_trough_2, s_trough_3
+#    ball_switches: s_trough_1, s_trough_2, s_trough_3
+    ball_switches: s_trough_1
     eject_coil: c_trough_eject
     entrance_count_delay: 300ms
     confirm_eject_type: target
