@@ -138,12 +138,12 @@
     h_pos: center
     y: 1
   - type: text
-    text: Claudio Zamai
+    text: Eric Richardson
     font: small
     h_pos: center
     y: 8
   - type: text
-    text: Eric Richardson
+    text: Richard Billard
     font: small
     h_pos: center
     y: 14
@@ -175,11 +175,11 @@
     font: small
     h_pos: center
     y: 14
-#  - type: text
-#    text: xxx
-#    font: small
-#    h_pos: center
-#    y: 20
+  - type: text
+    text: Claudio Zamai
+    font: small
+    h_pos: center
+    y: 20
 #  - type: text
 #    text: xxx
 #    font: small
