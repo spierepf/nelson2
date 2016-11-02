@@ -292,6 +292,19 @@
         duration: 1s
         direction: top
 
+- tocks: 1
+  display:
+    - type: text
+      text: 'ART BY'
+- tocks: 3
+  display:
+    - type: image
+      image: rockPaperCynic
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top
+
 - tocks: 3
   display:
     - type: Text
