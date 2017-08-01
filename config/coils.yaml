@@ -13,7 +13,7 @@ coils:
     number: 21-1
 
   c_flipper_left:
-    number: 21-2
+    number: 21-3
 
   c_pop_bumper_bottom:
     pulse_ms: 6
