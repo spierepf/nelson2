@@ -186,11 +186,11 @@
 #    h_pos: center
 #    y: 26
 
-- tocks: 4
-  display:
-  - type: Movie
-    movie: nyancat
-    repeat: True
+#- tocks: 4
+#  display:
+#  - type: Movie
+#    movie: nyancat
+#    repeat: True
 
 - tocks: 3
   display:
