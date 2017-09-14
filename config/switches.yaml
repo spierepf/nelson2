@@ -83,13 +83,13 @@ switches:
   s_plunger_lane:
     number: 5-4
 
-  s_drop_target_left_3:
+  s_drop_target_left_1:
     number: 1-7
 
   s_drop_target_left_2:
     number: 1-6
 
-  s_drop_target_left_1:
+  s_drop_target_left_3:
     number: 1-5
 
   s_upper_lane_1:
