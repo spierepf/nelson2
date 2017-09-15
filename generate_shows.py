@@ -3,10 +3,6 @@ import yaml
 import collections
 import math
 
-def hexint_presenter(dumper, data):
-    return dumper.represent_int(hex(data))
-yaml.add_representer(int, hexint_presenter)
-
 """
  * The color white.  In the default sRGB space.
 """
@@ -212,11 +208,8 @@ def replicate(pattern, count):
     return retval;
 
 def to_hex(color):
-    retval = 0
-    for x in color:
-        retval = retval * 256 + x
-    return int(retval)
-
+    return ''.join('{:02x}'.format(int(x)) for x in color)
+    
 def gen_frame(leds, pattern):
     items = {}
     i = 0
