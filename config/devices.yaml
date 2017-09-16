@@ -52,35 +52,42 @@ flippers:
   flipper_left:
     main_coil: c_flipper_left
     activation_switch: s_flipper_left
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ending
 
   flipper_right:
     main_coil: c_flipper_right
     activation_switch: s_flipper_right
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ending
 
 autofire_coils:
   slingshot_right:
     coil: c_slingshot_right
     switch: s_slingshot_right
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ending
 
   slingshot_left:
     coil: c_slingshot_left
     switch: s_slingshot_left
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ending
 
   pop_bumper_left:
     coil: c_pop_bumper_left
     switch: s_pop_bumper_left
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ending
 
   pop_bumper_right:
     coil: c_pop_bumper_right
     switch: s_pop_bumper_right
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ending
 
   pop_bumper_bottom:
     coil: c_pop_bumper_bottom
     switch: s_pop_bumper_bottom
-    enable_events: machine_reset_phase_3
+    enable_events: ball_started
+    disable_events: ball_ending
