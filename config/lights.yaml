@@ -261,14 +261,14 @@ leds:
     l_opponent_bid_g: { number: 462 }
     l_opponent_bid_h: { number: 463 }
     
-    l_xp_bar_a: { number: 464 }
-    l_xp_bar_b: { number: 465 }
-    l_xp_bar_c: { number: 466 }
-    l_xp_bar_d: { number: 467 }
-    l_xp_bar_e: { number: 468 }
-    l_xp_bar_f: { number: 469 }
-    l_xp_bar_g: { number: 470 }
-    l_xp_bar_h: { number: 471 }
+    l_xp_bar_h: { number: 464 }
+    l_xp_bar_g: { number: 465 }
+    l_xp_bar_f: { number: 466 }
+    l_xp_bar_e: { number: 467 }
+    l_xp_bar_d: { number: 468 }
+    l_xp_bar_c: { number: 469 }
+    l_xp_bar_b: { number: 470 }
+    l_xp_bar_a: { number: 471 }
         
     l_gaming_mode_a: { number: 472 }
     l_gaming_mode_b: { number: 473 }
