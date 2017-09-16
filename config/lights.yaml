@@ -167,14 +167,14 @@ leds:
     l_main_stage_arrow_3_g: { number: 321 }
     l_main_stage_arrow_3_h: { number: 320 }    
 
-    l_kick_out_left_arrow_a: { number: 344 }
-    l_kick_out_left_arrow_b: { number: 345 }
-    l_kick_out_left_arrow_c: { number: 346 }
-    l_kick_out_left_arrow_d: { number: 347 }
-    l_kick_out_left_arrow_e: { number: 348 }
-    l_kick_out_left_arrow_f: { number: 349 }
-    l_kick_out_left_arrow_g: { number: 350 }
-    l_kick_out_left_arrow_h: { number: 351 }
+    l_kick_out_left_arrow_h: { number: 344 }
+    l_kick_out_left_arrow_g: { number: 345 }
+    l_kick_out_left_arrow_f: { number: 346 }
+    l_kick_out_left_arrow_e: { number: 347 }
+    l_kick_out_left_arrow_d: { number: 348 }
+    l_kick_out_left_arrow_c: { number: 349 }
+    l_kick_out_left_arrow_b: { number: 350 }
+    l_kick_out_left_arrow_a: { number: 351 }
 
     l_outlane_left_a: { number: 352 }
     l_outlane_left_b: { number: 353 }
